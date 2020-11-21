@@ -1,0 +1,64 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 10vh;
+    margin: 0;
+    
+    background-color: #ff5c7a;
+}
+
+.button_row{
+    align-items: center;
+    display: flex;
+    width:100%;
+    padding: 0px 100px 0px 2px;
+    justify-content: flex-end;
+}
+
+.title_button   {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+
+    color: white;
+    background-color: inherit;
+    
+    outline: none;
+    border: none;
+    margin: 10px;
+    padding-left: 30px;
+}
+
+.title_button:hover{
+    transform: scale(1.03);
+}
+
+.title_button:active{color: #cfcfcf;
+}
+
+.header_button{
+    width: 100px;
+    height: 40%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+
+    color: white;
+    background-color: inherit;
+    
+    outline: none;
+    border: none;
+    margin: 15px;
+}
+
+.header_button:hover{color: #e8e8e8;}
+
+.header_button:active{
+    color: #cfcfcf;
+    transform: translateY(2px);
+}
