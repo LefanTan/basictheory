@@ -1,7 +1,7 @@
 import React from "react"
 import Header from './Components/Header'
 import Home from './Components/Home'
-import Chords from './Components/Chords'
+import Chords from './Components/Chords/Chords'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import styles from './App.module.css'
 
