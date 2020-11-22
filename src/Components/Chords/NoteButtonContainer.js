@@ -1,38 +1,39 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import NoteButton from './NoteButton'
+import StandardButton from './StandardButton'
+import styles from './NoteButtonContainer.module.css'
 
 function NoteButtonContainer(props){
     return(
-        <div className={props.styles.Container}>
-                <div className={props.styles.noteButtonContainer}>
-                    <NoteButton className={props.styles.noteButton} note='C' onClick={props.onClick}/>
+        <div className={styles.noteMainContainer}>
+                <div className={styles.noteButtonContainer}>
+                    <StandardButton className={styles.noteButton} value='C' onClick={props.onClick}/>
                     <div>
-                        <NoteButton className={props.styles.noteButtonSharp} note='C#' onClick={props.onClick}/>
-                        <NoteButton className={props.styles.noteButtonSharp} note='Db' onClick={props.onClick}/>
+                        <StandardButton className={styles.noteButtonSharp} value='C#' onClick={props.onClick}/>
+                        <StandardButton className={styles.noteButtonSharp} value='Db' onClick={props.onClick}/>
                     </div>
-                    <NoteButton className={props.styles.noteButton} note='D' onClick={props.onClick}/>
+                    <StandardButton className={styles.noteButton} value='D' onClick={props.onClick}/>
                     <div>
-                        <NoteButton className={props.styles.noteButtonSharp} note='D#' onClick={props.onClick}/>
-                        <NoteButton className={props.styles.noteButtonSharp} note='Eb' onClick={props.onClick}/>
+                        <StandardButton className={styles.noteButtonSharp} value='D#' onClick={props.onClick}/>
+                        <StandardButton className={styles.noteButtonSharp} value='Eb' onClick={props.onClick}/>
                     </div>
-                    <NoteButton className={props.styles.noteButton} note='E' onClick={props.onClick}/>
-                    <NoteButton className={props.styles.noteButton} note='F' onClick={props.onClick}/>
+                    <StandardButton className={styles.noteButton} value='E' onClick={props.onClick}/>
+                    <StandardButton className={styles.noteButton} value='F' onClick={props.onClick}/>
                     <div>
-                        <NoteButton className={props.styles.noteButtonSharp} note='C#' onClick={props.onClick}/>
-                        <NoteButton className={props.styles.noteButtonSharp} note='Db' onClick={props.onClick}/>
+                        <StandardButton className={styles.noteButtonSharp} value='C#' onClick={props.onClick}/>
+                        <StandardButton className={styles.noteButtonSharp} value='Db' onClick={props.onClick}/>
                     </div>
-                    <NoteButton className={props.styles.noteButton} note='G' onClick={props.onClick}/>
+                    <StandardButton className={styles.noteButton} value='G' onClick={props.onClick}/>
                     <div>
-                        <NoteButton className={props.styles.noteButtonSharp} note='G#' onClick={props.onClick}/>
-                        <NoteButton className={props.styles.noteButtonSharp} note='Ab' onClick={props.onClick}/>
+                        <StandardButton className={styles.noteButtonSharp} value='G#' onClick={props.onClick}/>
+                        <StandardButton className={styles.noteButtonSharp} value='Ab' onClick={props.onClick}/>
                     </div>
-                    <NoteButton className={props.styles.noteButton} note='A' onClick={props.onClick}/>
+                    <StandardButton className={styles.noteButton} value='A' onClick={props.onClick}/>
                     <div>
-                        <NoteButton className={props.styles.noteButtonSharp} note='A#' onClick={props.onClick}/>
-                        <NoteButton className={props.styles.noteButtonSharp} note='Bb' onClick={props.onClick}/>
+                        <StandardButton className={styles.noteButtonSharp} value='A#' onClick={props.onClick}/>
+                        <StandardButton className={styles.noteButtonSharp} value='Bb' onClick={props.onClick}/>
                     </div>
-                    <NoteButton className={props.styles.noteButton} note='B' onClick={props.onClick}/>
+                    <StandardButton className={styles.noteButton} value='B' onClick={props.onClick}/>
                 </div>
             </div>
     )

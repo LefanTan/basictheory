@@ -1,75 +1,26 @@
-.Container{
+.mainContainer{
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column;
 
+    margin: 0;
+    
+    margin-left: 20px;
+    padding: 0;
     align-items: flex-start;
     justify-content: center;
-
-    width: 100%;
-    height: 90vh;
-
-    padding:0; border:0;
 }
 
-.noteButtonContainer{
-    display: flex;
-    flex-flow: row wrap;
-
-    margin-top: 10px;
-}
-
-.noteButton{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 60px;
-    height: 70px;
-
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 35px;
-
-    outline: none;
-    border: 1px solid #e8e8e8;
-    border-radius: 10px;
-    padding: 0px;
-    margin: 2px;
-
-    box-shadow: 0px 2px 1px;
-
-    color: #ff5c7a;
-    background-color: inherit;
-}
-
-.noteButton:hover{background-color: #f5f5f5;}
-
-.noteButton:active{background-color: #e8e8e8;}
-
-.noteButtonSharp{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 60px;
-    height: 36px;
-
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-
-    outline: none;
-    border: 1px solid #f5f5f5;
-    border-radius: 8px;
-    padding: 0px;
-    margin: 2px;
-
-    box-shadow: 0px 2px 1px #d4d4d4;
-
-    color: white;
+h1{
     background-color: #ff5c7a;
+    color: white;
+
+    font-family: 'Abel', sans-serif;
+    font-size: 40px;
+    margin: 5px;
+    padding: 3px 10px 3px 10px;
 }
 
-.noteButtonSharp:hover{background-color: #e24f6a;}
-
-.noteButtonSharp:active{background-color: #ca475f;}
+.chordsContainer{
+    display: flex;
+    flex-direction: row;
+}
