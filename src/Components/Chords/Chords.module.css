@@ -13,14 +13,27 @@
 h1{
     background-color: #ff5c7a;
     color: white;
+    width: max-content;
 
+    text-align: center;
     font-family: 'Abel', sans-serif;
     font-size: 40px;
+
     margin: 5px;
     padding: 3px 10px 3px 10px;
 }
 
-.chordsContainer{
+.rowContainer{
     display: flex;
     flex-direction: row;
+
+    margin-right: 50px;
+}
+
+.columnContainer{
+    display: flex;
+    flex-direction: column;
+
+    width: 375px;   
+    height: 175px;
 }

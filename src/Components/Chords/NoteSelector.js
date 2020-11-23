@@ -3,7 +3,7 @@ import React from 'react'
 import StandardButton from './StandardButton'
 import styles from './NoteButtonContainer.module.css'
 
-function NoteButtonContainer(props){
+function NoteSelector(props){
     return(
         <div className={styles.noteMainContainer}>
                 <div className={styles.noteButtonContainer}>
@@ -35,8 +35,8 @@ function NoteButtonContainer(props){
                     </div>
                     <StandardButton className={styles.noteButton} value='B' onClick={props.onClick}/>
                 </div>
-            </div>
+        </div>
     )
 }
 
-export default NoteButtonContainer;
+export default NoteSelector;
