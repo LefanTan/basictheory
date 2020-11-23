@@ -36,7 +36,6 @@ class Chords extends Component{
     }
 
     render(){
-        var nice = 30;
         return(
             <div className={chordStyles.mainContainer}>
                 <NoteSelector styles={chordStyles} onClick={this.handleNoteButtonClick}/>
