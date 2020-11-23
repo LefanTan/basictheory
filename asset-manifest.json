@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/basictheory/static/css/main.b339f8b0.chunk.css",
+    "main.css": "/basictheory/static/css/main.05f473a2.chunk.css",
     "main.js": "/basictheory/static/js/main.d0f004d1.chunk.js",
     "main.js.map": "/basictheory/static/js/main.d0f004d1.chunk.js.map",
     "runtime-main.js": "/basictheory/static/js/runtime-main.60d87bb4.js",
@@ -8,13 +8,13 @@
     "static/js/2.fcd9e8de.chunk.js": "/basictheory/static/js/2.fcd9e8de.chunk.js",
     "static/js/2.fcd9e8de.chunk.js.map": "/basictheory/static/js/2.fcd9e8de.chunk.js.map",
     "index.html": "/basictheory/index.html",
-    "static/css/main.b339f8b0.chunk.css.map": "/basictheory/static/css/main.b339f8b0.chunk.css.map",
+    "static/css/main.05f473a2.chunk.css.map": "/basictheory/static/css/main.05f473a2.chunk.css.map",
     "static/js/2.fcd9e8de.chunk.js.LICENSE.txt": "/basictheory/static/js/2.fcd9e8de.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.60d87bb4.js",
     "static/js/2.fcd9e8de.chunk.js",
-    "static/css/main.b339f8b0.chunk.css",
+    "static/css/main.05f473a2.chunk.css",
     "static/js/main.d0f004d1.chunk.js"
   ]
 }
