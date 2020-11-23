@@ -1,3 +1,5 @@
+@import '../index.css';
+
 .header{
     display: flex;
     flex-direction: row;
@@ -8,11 +10,11 @@
     right:0;
     top:0;
     width: 100%;
-    min-width: 600px;
+    min-width: 800px;
     min-height: 10vh;
     margin: 0 auto;
     
-    background-color: #ff5c7a;
+    background-color: var(--main-color);
 }
 
 .button_row{

@@ -12,7 +12,7 @@
 .mainPageButton{
     font-family: 'Ubuntu', sans-serif;
     font-size: 40px;
-    color: #ff5c7a;
+    color: var(--main-color);
     background-color: inherit;
 
     border: none;
