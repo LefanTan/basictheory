@@ -4,6 +4,9 @@ import buttonStyles from './NoteButtonContainer.module.css'
 import StandardButton from './StandardButton';
 import NoteSelector from './NoteSelector';
  
+/*
+This is the Chords page
+*/
 class Chords extends Component{
     constructor(props){
         super(props)

@@ -96,6 +96,6 @@
 
     box-shadow: 0px 1px 1px;
 
-    color: #ff5c7a;
+    color: var(--main-color);
     background-color: inherit;
 }

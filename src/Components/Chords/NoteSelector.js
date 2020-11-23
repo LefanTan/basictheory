@@ -3,6 +3,10 @@ import React from 'react'
 import StandardButton from './StandardButton'
 import styles from './NoteButtonContainer.module.css'
 
+/*
+Note selector component
+props expect styles object(styles.noteMainContainer, styles.noteButton, styles.noteButtonSharp) and onClick handler
+*/
 function NoteSelector(props){
     return(
         <div className={styles.noteMainContainer}>
