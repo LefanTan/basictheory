@@ -39,7 +39,7 @@ class Chords extends Component{
         var nice = 30;
         return(
             <div className={chordStyles.mainContainer}>
-                <NoteSelector style={{margin: 100}} styles={chordStyles} onClick={this.handleNoteButtonClick}/>
+                <NoteSelector styles={chordStyles} onClick={this.handleNoteButtonClick}/>
 
                 <div className={chordStyles.rowContainer}>
                     <div className={chordStyles.columnContainer}>
