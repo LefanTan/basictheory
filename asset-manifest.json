@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/basictheory.io/static/css/main.b84b85b5.chunk.css",
+    "main.js": "/basictheory.io/static/js/main.521406f1.chunk.js",
+    "main.js.map": "/basictheory.io/static/js/main.521406f1.chunk.js.map",
+    "runtime-main.js": "/basictheory.io/static/js/runtime-main.dd3dda1e.js",
+    "runtime-main.js.map": "/basictheory.io/static/js/runtime-main.dd3dda1e.js.map",
+    "static/js/2.0f4d4679.chunk.js": "/basictheory.io/static/js/2.0f4d4679.chunk.js",
+    "static/js/2.0f4d4679.chunk.js.map": "/basictheory.io/static/js/2.0f4d4679.chunk.js.map",
+    "index.html": "/basictheory.io/index.html",
+    "static/css/main.b84b85b5.chunk.css.map": "/basictheory.io/static/css/main.b84b85b5.chunk.css.map",
+    "static/js/2.0f4d4679.chunk.js.LICENSE.txt": "/basictheory.io/static/js/2.0f4d4679.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dd3dda1e.js",
+    "static/js/2.0f4d4679.chunk.js",
+    "static/css/main.b84b85b5.chunk.css",
+    "static/js/main.521406f1.chunk.js"
+  ]
+}
