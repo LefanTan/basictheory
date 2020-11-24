@@ -15,7 +15,7 @@ function Sidebar(){
 
         // if side bar is active, show y scrollbar
         root.style.setProperty('--overflow-y', sidebar ? 'visible' : 'hidden');
-    })
+    }, [sidebar])
 
     return(
         <div className={styles.Container}>

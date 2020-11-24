@@ -4,12 +4,13 @@
     display: flex;
     flex-flow: column;
 
+    width: var(--device-width);
+    height: var(--device-height);
+
     margin: 0;
-    
-    margin-left: 20px;
     padding: 0;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-start;
 }
 
 .mainContainer h1{
@@ -25,17 +26,33 @@
     padding: 3px 10px 3px 10px;
 }
 
+/**
+Row container contains column container that contains two rows of innerChordRow
+**/
 .rowContainer{
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
 
-    margin-right: 50px;
+    width: 50%;
+    height: 22.5%;
 }
 
 .columnContainer{
     display: flex;
     flex-direction: column;
 
-    width: 375px;   
-    height: 175px;
+    width: auto;   
+    height: 100%;
+
+    margin: 0px 5px 0px 5px;
+}
+
+.innerChordRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    width: auto;
+    height: 22.5%;
 }

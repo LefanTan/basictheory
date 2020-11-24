@@ -42,85 +42,69 @@ class Chords extends Component{
     render(){
         return(
             <div className={chordStyles.mainContainer}>
-                <NoteSelector styles={chordStyles} onClick={this.handleNoteButtonClick}/>
+                <NoteSelector className={chordStyles.noteSelector} styles={chordStyles} onClick={this.handleNoteButtonClick}/>
                 <Sidebar />
                 <div className={chordStyles.rowContainer}>
                     <div className={chordStyles.columnContainer}>
                         <h1>Major</h1>
-                        <div className={chordStyles.rowContainer}>
+                        <div className={chordStyles.innerChordRow}>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}maj`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}maj7`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}maj9`} onClick={this.handleChordButtonClick}/>
                         </div>
-                        <div className={chordStyles.rowContainer}>
+                        <div className={chordStyles.innerChordRow}>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}maj11`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}maj13`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}maj7(#11)`} onClick={this.handleChordButtonClick}/>
                         </div>
-                    </div>
-                    
-                    <br/>
-                    <div className={chordStyles.columnContainer}>
-                        <h1>Minor</h1>
-                        <div className={chordStyles.rowContainer}>
-                            <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}min`} onClick={this.handleChordButtonClick}/>
-                            <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}min7`} onClick={this.handleChordButtonClick}/>
-                            <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}min9`} onClick={this.handleChordButtonClick}/>
-                        </div>
-                        <div className={chordStyles.rowContainer}>
-                            <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}min11`} onClick={this.handleChordButtonClick}/>
-                            <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}min13`} onClick={this.handleChordButtonClick}/>
-                        </div>
-                    </div>
-                </div>
-
-                <div className={chordStyles.rowContainer}>
-                    <div className={chordStyles.columnContainer}>
+                        <br/>
                         <h1>Dominant</h1>
-                        <div className={chordStyles.rowContainer}>
+                        <div className={chordStyles.innerChordRow}>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}7`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}9`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}11`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}13`} onClick={this.handleChordButtonClick}/>
                         </div>
+                        <br/>
+                        <h1>Diminished</h1>
+                        <div className={chordStyles.innerChordRow}>
+                            <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}dim`} onClick={this.handleChordButtonClick}/>
+                            <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}dim7`} onClick={this.handleChordButtonClick}/>
+                        </div>
                     </div>
-                    
-                    <br/>
+
                     <div className={chordStyles.columnContainer}>
+                        <h1>Minor</h1>
+                        <div className={chordStyles.innerChordRow}>
+                            <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}min`} onClick={this.handleChordButtonClick}/>
+                            <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}min7`} onClick={this.handleChordButtonClick}/>
+                            <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}min9`} onClick={this.handleChordButtonClick}/>
+                        </div>
+                        <div className={chordStyles.innerChordRow}>
+                            <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}min11`} onClick={this.handleChordButtonClick}/>
+                            <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}min13`} onClick={this.handleChordButtonClick}/>
+                        </div>
+                        <br/>
                         <h1>Suspended</h1>
-                        <div className={chordStyles.rowContainer}>
+                        <div className={chordStyles.innerChordRow}>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}sus2`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}sus4`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}7sus2`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}7sus4`} onClick={this.handleChordButtonClick}/>
                         </div>
-                        <div className={chordStyles.rowContainer}>
+                        <div className={chordStyles.innerChordRow}>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}9sus2`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}9sus4`} onClick={this.handleChordButtonClick}/>
                         </div>
-                    </div>
-                </div>
-
-                <div className={chordStyles.rowContainer}>
-                    <div className={chordStyles.columnContainer}>
-                        <h1>Diminished</h1>
-                        <div className={chordStyles.rowContainer}>
-                            <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}dim`} onClick={this.handleChordButtonClick}/>
-                            <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}dim7`} onClick={this.handleChordButtonClick}/>
-                        </div>
-                    </div>
-                    
-                    <br/>
-                    <div className={chordStyles.columnContainer}>
+                        <br/>
                         <h1>Augmented</h1>
-                        <div className={chordStyles.rowContainer}>
+                        <div className={chordStyles.innerChordRow}>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}aug`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}aug6`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}aug7`} onClick={this.handleChordButtonClick}/>
                         </div>
                     </div>
                 </div>
-
             </div>
         );
     }

@@ -16,6 +16,12 @@ code {
     --main-color: #df4d68;
     --main-hover: #c2455c;
     --main-click: #bb374f;
-    --overflow-x: hidden;
+    --overflow-x: auto;
     --overflow-y: visible;
+    --device-width: 100%;
+    --device-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
 }
