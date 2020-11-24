@@ -42,8 +42,11 @@ class Chords extends Component{
     render(){
         return(
             <div className={chordStyles.mainContainer}>
-                <NoteSelector className={chordStyles.noteSelector} styles={chordStyles} onClick={this.handleNoteButtonClick}/>
-                <Sidebar />
+                <div className={chordStyles.header}>
+                    <Sidebar />
+                    <NoteSelector className={chordStyles.noteSelector} styles={chordStyles} onClick={this.handleNoteButtonClick}/>
+                </div>
+
                 <div className={chordStyles.rowContainer}>
                     <div className={chordStyles.columnContainer}>
                         <h1>Major</h1>

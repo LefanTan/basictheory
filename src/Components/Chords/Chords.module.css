@@ -26,6 +26,14 @@
     padding: 3px 10px 3px 10px;
 }
 
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    width: 100%;
+}
+
 /**
 Row container contains column container that contains two rows of innerChordRow
 **/
@@ -34,10 +42,13 @@ Row container contains column container that contains two rows of innerChordRow
     flex-direction: row;
     justify-content: flex-start;
 
-    width: 50%;
+    width: 55%;
     height: 22.5%;
 }
 
+/*
+this contains all elements includng the chord header and its innerChordRow
+*/
 .columnContainer{
     display: flex;
     flex-direction: column;
