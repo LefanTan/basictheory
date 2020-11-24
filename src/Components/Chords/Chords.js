@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import chordStyles from './Chords.module.css'
-import buttonStyles from './NoteButtonContainer.module.css'
+import buttonStyles from './NoteSelector.module.css'
 import StandardButton from './StandardButton';
 import NoteSelector from './NoteSelector';
-import sidebarIcon from '../../img/sidebar.png'
+import Sidebar from './Sidebar';
  
 /*
 This is the Chords page
@@ -42,11 +42,8 @@ class Chords extends Component{
     render(){
         return(
             <div className={chordStyles.mainContainer}>
-                <div className={chordStyles.header}>
-                    <NoteSelector styles={chordStyles} onClick={this.handleNoteButtonClick}/>
-                    <button className={chordStyles.sidebarButton}><img src={sidebarIcon} className={chordStyles.sidebarIcon}/></button>
-                </div>
-
+                <NoteSelector styles={chordStyles} onClick={this.handleNoteButtonClick}/>
+                <Sidebar />
                 <div className={chordStyles.rowContainer}>
                     <div className={chordStyles.columnContainer}>
                         <h1>Major</h1>

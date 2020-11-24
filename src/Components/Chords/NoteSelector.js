@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import StandardButton from './StandardButton'
-import styles from './NoteButtonContainer.module.css'
+import styles from './NoteSelector.module.css'
 
 /*
 Note selector component

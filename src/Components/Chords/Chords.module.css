@@ -12,7 +12,7 @@
     justify-content: center;
 }
 
-h1{
+.mainContainer h1{
     background-color: var(--main-color);
     color: white;
     width: max-content;
@@ -39,46 +39,3 @@ h1{
     width: 375px;   
     height: 175px;
 }
-
-.header{
-    display: flex;
-
-    width: 100%;
-    height: 100%;
-
-    justify-content: space-evenly;
-    align-items: flex-end;
-}
-
-.sidebarButton{
-    width: 40px;
-    height: 40px;
-    margin: 20px;
-
-    padding:0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    outline: none;
-    border: none;
-
-    background-color: inherit;
-}
-
-.sidebarIcon{
-    width: 40px;
-    height: 40px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    filter: invert(39%) sepia(20%) saturate(2961%) hue-rotate(308deg) brightness(99%) contrast(86%);
-}
-.sidebarIcon:hover{
-    filter: invert(34%) sepia(85%) saturate(605%) hue-rotate(303deg) brightness(90%) contrast(90%);
-    transform: scale(1.1);
-}
-.sidebarIcon:active{filter: invert(34%) sepia(85%) saturate(605%) hue-rotate(303deg) brightness(80%) contrast(90%);}

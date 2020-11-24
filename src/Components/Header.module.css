@@ -15,6 +15,7 @@
     margin: 0 auto;
     
     background-color: var(--main-color);
+    z-index: 1;
 }
 
 .button_row{

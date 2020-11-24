@@ -1,0 +1,74 @@
+.Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    position: absolute;
+    top: 90px;
+    right: 10px;
+}
+
+.Sidebar{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+    padding: 10px;
+
+    position: absolute;
+    top: 100px;
+    right: -1100%;
+    transition: 850ms;
+
+    height: 90vh;
+    width: 90vh;
+    background-color: rgb(241, 241, 241);
+    border-radius: 35px;
+}
+
+.SidebarActive{
+    composes: Sidebar;
+
+    right: 0;
+    transition: 300ms;
+}
+
+.sidebarButton{
+    width: 35px;
+    height: 40px;
+    margin: 20px;
+
+    padding:0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    outline: none;
+    border: none;
+
+    background-color: inherit;
+}
+
+.sidebarIcon{
+    width: inherit;
+    height: inherit;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    filter: invert(39%) sepia(20%) saturate(2961%) hue-rotate(308deg) brightness(99%) contrast(86%);
+}
+.sidebarIcon:hover{
+    filter: invert(34%) sepia(85%) saturate(605%) hue-rotate(303deg) brightness(94%) contrast(90%);
+    transform: scale(1.1);
+}
+.sidebarIcon:active{filter: invert(34%) sepia(85%) saturate(605%) hue-rotate(303deg) brightness(80%) contrast(90%);}
+
+.Sidebar h1{
+    color: var(--main-color);
+    font-size: 50px;
+    background-color: inherit;
+}

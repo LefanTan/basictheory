@@ -16,4 +16,6 @@ code {
     --main-color: #df4d68;
     --main-hover: #c2455c;
     --main-click: #bb374f;
+    --overflow-x: hidden;
+    --overflow-y: visible;
 }
