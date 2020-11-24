@@ -11,28 +11,17 @@
 }
 
 
-h1{
+h1, h2{
     background-color: var(--main-color);
     color: white;
     width: max-content;
 
     text-align: center;
     font-family: 'Abel', sans-serif;
-    font-size: 40px;
 
     margin: 5px;
     padding: 3px 10px 3px 10px;
 }
 
-h2{
-    background-color: var(--main-color);
-    color: white;
-    width: max-content;
-
-    text-align: center;
-    font-family: 'Abel', sans-serif;
-    font-size: 20px;
-
-    margin: 5px;
-    padding: 3px 10px 3px 10px;
-}
+h1{font-size: 40px;}
+h2{font-size: 20px;}

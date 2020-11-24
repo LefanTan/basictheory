@@ -3,6 +3,7 @@ import chordStyles from './Chords.module.css'
 import buttonStyles from './NoteButtonContainer.module.css'
 import StandardButton from './StandardButton';
 import NoteSelector from './NoteSelector';
+import sidebarIcon from '../../img/sidebar.png'
  
 /*
 This is the Chords page
@@ -41,7 +42,10 @@ class Chords extends Component{
     render(){
         return(
             <div className={chordStyles.mainContainer}>
-                <NoteSelector styles={chordStyles} onClick={this.handleNoteButtonClick}/>
+                <div className={chordStyles.header}>
+                    <NoteSelector styles={chordStyles} onClick={this.handleNoteButtonClick}/>
+                    <button className={chordStyles.sidebarButton}><img src={sidebarIcon} className={chordStyles.sidebarIcon}/></button>
+                </div>
 
                 <div className={chordStyles.rowContainer}>
                     <div className={chordStyles.columnContainer}>
