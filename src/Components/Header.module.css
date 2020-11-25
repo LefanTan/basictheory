@@ -10,10 +10,11 @@
     right:0;
     top:0;
     width: 100%;
+    height: auto;
     min-width: 800px;
-    min-height: 10vh;
     margin: 0 auto;
     
+    padding: 10px;
     background-color: var(--main-color);
     z-index: 1;
 }

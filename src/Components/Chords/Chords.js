@@ -43,11 +43,13 @@ class Chords extends Component{
         return(
             <div className={chordStyles.mainContainer}>
                 <div className={chordStyles.header}>
-                    <Sidebar />
                     <NoteSelector className={chordStyles.noteSelector} styles={chordStyles} onClick={this.handleNoteButtonClick}/>
                 </div>
 
                 <div className={chordStyles.rowContainer}>
+                    
+                    <Sidebar />
+
                     <div className={chordStyles.columnContainer}>
                         <h1>Major</h1>
                         <div className={chordStyles.innerChordRow}>
