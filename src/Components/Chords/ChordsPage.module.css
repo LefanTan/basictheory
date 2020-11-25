@@ -52,9 +52,7 @@ this contains all elements includng the chord header and its innerChordRow
 .columnContainer{
     display: flex;
     flex-direction: column;
-
-    flex:1;
-
+    
     width: auto;   
     height: 100%;
 

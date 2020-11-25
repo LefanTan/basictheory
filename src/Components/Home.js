@@ -2,6 +2,7 @@ import {React, Component} from "react"
 import {Link} from "react-router-dom"
 import styles from "./Home.module.css"
 
+// Home page component
 class Home extends Component{
     constructor(props){
         super(props)
@@ -20,8 +21,8 @@ class Home extends Component{
     render(){
         return(
             <div className={styles.Container}>
-                <Link to="/chords"> <button className={styles.mainPageButton}>Chord</button> </Link>
-                <Link to="/scales"> <button className={styles.mainPageButton}>Scales</button> </Link>
+                <Link to={process.env.REACT_APP_CHORDS_PAGE_URL}> <button className={styles.mainPageButton}>Chord</button> </Link>
+                <Link to={process.env.REACT_APP_SCALES_PAGE_URL}> <button className={styles.mainPageButton}>Scales</button> </Link>
             </div>
         );
     }

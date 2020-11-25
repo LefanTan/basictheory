@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
-import chordStyles from './Chords.module.css'
+import chordStyles from './ChordsPage.module.css'
 import buttonStyles from './NoteSelector.module.css'
 import StandardButton from './StandardButton';
 import NoteSelector from './NoteSelector';
 import Sidebar from './Sidebar';
  
-/*
-This is the Chords page
-*/
-class Chords extends Component{
+// Chord page component
+class ChordsPage extends Component{
     constructor(props){
         super(props)
         this.state ={
@@ -115,4 +113,4 @@ class Chords extends Component{
     }
 }
 
-export default Chords;
+export default ChordsPage;

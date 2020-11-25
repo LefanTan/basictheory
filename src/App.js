@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import useViewport from './Components/CustomHooks'
 import Header from './Components/Header'
 import Home from './Components/Home'
-import Chords from './Components/Chords/Chords'
+import ChordsPage from './Components/Chords/ChordsPage'
 import {BrowserRouter as Router, Switch, Route,} from 'react-router-dom'
 import styles from './App.module.css'
 import NotFoundPage from "./Components/NotFoundPage"
@@ -27,8 +27,8 @@ function App() {
                 <Header />
                 <Switch>
                     <Route path='/' exact component={Home}/>
-                    <Route path="/home" component={Home}/>
-                    <Route path="/chords" component={Chords}/>  
+                    <Route path={process.env.REACT_APP_HOME_PAGE_URL} component={Home}/>
+                    <Route path={process.env.REACT_APP_CHORDS_PAGE_URL} component={ChordsPage}/>  
                     <Route component={NotFoundPage}/>
                 </Switch>
             </Router>

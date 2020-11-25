@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { render } from 'react-dom';
+import ChordInfo from './ChordInfo'
 import * as Fi from 'react-icons/fi'
 import styles from './Sidebar.module.css'
 import {Link} from 'react-router-dom';
@@ -23,7 +23,7 @@ function Sidebar(){
                 <button className={styles.sidebarButton} onClick={useSidebar} ><Fi.FiMenu className={styles.sidebarIcon}/></button>
             </Link>
             <div className={sidebar ? styles.SidebarActive : styles.Sidebar}>
-                <h1>Major 7th chord</h1>
+                <ChordInfo />
             </div>
         </div>
     )
