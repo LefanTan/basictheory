@@ -6,7 +6,7 @@
 
     margin: 0px 20px 0px 20px;
     width: auto;
-    min-width: 40vw;
+    /* min-width: 40vw; */
     height: auto;
 }
 
@@ -18,7 +18,7 @@
     position: relative;
     left: -100%; 
     
-    width: 100%;
+    width: auto;
     height: auto;
 
     padding:10px;
@@ -42,7 +42,7 @@
     width: 35px;
     height: 40px;
 
-    padding:0;
+    padding: 0;
 
     position: absolute;
     top: 110px;
@@ -66,6 +66,9 @@
     justify-content: center;
     align-items: center;
 
+    position: absolute;
+    top: 0px;
+    left: 0px;
     filter: invert(39%) sepia(20%) saturate(2961%) hue-rotate(308deg) brightness(99%) contrast(86%);
 }
 .sidebarIcon:hover{

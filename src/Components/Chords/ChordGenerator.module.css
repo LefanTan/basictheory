@@ -1,0 +1,96 @@
+.mainContainer{
+    /* background-color: ivory; */
+    
+    position: relative;
+    top: 0px;
+    left: 0px;
+
+    flex: 2;
+
+    width: 100%;
+    /* min-width: 20vh; */
+    height: auto;
+}
+
+.mainImg{
+    position: relative;
+    top: 0px;
+    left: 0px;
+
+    aspect-ratio: 2/3;
+    width: 100%;
+    height: undefined;
+
+    display: table-cell;
+    align-self: flex-start;
+    padding: 0;
+    
+    filter: invert(39%) sepia(20%) saturate(2961%) hue-rotate(308deg) brightness(99%) contrast(86%);
+} 
+
+.noteButtonContainer{
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    width: 20%;
+    height: 20%;
+}
+
+.noteButton{
+    position: absolute;
+    top: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    outline: none;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+
+    background-color: inherit;
+}
+
+.noteButtonImg{
+    width: auto;
+    height: 100%;
+
+    padding: 0px;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.noteButtonImg:hover{
+    filter: brightness(95%);
+}
+
+.noteButtonImg:active{
+    filter: brightness(90%);
+}
+
+.noteText{
+    color: var(--main-color);
+    font-size: auto;
+
+    z-index: 1;
+    pointer-events: none;
+    min-width: 100%;
+    min-height: 100%;
+
+    margin:0;
+    padding:0;
+    padding-left: 4px;
+    padding-top: 0px;
+    text-align: center;
+}

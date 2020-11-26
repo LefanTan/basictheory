@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import styles from './ChordInfo.module.css'
-import dchord from './imgs/dmajor-type1.png'
+import ChordGenerator from './ChordGenerator'
 
 class ChordInfo extends Component{
     constructor(props){
@@ -18,15 +18,28 @@ class ChordInfo extends Component{
             <div className={styles.Container}>
                 <h1>Major 7th chord</h1>    
                 <div className={styles.rowContainer}>
-                    <img className={styles.mainChordImg} src={imageDictionary("./dmajor-type1.png").default}/>
-                    <div>
-                        <div className={styles.rowContainer}>
+                    {/* <img className={styles.mainChordImg} src={imageDictionary("./dmajor-type1.png").default}/> */}
+                    <ChordGenerator />
+                    <div className={styles.columnContainer}>
+                        <div className={styles.noteDegreeRow}>
                             <h1>C</h1> 
-                            <p>root</p>
+                            <p>Root</p>
+                            <h2>(I)</h2>
                         </div>
-                        <li>nice</li>
-                        <li>nice</li>
+                        <div className={styles.noteDegreeRow}>
+                            <h1>E</h1> 
+                            <p>Major Third</p>
+                            <h2>(iii)</h2>
+                        </div>
+                        <div className={styles.noteDegreeRow}>
+                            <h1>G</h1> 
+                            <p>Perfect Fifth</p>
+                            <h2>(V)</h2>
+                        </div>
                     </div>
+                </div>
+                <div className={styles.rowContainer}>
+                    <h2>Chord Function</h2>
                 </div>
             </div>
         )
