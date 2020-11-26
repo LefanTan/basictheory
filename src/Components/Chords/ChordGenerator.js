@@ -13,7 +13,7 @@ function ChordGenerator(){
 
         display: 'flex',
         justifyContent: 'center',
-        alignContent: 'center',
+        alignItems: 'center',
 
         width: '15%',
         height: '15%'

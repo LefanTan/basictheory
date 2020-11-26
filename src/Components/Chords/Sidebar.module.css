@@ -6,7 +6,7 @@
 
     margin: 0px 20px 0px 20px;
     width: auto;
-    /* min-width: 40vw; */
+    min-width: 40vw;
     height: auto;
 }
 
@@ -18,7 +18,7 @@
     position: relative;
     left: -100%; 
     
-    width: auto;
+    width: 100%;
     height: auto;
 
     padding:10px;

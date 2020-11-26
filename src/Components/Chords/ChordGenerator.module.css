@@ -8,8 +8,8 @@
     flex: 2;
 
     width: 100%;
-    /* min-width: 20vh; */
     height: auto;
+    margin: 20px 0px 20px 0px;
 }
 
 .mainImg{
@@ -81,16 +81,14 @@
 
 .noteText{
     color: var(--main-color);
-    font-size: auto;
-
+    
     z-index: 1;
+    font-size: 120%;
     pointer-events: none;
-    min-width: 100%;
-    min-height: 100%;
 
+    width: min-content;
+    height: min-content;
     margin:0;
     padding:0;
-    padding-left: 4px;
-    padding-top: 0px;
     text-align: center;
 }
