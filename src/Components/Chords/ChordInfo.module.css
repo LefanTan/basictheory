@@ -1,12 +1,13 @@
 .Container{
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 
-    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
  
-    width: 100%;
+    max-width: max-content;
     height: 100%;
 }
 
@@ -25,7 +26,7 @@
 .Container .h2{
     color: var(--main-color);
     background-color: inherit;
-
+    
     margin: 0;
     padding: 0;
     padding-right: 5px;
@@ -35,52 +36,61 @@
 .Container .p{
     color: var(--main-color);
     background-color: inherit;
-
     font-size: auto;
     margin: 0;
-    padding-right: 5px;       
+    padding-right: 5px;
+
+    height: 100%; 
+    width: 100%;
 }
 
 .mainChordImg{
     width: 50%;
-    min-width: 25vh;
+    min-width: 20vw;
 
     margin: 0;
     padding: 0;
 }
 
-.rowContainer{
+.rowChordImgContainer{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 
-    max-width: fit-content;
-    white-space: nowrap;
-
+    width: max-content;
     margin: 0;
     padding: 0;
 }
 
 .noteDegreeRow{
     display: flex;
+    flex-direction: row;  
+    justify-content: flex-start;
     align-items: center;
 
-    width: 100%;
-    min-width: fit-content;
+    max-width: fit-content;
     height: auto;
-
-    margin: 0px 10px 0px 10px;
+    margin: 0;
     padding: 0;
 }
 
 .columnContainer{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    
-    margin: 5px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0px;
+    margin-left: 15%;
 
-    width: 50%;
+    max-width: fit-content;
     height: auto;
 }
 
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    max-width: fit-content;
+    height: auto;
+}

@@ -4,20 +4,25 @@ import React, {useState, useEffect} from 'react'
 function useViewport(){
     const [width, setWidth] = React.useState(window.innerWidth)
     const [height, setHeight] = React.useState(window.innerHeight)
+    const [isDevice, setIsDevice] = React.useState(false);
 
     React.useEffect(() =>{
         const handleWindowResize = () => {
             setWidth(window.innerWidth)
             setHeight(window.innerHeight)
-        }
-
+        }   
         window.addEventListener("resize", handleWindowResize)
 
         // when component unmount, unsubscribe from event
         return () => window.removeEventListener("resize", handleWindowResize)
     }, [])
 
-    return {width, height}
+    React.useEffect(() => {
+        setIsDevice(height > width)
+    })
+
+
+    return {width, height, isDevice}
 }
 
 export default useViewport;

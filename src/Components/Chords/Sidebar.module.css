@@ -4,9 +4,9 @@
     justify-content: flex-start;
     align-items: flex-start;
 
-    margin: 0px 20px 0px 20px;
-    width: auto;
-    min-width: 40vw;
+    margin: 0px 20px 0px 20px;  
+    /*to add a cap in mobile browser*/
+    max-width: fit-content;
     height: auto;
 }
 

@@ -5,9 +5,7 @@
     top: 0px;
     left: 0px;
 
-    flex: 2;
-
-    width: 100%;
+    max-width: 30%;
     height: auto;
     margin: 20px 0px 20px 0px;
 }
@@ -43,6 +41,7 @@
 .noteButton{
     position: absolute;
     top: 0px;
+    left: 0px;
 
     display: flex;
     justify-content: center;
@@ -55,7 +54,6 @@
     border: none;
     margin: 0px;
     padding: 0px;
-
     background-color: inherit;
 }
 
@@ -64,7 +62,7 @@
     height: 100%;
 
     padding: 0px;
-    margin: 0;
+    margin: 0px;
 
     display: flex;
     justify-content: center;
@@ -80,15 +78,17 @@
 }
 
 .noteText{
-    color: var(--main-color);
-    
+    color: var(--main-color);       
+
     z-index: 1;
-    font-size: 120%;
+    font-size: medium;
     pointer-events: none;
 
-    width: min-content;
-    height: min-content;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
     margin:0;
     padding:0;
+
     text-align: center;
 }

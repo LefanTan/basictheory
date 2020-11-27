@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import ChordInfo from './ChordInfo'
 import * as Fi from 'react-icons/fi'
 import styles from './Sidebar.module.css'
+import useViewport from '../CustomHooks'
 import {Link} from 'react-router-dom';
 
 function Sidebar(){
