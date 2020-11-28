@@ -5,9 +5,10 @@
     align-items: flex-start;
 
     margin: 0px 30px 0px 20px;  
+
     /*to add a cap in mobile browser*/
     max-width: fit-content;
-    height: auto;
+    max-height: 80vh;
 }
 
 .Sidebar{
@@ -19,15 +20,16 @@
     left: -100%; 
     
     width: 100%;
-    height: auto;
+    max-height: fit-content;
 
-    padding:10px;
+    padding: 10px;
 
     transition: 300ms;
     visibility: hidden;
 
     background-color: var(--primary-background);
     border-radius: 35px;
+    overflow: auto;
 }
 
 .SidebarActive{
@@ -69,10 +71,10 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    filter: invert(39%) sepia(20%) saturate(2961%) hue-rotate(308deg) brightness(99%) contrast(86%);
+    color: var(--main-color);
 }
 .sidebarIcon:hover{
-    filter: invert(34%) sepia(85%) saturate(605%) hue-rotate(303deg) brightness(94%) contrast(90%);
+    color: var(--main-hover);
     transform: scale(1.1);
 }
-.sidebarIcon:active{filter: invert(34%) sepia(85%) saturate(605%) hue-rotate(303deg) brightness(80%) contrast(90%);}
+.sidebarIcon:active{color: var(--main-click);}

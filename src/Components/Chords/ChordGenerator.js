@@ -5,19 +5,20 @@ import styles from './ChordGenerator.module.css'
 import chordFret from './imgs/chordFret.png'
 import noteButton from './imgs/noteButton.png'
 import useViewport from '../CustomHooks'
+import { render } from 'react-dom'
 
 function ChordGenerator(props){
-    
-    const buttonComponents = props.noteButtonPositions.map(notePos =>
-    {    
-        const topPos = (0.25 * Math.pow(notePos.fret, 2)) + (16.25 * notePos.fret) - 4.5; 
-        const leftPos = 19 * (7 - notePos.string) - 22.5
+
+    // Buttons for numbered note buttons
+    function StandardNoteButton(props){
+        const topPos = -0.25 * Math.pow(props.noteInfo.fret, 2) + 19.25 * props.noteInfo.fret - 8.5; 
+        const leftPos = 19 * (7 - props.noteInfo.string) - 22.5
         
-        const noteButtonContainerStyle = {
+        const standardButtonContainer = {
             position: 'absolute',       
             top: `${topPos}%`,
             left: `${leftPos}%`,
-
+    
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
@@ -25,21 +26,55 @@ function ChordGenerator(props){
             width: '15%',
             height: '15%'
         }
-        
-        return(
-            <div key={notePos.key} style={noteButtonContainerStyle}>
-                <button className={styles.noteButton}>
+
+        return(    
+            <div key={props.noteInfo.key} style={standardButtonContainer}>
+                <button onClick={() => props.onNoteClick(props.noteInfo.note)} className={styles.noteButton}>
                     <img src={noteButton} className={styles.noteButtonImg}/>
                 </button>
-                <p className={styles.noteText}>{notePos.noteType}</p>
+                <p className={styles.noteText}>{props.noteInfo.noteNumber}</p>
             </div>
         )
-    })
+    }
+
+    // For open string buttons such as X and O
+    function OpenStringButton(props){
+        const leftPos = 19 * (7 - props.noteInfo.string) - 23.5
+
+        const openStringButtonContainer = {
+            position: 'absolute',       
+            top: '-15%',
+            left: `${leftPos}%`,
+    
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            textAlign: 'center',
+            width: '15%',
+            height: '15%'
+        }
+
+        return(    
+            <div key={props.noteInfo.key} style={openStringButtonContainer}>
+                <button onClick={() => props.noteInfo.noteNumber != 'X' && props.onNoteClick(props.noteInfo.note)} className={styles.noteButton}>
+                    <h3 className={props.noteInfo.noteNumber == 'X' ? styles.h3 : styles.openString}>{props.noteInfo.noteNumber}</h3>
+                </button>
+            </div>
+        )
+    }
 
     return(
         <div className={styles.mainContainer}>
             <img src={chordFret} className={styles.mainImg} />
-            {buttonComponents}
+            {props.noteButtonPositions.map(noteInfo =>{
+                if(noteInfo.fret == 0){
+                    return(<OpenStringButton onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
+                }else{
+                    return(<StandardNoteButton onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
+                }
+            })}
+    
+            <h3 className={styles.fretNumber}>{props.startingFret}</h3>
         </div>
     )
 }

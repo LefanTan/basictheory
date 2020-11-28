@@ -13,7 +13,7 @@
     justify-content: flex-start;
 }
 
-.mainContainer h1{
+.h1{
     background-color: var(--main-color);
     color: white;
     width: max-content;

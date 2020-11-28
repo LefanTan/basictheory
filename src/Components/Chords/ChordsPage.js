@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ChordInfo from './ChordInfo'
 import chordStyles from './ChordsPage.module.css'
 import buttonStyles from './NoteSelector.module.css'
 import StandardButton from './StandardButton';
@@ -45,11 +46,9 @@ class ChordsPage extends Component{
                 </div>
 
                 <div className={chordStyles.rowContainer}>
-                    
-                    <Sidebar />
-
+                    <Sidebar><ChordInfo /></Sidebar>
                     <div className={chordStyles.columnContainer}>
-                        <h1>Major</h1>
+                        <h1 className={chordStyles.h1}>Major</h1>
                         <div className={chordStyles.innerChordRow}>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}maj`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}maj7`} onClick={this.handleChordButtonClick}/>
@@ -61,7 +60,7 @@ class ChordsPage extends Component{
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}maj7(#11)`} onClick={this.handleChordButtonClick}/>
                         </div>
                         <br/>
-                        <h1>Dominant</h1>
+                        <h1 className={chordStyles.h1}>Dominant</h1>
                         <div className={chordStyles.innerChordRow}>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}7`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}9`} onClick={this.handleChordButtonClick}/>
@@ -69,7 +68,7 @@ class ChordsPage extends Component{
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}13`} onClick={this.handleChordButtonClick}/>
                         </div>
                         <br/>
-                        <h1>Diminished</h1>
+                        <h1 className={chordStyles.h1}>Diminished</h1>
                         <div className={chordStyles.innerChordRow}>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}dim`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}dim7`} onClick={this.handleChordButtonClick}/>
@@ -77,7 +76,7 @@ class ChordsPage extends Component{
                     </div>
 
                     <div className={chordStyles.columnContainer}>
-                        <h1>Minor</h1>
+                        <h1 className={chordStyles.h1}>Minor</h1>
                         <div className={chordStyles.innerChordRow}>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}min`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}min7`} onClick={this.handleChordButtonClick}/>
@@ -88,7 +87,7 @@ class ChordsPage extends Component{
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}min13`} onClick={this.handleChordButtonClick}/>
                         </div>
                         <br/>
-                        <h1>Suspended</h1>
+                        <h1 className={chordStyles.h1}>Suspended</h1>
                         <div className={chordStyles.innerChordRow}>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}sus2`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}sus4`} onClick={this.handleChordButtonClick}/>
@@ -100,7 +99,7 @@ class ChordsPage extends Component{
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}9sus4`} onClick={this.handleChordButtonClick}/>
                         </div>
                         <br/>
-                        <h1>Augmented</h1>
+                        <h1 className={chordStyles.h1}>Augmented</h1>
                         <div className={chordStyles.innerChordRow}>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}aug`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={buttonStyles.chordButton} value={`${this.state.selectedNote}aug6`} onClick={this.handleChordButtonClick}/>

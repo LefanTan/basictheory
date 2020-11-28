@@ -6,8 +6,28 @@
     left: 0px;
 
     max-width: 30%;
-    height: auto;
     margin: 20px 0px 20px 0px;
+}
+
+.h3, .openString{
+    color: var(--main-color);
+}
+
+.openString:hover{
+    transform: scale(1.3);
+    color: var(--main-hover);
+}
+
+.openString:active{
+    color: var(--main-click);
+}
+
+.fretNumber{
+    color: var(--main-color);
+
+    position: absolute;
+    top: -15px;
+    left: -20px;
 }
 
 .mainImg{
@@ -89,6 +109,5 @@
     line-height: 50px;
     margin:0;
     padding:0;
-
     text-align: center;
 }

@@ -14,9 +14,10 @@ code {
 
 :root{
     --main-color: #df4d68;
-    --primary-background: #f5f5f5;
-    --main-hover: #c2455c;
+    --main-hover: #d14e66;
     --main-click: #bb374f;
+    
+    --primary-background: #f5f5f5;
     --overflow-x: auto;
     --overflow-y: visible;
     --device-width: 100%;

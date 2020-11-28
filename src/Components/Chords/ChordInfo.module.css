@@ -4,52 +4,59 @@
     align-items: center;
     flex-direction: column;
 
-    margin-bottom: 20px;
+    margin-top: 10px;
     margin-left: 10px;
- 
+    margin-bottom: 50px;
+
     max-width: max-content;
-    height: 100%;
+    height: fit-content;
 }
 
-.Container .h1 {
+.generalText{
     color: var(--main-color);
     background-color: inherit;
 
     margin: 0;
     padding: 0;
-    align-self: center;
-    padding-right: 5px;
-
     font-size: auto;
+    padding-right: 5px;
 }
 
-.Container .h2{
-    color: var(--main-color);
+.h1{
+    composes: generalText;
+    align-self: center;
+}
+
+.h2{
+    composes: generalText;
+    font-size: 150%;
+}
+
+.p{
+    composes: generalText;
+}
+
+.arrowDownButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 10%;
+    
+    outline: none;
+    border: none;
     background-color: inherit;
     
-    margin: 0;
-    padding: 0;
-    padding-right: 5px;
-    font-size: auto;
-}
-
-.Container .p{
     color: var(--main-color);
-    background-color: inherit;
-    font-size: auto;
-    margin: 0;
-    padding-right: 5px;
-
-    height: 100%; 
-    width: 100%;
 }
 
-.mainChordImg{
-    width: 50%;
-    min-width: 20vw;
+.arrowDownImg{
+    width:10%;
+    height: 10%;
 
-    margin: 0;
-    padding: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
 .rowChordImgContainer{
@@ -57,7 +64,7 @@
     align-items: center;
     justify-content: center;
 
-    width: max-content;
+    width: fit-content;
     margin: 0;
     padding: 0;
 }
@@ -94,3 +101,51 @@
     max-width: fit-content;
     height: auto;
 }
+
+.moreChordContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    position: relative;
+    top: -100px;
+    left: 0px;
+
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+
+    margin-top: 10px;
+    padding: 0px;
+
+    transition: 
+        top 0s,
+        visibility 100ms,
+        width 100ms,
+        height 100ms
+}
+
+.moreChordContainerActive {
+    composes: moreChordContainer;
+    
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+
+    transition: 
+        top 0s,
+        visibility 300ms,
+        width 300ms,
+        height 300ms
+}
+
+.moreChordRow{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+
+    max-width: fit-content;
+}
+

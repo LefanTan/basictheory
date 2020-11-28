@@ -1,12 +1,10 @@
+/* eslint-disable react/prop-types */
 import React, {useEffect, useState} from 'react'
-import ChordInfo from './ChordInfo'
 import * as Fi from 'react-icons/fi'
 import styles from './Sidebar.module.css'
-import useViewport from '../CustomHooks'
 import {Link} from 'react-router-dom';
 
-function Sidebar(){
-
+function Sidebar(props){
     const [sidebar, setSidebar] = useState(false)
     const useSidebar = () => setSidebar(!sidebar)
 
@@ -24,7 +22,7 @@ function Sidebar(){
                 <button className={styles.sidebarButton} onClick={useSidebar} ><Fi.FiMenu className={styles.sidebarIcon}/></button>
             </Link>
             <div className={sidebar ? styles.SidebarActive : styles.Sidebar}>
-                <ChordInfo />
+                {props.children}
             </div>
         </div>
     )
