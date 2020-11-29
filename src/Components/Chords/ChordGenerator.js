@@ -28,7 +28,7 @@ function ChordGenerator(props){
         }
 
         return(    
-            <div key={props.noteInfo.key} style={standardButtonContainer}>
+            <div style={standardButtonContainer}>
                 <button onClick={() => props.onNoteClick(props.noteInfo.note)} className={styles.noteButton}>
                     <img src={noteButton} className={styles.noteButtonImg}/>
                 </button>
@@ -43,7 +43,7 @@ function ChordGenerator(props){
 
         const openStringButtonContainer = {
             position: 'absolute',       
-            top: '-15%',
+            top: '-30px',
             left: `${leftPos}%`,
     
             display: 'flex',
@@ -55,7 +55,7 @@ function ChordGenerator(props){
         }
 
         return(    
-            <div key={props.noteInfo.key} style={openStringButtonContainer}>
+            <div style={openStringButtonContainer}>
                 <button onClick={() => props.noteInfo.noteNumber != 'X' && props.onNoteClick(props.noteInfo.note)} className={styles.noteButton}>
                     <h3 className={props.noteInfo.noteNumber == 'X' ? styles.h3 : styles.openString}>{props.noteInfo.noteNumber}</h3>
                 </button>
@@ -68,9 +68,9 @@ function ChordGenerator(props){
             <img src={chordFret} className={styles.mainImg} />
             {props.noteButtonPositions.map(noteInfo =>{
                 if(noteInfo.fret == 0){
-                    return(<OpenStringButton onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
+                    return(<OpenStringButton key={noteInfo.key} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
                 }else{
-                    return(<StandardNoteButton onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
+                    return(<StandardNoteButton key={noteInfo.key} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
                 }
             })}
     

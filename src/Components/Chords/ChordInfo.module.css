@@ -76,9 +76,16 @@
     align-items: center;
 
     max-width: fit-content;
+    white-space: nowrap;
     height: auto;
     margin: 0;
     padding: 0;
+}
+
+.noteDegreeRowIncrease{
+    composes: noteDegreeRow;
+    transform: scale(1.2);
+    transition: 200ms;
 }
 
 .columnContainer{
@@ -86,11 +93,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
     margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     margin-left: 15%;
 
     max-width: fit-content;
-    height: auto;
+    height: fit-content;
 }
 
 .textContainer{
@@ -108,7 +118,7 @@
     flex-direction: column;
     
     position: relative;
-    top: -100px;
+    top: -600px;
     left: 0px;
 
     width: 0px;
@@ -120,7 +130,7 @@
 
     transition: 
         top 0s,
-        visibility 100ms,
+        visibility 0ms,
         width 100ms,
         height 100ms
 }
@@ -129,7 +139,7 @@
     composes: moreChordContainer;
     
     top: 0px;
-    width: 100%;
+    width: 80%;
     height: 100%;
     visibility: visible;
 

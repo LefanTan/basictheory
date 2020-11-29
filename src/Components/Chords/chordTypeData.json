@@ -1,0 +1,94 @@
+[
+    {
+        "ChordType": "maj",
+        "FullName": "Major",
+        "Notes":[
+            {
+                "num": "1",
+                "name": "Root"
+            },
+            {
+                "num": "3",
+                "name": "Major 3rd"
+            },
+            {
+                "num": "5",
+                "name": "Perfect 5th"
+            }
+        ],
+        "Description":  "Along with the minor chord, it isone of the basic building blocks of tonal music in Western music. In it's most basic form, it is also known as a Major Triad.",
+        "Sound": "Happy, Consonant, stable, not requiring resolution"
+    },
+    {
+        "ChordType": "maj7",
+        "FullName": "Major 7th",
+        "Notes":[
+            {
+                "num": "1",
+                "name": "Root"
+            },
+            {
+                "num": "3",
+                "name": "Major 3rd"
+            },
+            {
+                "num": "5",
+                "name": "Perfect 5th"
+            },
+            {
+                "num": "7",
+                "name": "Major 7th" 
+            }
+        ],
+        "Description":  "The Major 7th is a half step below the root note. A common use case for this chord is to give the tonic chord in a major scale a slight dissonant edge.  It is often used in traditional pop, jazz, bossa nova, indie etc",
+        "Sound": "Slightly dissonant, jazzy, soft, chill"
+    },
+    {
+        "ChordType": "maj9",
+        "FullName": "Major 9th",
+        "Notes":[
+            {
+                "num": "1",
+                "name": "Root"
+            },
+            {
+                "num": "3",
+                "name": "Major 3rd"
+            },
+            {
+                "num": "5",
+                "name": "Perfect 5th"
+            },
+            {
+                "num": "7",
+                "name": "Major 7th" 
+            },
+            {
+                "num": "9",
+                "name": "Major 9th" 
+            }
+        ],
+        "Description": "The Major 9th is also the 2nd of the root note, it is written as 9 because it is a chord extension. The Major 9th chord is often used to provide more texture and variety to your playing. In a thick chord like this, the 5th can also be left out and it will still sound great. Used in blues, jazz etc",
+        "Sound": "More dissonant than 7th chords, jazzy, soft, chill"
+    },
+    {
+        "ChordType": "min",
+        "FullName": "Minor",
+        "Notes":[
+            {
+                "num": "1",
+                "name": "Root"
+            },
+            {
+                "num": "b3",
+                "name": "Minor 3rd"
+            },
+            {
+                "num": "5",
+                "name": "Perfect 5th"
+            }
+        ],
+        "Description":  "Along with the major chord, it is one of the basic building blocks of tonal music in Western music. In it's most basic form, it is also known as a Minor Triad",
+        "Sound": "Sad/Dark, Consonant, stable, not requiring resolution"
+    }
+]

@@ -49,8 +49,12 @@
     background-color: inherit;
 }
 .noteButton:hover, .chordButton:hover{background-color: #f5f5f5;}
-.noteButton:active, .chordButton:active{background-color: #e8e8e8;}
+.noteButton:active, .chordButton:active, .noteButtonSelected:hover, .chordButtonSelected:hover{background-color: #d3d3d3;}
 
+.noteButtonSelected{
+    composes: noteButton;
+    background-color: #d3d3d3;
+}
 
 .noteButtonSharp{
     composes: genericButton;
@@ -64,7 +68,12 @@
     background-color: var(--main-color);
 }
 .noteButtonSharp:hover{background-color: var(--main-hover);}
-.noteButtonSharp:active{background-color: var(--main-click);}
+.noteButtonSharp:active, .noteButtonSharpSelected:hover{background-color: var(--main-click);}
+
+.noteButtonSharpSelected{
+    composes: noteButtonSharp;
+    background-color: var(--main-click);
+}
 
 .chordButton{
     composes: genericButton;
@@ -78,4 +87,9 @@
 
     color: var(--main-color);
     background-color: inherit;
+}
+
+.chordButtonSelected{
+    composes: chordButton;
+    background-color: #d3d3d3;
 }
