@@ -69,7 +69,7 @@ class ChordInfo extends Component{
                 fret: 0
             }
         ]
-
+        
         return (
             this.props.info ?
             <div className={styles.Container}>

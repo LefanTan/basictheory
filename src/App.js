@@ -4,6 +4,7 @@ import Header from './Components/Header'
 import Home from './Components/Home'
 import ChordsPage from './Components/Chords/ChordsPage'
 import {BrowserRouter as Router, Switch, Route,} from 'react-router-dom'
+import {db} from './Services/Firebase'
 import styles from './App.module.css'
 import NotFoundPage from "./Components/NotFoundPage"
 
