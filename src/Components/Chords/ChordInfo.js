@@ -2,9 +2,11 @@
 import React, {Component} from 'react'
 import styles from './ChordInfo.module.css'
 import ChordGenerator from './ChordGenerator'
+import GetNoteBasedOnInterval from '../Helpers/HelperFunction'
 import {HiArrowDown} from 'react-icons/hi'
 
 class ChordInfo extends Component{
+
     constructor(props){
         super(props)
         this.state = {
@@ -19,89 +21,32 @@ class ChordInfo extends Component{
     handleClick(buttonClassName){
         this.setState(prevState => {
             return{
-                moreShape: (buttonClassName == styles.arrowDownButton) ? !prevState.moreShape : prevState.moreShape,
-                selectedNote: prevState.selectedNote
+                moreShape: (buttonClassName == styles.arrowDownButton) ? !prevState.moreShape : prevState.moreShape
             }
         })
     }
 
     chordGeneratorNoteClick(note){
         this.setState({
-            selectedNote: note
+            selectedNote: GetNoteBasedOnInterval(this.props.note, note)
         })
     }
 
     render(){
-        const notePositions = [ 
-            {
-                key: '1',
-                note: 'C',
-                noteNumber: 'b3',
-                string: 1,
-                fret: 2
-            },
-            {
-                key: '2',
-                note: 'E',
-                noteNumber: '1',
-                string: 2,
-                fret: 3
-            },
-            {
-                key: '3',
-                note: 'G',
-                noteNumber: '5',
-                string: 3,
-                fret: 2
-            },
-            {
-                key: '4',
-                note: '',
-                noteNumber: 'X',
-                string: 5,
-                fret: 0
-            },
-            {
-                key: '5',
-                note: 'D',
-                noteNumber: 'O',
-                string: 3,
-                fret: 0
-            }
-        ]
-        
         return (
             this.props.info ?
+        
             <div className={styles.Container}>
                 <h1 className={styles.h1}>{this.props.info.FullName} Chord</h1>    
                 <div className={styles.rowChordImgContainer}>
-                    {/* <img className={styles.mainChordImg} src={imageDictionary("./dmajor-type1.png").default}/> */}
-                    <ChordGenerator onNoteClick={this.chordGeneratorNoteClick} noteButtonPositions={notePositions}/>
+                    {/* <ChordGenerator onNoteClick={this.chordGeneratorNoteClick}/> */}
                     <div className={styles.columnContainer}>
-                        <div className={styles.noteDegreeRow}>
-                            <h1 className={styles.h1}>C</h1> 
-                            <p className={styles.p}>Root</p>
-                        </div>
-                        <div className={styles.noteDegreeRow}>
-                            <h1 className={styles.h1}>E</h1> 
-                            <p className={styles.p}>Major Third</p>
-                        </div>
-                        <div className={styles.noteDegreeRow}>
-                            <h1 className={styles.h1}>G</h1> 
-                            <p className={styles.p}>Perfect Fifth</p>
-                        </div>
-                        <div className={styles.noteDegreeRow}>
-                            <h1 className={styles.h1}>G</h1> 
-                            <p className={styles.p}>Dominant 7th</p>
-                        </div>
-                        <div className={styles.noteDegreeRow}>
-                            <h1 className={styles.h1}>Bb</h1> 
-                            <p className={styles.p}>Dominant 9th</p>
-                        </div>
-                        <div className={styles.noteDegreeRow}>
-                            <h1 className={styles.h1}>Ab</h1> 
-                            <p className={styles.p}>Perfect Fifth</p>
-                        </div>
+                        {this.props.info.Notes.map(note => 
+                            <div key={note.name} className={styles.noteDegreeRow}>
+                                <h1 className={styles.noteText}>{GetNoteBasedOnInterval(this.props.note, note.num)}</h1> 
+                                <p className={styles.p}>{note.name}</p>
+                            </div>
+                        )}
                     </div>
                 </div>
                 <div className={styles.textContainer}>
@@ -127,17 +72,17 @@ class ChordInfo extends Component{
                         <h2 className={styles.h2}>Selected Note:</h2>
                         <h2>{this.state.selectedNote}</h2>
                     </div>
+
                     <div className={styles.moreChordRow}>
-                        <ChordGenerator onNoteClick={this.chordGeneratorNoteClick} noteButtonPositions={notePositions}/>
-                        <ChordGenerator onNoteClick={this.chordGeneratorNoteClick} noteButtonPositions={notePositions}/>
-                    </div>
-                    <div className={styles.moreChordRow}>
-                        <ChordGenerator onNoteClick={this.chordGeneratorNoteClick} noteButtonPositions={notePositions}/>
-                        <ChordGenerator onNoteClick={this.chordGeneratorNoteClick} noteButtonPositions={notePositions}/>
+                        {this.props.info.Shapes && this.props.info.Shapes.map(shape => 
+                              <ChordGenerator key={this.props.info.Shapes.findIndex(x => x == shape)} onNoteClick={this.chordGeneratorNoteClick} noteButtonPositions={shape['Notes']}/>
+                        )}
                     </div>
                 </div>
             </div>
             :
+
+            // If the info doesn't exist, print N/A
             <div>
                 <h1 className={styles.h1}>N/A</h1>    
             </div>

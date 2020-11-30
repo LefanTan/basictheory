@@ -27,6 +27,11 @@
     align-self: center;
 }
 
+.noteText{
+    composes: generalText;
+    font-size: xx-large;
+}
+
 .h2{
     composes: generalText;
     font-size: 150%;
@@ -157,5 +162,6 @@
     flex-direction: row;
 
     max-width: fit-content;
+    flex-wrap: wrap;
 }
 

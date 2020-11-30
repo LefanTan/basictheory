@@ -4,7 +4,6 @@ import React from 'react'
 import styles from './ChordGenerator.module.css'
 import chordFret from './imgs/chordFret.png'
 import noteButton from './imgs/noteButton.png'
-import useViewport from '../CustomHooks'
 import { render } from 'react-dom'
 
 function ChordGenerator(props){
@@ -29,7 +28,7 @@ function ChordGenerator(props){
 
         return(    
             <div style={standardButtonContainer}>
-                <button onClick={() => props.onNoteClick(props.noteInfo.note)} className={styles.noteButton}>
+                <button onClick={() => props.onNoteClick(props.noteInfo.noteNumber)} className={styles.noteButton}>
                     <img src={noteButton} className={styles.noteButtonImg}/>
                 </button>
                 <p className={styles.noteText}>{props.noteInfo.noteNumber}</p>
@@ -56,7 +55,7 @@ function ChordGenerator(props){
 
         return(    
             <div style={openStringButtonContainer}>
-                <button onClick={() => props.noteInfo.noteNumber != 'X' && props.onNoteClick(props.noteInfo.note)} className={styles.noteButton}>
+                <button onClick={() => props.noteInfo.noteNumber != 'X' && props.onNoteClick(props.noteInfo.noteNumber)} className={styles.noteButton}>
                     <h3 className={props.noteInfo.noteNumber == 'X' ? styles.h3 : styles.openString}>{props.noteInfo.noteNumber}</h3>
                 </button>
             </div>
@@ -66,11 +65,11 @@ function ChordGenerator(props){
     return(
         <div className={styles.mainContainer}>
             <img src={chordFret} className={styles.mainImg} />
-            {props.noteButtonPositions.map(noteInfo =>{
+            {props.noteButtonPositions && props.noteButtonPositions.map(noteInfo =>{
                 if(noteInfo.fret == 0){
-                    return(<OpenStringButton key={noteInfo.key} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
+                    return(<OpenStringButton key={props.noteButtonPositions.findIndex(x => x == noteInfo)} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
                 }else{
-                    return(<StandardNoteButton key={noteInfo.key} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
+                    return(<StandardNoteButton key={props.noteButtonPositions.findIndex(x => x == noteInfo)} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
                 }
             })}
     

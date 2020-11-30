@@ -41,7 +41,7 @@ class ChordsPage extends Component{
     handleNoteButtonClick(value){
         this.setState({
             selectedNote: value
-        }) 
+        }, console.log(this.state.selectedNote)) 
     }
 
     // Invoked when a chord button is clicked
@@ -59,7 +59,7 @@ class ChordsPage extends Component{
                 </div>
 
                 <div className={chordStyles.rowContainer}>
-                    <Sidebar><ChordInfo info={this.state.selectedChordInfo} /></Sidebar>
+                    <Sidebar><ChordInfo key={`${this.state.selectedNote}${this.state.selectedChord}`} note={this.state.selectedNote} info={this.state.selectedChordInfo} /></Sidebar>
                     <div className={chordStyles.columnContainer}>
                         <h1 className={chordStyles.h1}>Major</h1>
                         <div className={chordStyles.innerChordRow}>
