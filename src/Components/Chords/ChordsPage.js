@@ -27,21 +27,23 @@ class ChordsPage extends Component{
 
     // Query chord info with the selected chord type and update the state
     updateChordInfo(){
+        var checkForMajorSharp = (this.state.selectedChord == "maj7(#11)") ? "maj7sharp11" : this.state.selectedChord
+
         const chordTypesRef = db.ref().child('ChordTypes')
         const query = chordTypesRef.
                         orderByKey().
-                        equalTo(this.state.selectedChord)
+                        equalTo(checkForMajorSharp)
 
         query.on('value', snap =>
-            this.setState({selectedChordInfo: snap.val() && snap.val()[`${this.state.selectedChord}`]})
-            )
+            this.setState({selectedChordInfo: snap.val() && snap.val()[`${checkForMajorSharp}`]})
+        )
     }
 
     // invoked when note selector button is clicked
     handleNoteButtonClick(value){
         this.setState({
             selectedNote: value
-        }, console.log(this.state.selectedNote)) 
+        }) 
     }
 
     // Invoked when a chord button is clicked
@@ -59,7 +61,7 @@ class ChordsPage extends Component{
                 </div>
 
                 <div className={chordStyles.rowContainer}>
-                    <Sidebar><ChordInfo key={`${this.state.selectedNote}${this.state.selectedChord}`} note={this.state.selectedNote} info={this.state.selectedChordInfo} /></Sidebar>
+                    <Sidebar><ChordInfo note={this.state.selectedNote} info={this.state.selectedChordInfo} /></Sidebar>
                     <div className={chordStyles.columnContainer}>
                         <h1 className={chordStyles.h1}>Major</h1>
                         <div className={chordStyles.innerChordRow}>

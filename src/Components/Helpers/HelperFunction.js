@@ -19,13 +19,14 @@ function GetNoteBasedOnInterval(rootNote, interval){
         case '11':
             return notes[(rootIndex + 5) % 12]
         case 'b5': // diminished fifth or augmented forth
+        case '#11':
             return notes[(rootIndex + 6) % 12]
         case '5': // perfect fifth
             return notes[(rootIndex + 7) % 12]
         case 'b6': // minor sixth
-            return notes[(rootIndex + 7) % 12]
+            return notes[(rootIndex + 8) % 12]
         case '6': // major sixth
-        case '14': 
+        case '13': 
             return notes[(rootIndex + 9) % 12]
         case 'b7': // minor seventh
             return notes[(rootIndex + 10) % 12]

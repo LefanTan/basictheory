@@ -22,7 +22,6 @@
     
     width: 100%;
     max-height: fit-content;
-
     padding: 10px;
 
     transition: 300ms;
@@ -31,6 +30,7 @@
     background-color: var(--primary-background);
     border-radius: 35px;
     overflow: auto;
+    scroll-padding-right: 2em;
 }
 
 .SidebarActive{

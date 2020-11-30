@@ -32,6 +32,13 @@ class ChordInfo extends Component{
         })
     }
 
+    componentDidUpdate(prevProps){
+        // Reset if selectedNote or selectedChord changed
+        if(prevProps != this.props){
+            this.setState({selectedNote : "None"})
+        }
+    }
+
     render(){
         return (
             this.props.info ?
@@ -39,7 +46,7 @@ class ChordInfo extends Component{
             <div className={styles.Container}>
                 <h1 className={styles.h1}>{this.props.info.FullName} Chord</h1>    
                 <div className={styles.rowChordImgContainer}>
-                    {/* <ChordGenerator onNoteClick={this.chordGeneratorNoteClick}/> */}
+                    <ChordGenerator onNoteClick={this.chordGeneratorNoteClick}/>
                     <div className={styles.columnContainer}>
                         {this.props.info.Notes.map(note => 
                             <div key={note.name} className={styles.noteDegreeRow}>

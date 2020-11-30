@@ -5,9 +5,8 @@
     top: 0px;
     left: 0px;
 
-    min-width: 20%;
     max-width: 35%;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 5px 20px 5px;
 }
 
 .h3, .openString{
@@ -102,7 +101,7 @@
     color: var(--main-color);       
 
     z-index: 1;
-    font-size: medium;
+    font-size: small;
     pointer-events: none;
 
     width: 100%;
