@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/basictheory/static/css/main.9c503855.chunk.css",
-    "main.js": "/basictheory/static/js/main.27a45963.chunk.js",
-    "main.js.map": "/basictheory/static/js/main.27a45963.chunk.js.map",
+    "main.css": "/basictheory/static/css/main.007a3872.chunk.css",
+    "main.js": "/basictheory/static/js/main.d41fea9f.chunk.js",
+    "main.js.map": "/basictheory/static/js/main.d41fea9f.chunk.js.map",
     "runtime-main.js": "/basictheory/static/js/runtime-main.60d87bb4.js",
     "runtime-main.js.map": "/basictheory/static/js/runtime-main.60d87bb4.js.map",
-    "static/js/2.45cf183f.chunk.js": "/basictheory/static/js/2.45cf183f.chunk.js",
-    "static/js/2.45cf183f.chunk.js.map": "/basictheory/static/js/2.45cf183f.chunk.js.map",
+    "static/js/2.2675645f.chunk.js": "/basictheory/static/js/2.2675645f.chunk.js",
+    "static/js/2.2675645f.chunk.js.map": "/basictheory/static/js/2.2675645f.chunk.js.map",
     "index.html": "/basictheory/index.html",
-    "static/css/main.9c503855.chunk.css.map": "/basictheory/static/css/main.9c503855.chunk.css.map",
-    "static/js/2.45cf183f.chunk.js.LICENSE.txt": "/basictheory/static/js/2.45cf183f.chunk.js.LICENSE.txt",
+    "static/css/main.007a3872.chunk.css.map": "/basictheory/static/css/main.007a3872.chunk.css.map",
+    "static/js/2.2675645f.chunk.js.LICENSE.txt": "/basictheory/static/js/2.2675645f.chunk.js.LICENSE.txt",
     "static/media/chordFret.0ce51486.png": "/basictheory/static/media/chordFret.0ce51486.png",
     "static/media/noteButton.82f32475.png": "/basictheory/static/media/noteButton.82f32475.png"
   },
   "entrypoints": [
     "static/js/runtime-main.60d87bb4.js",
-    "static/js/2.45cf183f.chunk.js",
-    "static/css/main.9c503855.chunk.css",
-    "static/js/main.27a45963.chunk.js"
+    "static/js/2.2675645f.chunk.js",
+    "static/css/main.007a3872.chunk.css",
+    "static/js/main.d41fea9f.chunk.js"
   ]
 }
