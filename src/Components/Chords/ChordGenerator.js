@@ -64,9 +64,9 @@ function ChordGenerator(props){
         )
     }
 
-    var fretNote = props.noteButtonPositions && props.noteButtonPositions.find(x => x.noteNumber == '1');
+    var fretNote = props.noteButtonPositions && props.noteButtonPositions.find(x => x.fret != 0 && x.noteNumber == '1');
     if(fretNote == undefined && props.noteButtonPositions)
-        fretNote = props.noteButtonPositions.find(x => x.noteNumber != 'O' && x.noteNumber != 'X')
+        fretNote = props.noteButtonPositions.find(x => x.noteNumber != 0 && x.noteNumber != 'X')
 
     var topPos = -0.75 * Math.pow(fretNote.fret, 2) + 22.5 * fretNote.fret - 12.5; 
     var fretNumContainer = {

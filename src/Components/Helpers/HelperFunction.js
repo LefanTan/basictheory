@@ -54,6 +54,12 @@ export function getFretNumber(string, targetNote){
         case 3:
             startIndex = notes.findIndex(x => x == 'G')
             break;
+        case 2:
+            startIndex = notes.findIndex(x => x == 'B')
+            break;
+        case 1:
+            startIndex = notes.findIndex(x => x == 'E')
+            break;
     }
     var targetIndex = notes.findIndex(x => x == targetNote)
 

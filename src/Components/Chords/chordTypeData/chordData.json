@@ -1341,7 +1341,8 @@
 			"Description": "Most commonly used on the II in the major scale or the IV in the minor scale. The Minor 7 adds an impressive amount of depth to the minor triads and can be used to both darken and brighten chord progressions.",
 			"Sound": "Slightly dissonant, jazzy, soft, chill, happier/darker than minor triads",
 			"Shapes": [{
-					"Notes": [{
+					"Notes": [
+						{
 							"noteNumber": "1",
 							"string": 6,
 							"fret": 2
@@ -1530,6 +1531,39 @@
 							"noteNumber": "b7",
 							"string": 2,
 							"fret": 4
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "b3",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "b7",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "1",
+							"string": 2,
+							"fret": 1
 						},
 						{
 							"noteNumber": "X",
@@ -3760,7 +3794,245 @@
 		}
 	},
 	"OpenChords":{
-        "Cmaj":{
+		"Amaj":{
+            "Notes":[
+				{
+					"noteNumber": "X",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 5,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 4,
+					"fret": 2
+				},
+				{
+					"noteNumber": "1",
+					"string": 3,
+					"fret": 2
+				},
+				{
+					"noteNumber": "3",
+					"string": 2,
+					"fret": 2
+				},
+				{
+					"noteNumber": "5",
+					"string": 1,
+					"fret": 0
+				}
+			]
+		},
+		"Amaj7":{
+            "Notes":[
+				{
+					"noteNumber": "X",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 5,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 4,
+					"fret": 2
+				},
+				{
+					"noteNumber": "7",
+					"string": 3,
+					"fret": 1
+				},
+				{
+					"noteNumber": "3",
+					"string": 2,
+					"fret": 2
+				},
+				{
+					"noteNumber": "5",
+					"string": 1,
+					"fret": 0
+				}
+			]
+		},
+		"A7":{
+            "Notes":[
+				{
+					"noteNumber": "X",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 5,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 4,
+					"fret": 2
+				},
+				{
+					"noteNumber": "b7",
+					"string": 3,
+					"fret": 0
+				},
+				{
+					"noteNumber": "3",
+					"string": 2,
+					"fret": 2
+				},
+				{
+					"noteNumber": "5",
+					"string": 1,
+					"fret": 0
+				}
+			]
+		},
+		"Amin":{
+            "Notes":[
+				{
+					"noteNumber": "X",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 5,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 4,
+					"fret": 2
+				},
+				{
+					"noteNumber": "1",
+					"string": 3,
+					"fret": 2
+				},
+				{
+					"noteNumber": "b3",
+					"string": 2,
+					"fret": 1
+				},
+				{
+					"noteNumber": "5",
+					"string": 1,
+					"fret": 0
+				}
+			]
+		},
+		"B7":{
+            "Notes":[
+				{
+					"noteNumber": "X",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 5,
+					"fret": 2
+				},
+				{
+					"noteNumber": "3",
+					"string": 4,
+					"fret": 1
+				},
+				{
+					"noteNumber": "b7",
+					"string": 3,
+					"fret": 2
+				},
+				{
+					"noteNumber": "1",
+					"string": 2,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 1,
+					"fret": 2
+				}
+			]
+		},
+		"Bmin7":{
+            "Notes":[
+				{
+					"noteNumber": "X",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 5,
+					"fret": 2
+				},
+				{
+					"noteNumber": "b3",
+					"string": 4,
+					"fret": 0
+				},
+				{
+					"noteNumber": "b7",
+					"string": 3,
+					"fret": 2
+				},
+				{
+					"noteNumber": "1",
+					"string": 2,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 1,
+					"fret": 2
+				}
+			]
+		},
+		"Amin7":{
+            "Notes":[
+				{
+					"noteNumber": "X",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 5,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 4,
+					"fret": 2
+				},
+				{
+					"noteNumber": "b7",
+					"string": 3,
+					"fret": 0
+				},
+				{
+					"noteNumber": "b3",
+					"string": 2,
+					"fret": 1
+				},
+				{
+					"noteNumber": "5",
+					"string": 1,
+					"fret": 0
+				}
+			]
+		},
+		"Cmaj":{
             "Notes":[
 				{
 					"noteNumber": "X",
@@ -3793,6 +4065,584 @@
 					"fret": 0
 				}
 			]
-        }
+		},
+		"Cmaj7":{
+            "Notes":[
+				{
+					"noteNumber": "X",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 5,
+					"fret": 3
+				},
+				{
+					"noteNumber": "3",
+					"string": 4,
+					"fret": 2
+				},
+				{
+					"noteNumber": "5",
+					"string": 3,
+					"fret": 0
+				},
+				{
+					"noteNumber": "7",
+					"string": 2,
+					"fret": 0
+				},
+				{
+					"noteNumber": "3",
+					"string": 1,
+					"fret": 0
+				}
+			]
+		},
+		"Cmin":{
+            "Notes":[
+				{
+					"noteNumber": "X",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "X",
+					"string": 5,
+					"fret": 0
+				},
+				{
+					"noteNumber": "b3",
+					"string": 4,
+					"fret": 1
+				},
+				{
+					"noteNumber": "5",
+					"string": 3,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 2,
+					"fret": 1
+				},
+				{
+					"noteNumber": "X",
+					"string": 1,
+					"fret": 0
+				}
+			]
+		},
+		"Dmaj":{
+            "Notes":[
+				{
+					"noteNumber": "X",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "X",
+					"string": 5,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 4,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 3,
+					"fret": 2
+				},
+				{
+					"noteNumber": "1",
+					"string": 2,
+					"fret": 3
+				},
+				{
+					"noteNumber": "3",
+					"string": 1,
+					"fret": 2
+				}
+			]
+		},
+		"Dmin":{
+            "Notes":[
+				{
+					"noteNumber": "X",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "X",
+					"string": 5,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 4,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 3,
+					"fret": 2
+				},
+				{
+					"noteNumber": "1",
+					"string": 2,
+					"fret": 3
+				},
+				{
+					"noteNumber": "b3",
+					"string": 1,
+					"fret": 1
+				}
+			]
+		},
+		"Dmin7":{
+            "Notes":[
+				{
+					"noteNumber": "X",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "X",
+					"string": 5,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 4,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 3,
+					"fret": 2
+				},
+				{
+					"noteNumber": "b7",
+					"string": 2,
+					"fret": 1
+				},
+				{
+					"noteNumber": "b3",
+					"string": 1,
+					"fret": 1
+				}
+			]
+		},
+		"Dmaj7":{
+            "Notes":[
+				{
+					"noteNumber": "X",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "X",
+					"string": 5,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 4,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 3,
+					"fret": 2
+				},
+				{
+					"noteNumber": "7",
+					"string": 2,
+					"fret": 2
+				},
+				{
+					"noteNumber": "3",
+					"string": 1,
+					"fret": 2
+				}
+			]
+		},
+		"D7":{
+            "Notes":[
+				{
+					"noteNumber": "X",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "X",
+					"string": 5,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 4,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 3,
+					"fret": 2
+				},
+				{
+					"noteNumber": "b7",
+					"string": 2,
+					"fret": 1
+				},
+				{
+					"noteNumber": "3",
+					"string": 1,
+					"fret": 2
+				}
+			]
+		},
+		"Emaj":{
+            "Notes":[
+				{
+					"noteNumber": "1",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 5,
+					"fret": 2
+				},
+				{
+					"noteNumber": "1",
+					"string": 4,
+					"fret": 2
+				},
+				{
+					"noteNumber": "3",
+					"string": 3,
+					"fret": 1
+				},
+				{
+					"noteNumber": "5",
+					"string": 2,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 1,
+					"fret": 0
+				}
+			]
+		},
+		"Emaj7":{
+            "Notes":[
+				{
+					"noteNumber": "1",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 5,
+					"fret": 2
+				},
+				{
+					"noteNumber": "7",
+					"string": 4,
+					"fret": 1
+				},
+				{
+					"noteNumber": "3",
+					"string": 3,
+					"fret": 1
+				},
+				{
+					"noteNumber": "5",
+					"string": 2,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 1,
+					"fret": 0
+				}
+			]
+		},
+		"E7":{
+            "Notes":[
+				{
+					"noteNumber": "1",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 5,
+					"fret": 2
+				},
+				{
+					"noteNumber": "b7",
+					"string": 4,
+					"fret": 0
+				},
+				{
+					"noteNumber": "3",
+					"string": 3,
+					"fret": 1
+				},
+				{
+					"noteNumber": "5",
+					"string": 2,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 1,
+					"fret": 0
+				}
+			]
+		},
+		"Emin7":{
+            "Notes":[
+				{
+					"noteNumber": "1",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 5,
+					"fret": 2
+				},
+				{
+					"noteNumber": "b7",
+					"string": 4,
+					"fret": 0
+				},
+				{
+					"noteNumber": "b3",
+					"string": 3,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 2,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 1,
+					"fret": 0
+				}
+			]
+		},
+		"Emin":{
+            "Notes":[
+				{
+					"noteNumber": "1",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 5,
+					"fret": 2
+				},
+				{
+					"noteNumber": "1",
+					"string": 4,
+					"fret": 2
+				},
+				{
+					"noteNumber": "b3",
+					"string": 3,
+					"fret": 0
+				},
+				{
+					"noteNumber": "5",
+					"string": 2,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 1,
+					"fret": 0
+				}
+			]
+		},
+		"Fmaj":{
+            "Notes":[
+				{
+					"noteNumber": "X",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "X",
+					"string": 5,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 4,
+					"fret": 3
+				},
+				{
+					"noteNumber": "3",
+					"string": 3,
+					"fret": 2
+				},
+				{
+					"noteNumber": "5",
+					"string": 2,
+					"fret": 1
+				},
+				{
+					"noteNumber": "1",
+					"string": 1,
+					"fret": 1
+				}
+			]
+		},
+		"Fmaj7":{
+            "Notes":[
+				{
+					"noteNumber": "X",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "X",
+					"string": 5,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 4,
+					"fret": 3
+				},
+				{
+					"noteNumber": "3",
+					"string": 3,
+					"fret": 2
+				},
+				{
+					"noteNumber": "5",
+					"string": 2,
+					"fret": 1
+				},
+				{
+					"noteNumber": "7",
+					"string": 1,
+					"fret": 0
+				}
+			]
+		},
+		"Fmin":{
+            "Notes":[
+				{
+					"noteNumber": "X",
+					"string": 6,
+					"fret": 0
+				},
+				{
+					"noteNumber": "X",
+					"string": 5,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 4,
+					"fret": 3
+				},
+				{
+					"noteNumber": "b3",
+					"string": 3,
+					"fret": 1
+				},
+				{
+					"noteNumber": "5",
+					"string": 2,
+					"fret": 1
+				},
+				{
+					"noteNumber": "1",
+					"string": 1,
+					"fret": 1
+				}
+			]
+		},
+		"Gmaj":{
+            "Notes":[
+				{
+					"noteNumber": "1",
+					"string": 6,
+					"fret": 3
+				},
+				{
+					"noteNumber": "3",
+					"string": 5,
+					"fret": 2
+				},
+				{
+					"noteNumber": "5",
+					"string": 4,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 3,
+					"fret": 0
+				},
+				{
+					"noteNumber": "3",
+					"string": 2,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 1,
+					"fret": 3
+				}
+			]
+		},
+		"G7":{
+            "Notes":[
+				{
+					"noteNumber": "1",
+					"string": 6,
+					"fret": 3
+				},
+				{
+					"noteNumber": "3",
+					"string": 5,
+					"fret": 2
+				},
+				{
+					"noteNumber": "5",
+					"string": 4,
+					"fret": 0
+				},
+				{
+					"noteNumber": "1",
+					"string": 3,
+					"fret": 0
+				},
+				{
+					"noteNumber": "3",
+					"string": 2,
+					"fret": 0
+				},
+				{
+					"noteNumber": "b7",
+					"string": 1,
+					"fret": 1
+				}
+			]
+		}
     }
 }
