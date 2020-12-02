@@ -18,7 +18,7 @@ function Sidebar(props){
     }, [sidebar])
 
     useEffect(() => {
-        useSidebar(true)
+        useSidebar(props.toggle)
     },[props.toggle])
 
     return(

@@ -4,7 +4,7 @@ import React from 'react'
 import styles from './ChordGenerator.module.css'
 import chordFret from './imgs/chordFret.png'
 import noteButton from './imgs/noteButton.png'
-import {getFretNumber} from '../Helpers/HelperFunction'
+import {getFretNumber, getNoteBasedOnInterval} from '../Helpers/HelperFunction'
 
 function ChordGenerator(props){
 
@@ -56,7 +56,9 @@ function ChordGenerator(props){
         return(    
             <div style={openStringButtonContainer}>
                 <button onClick={() => props.noteInfo.noteNumber != 'X' && props.onNoteClick(props.noteInfo.noteNumber)} className={styles.noteButton}>
-                    <h3 className={props.noteInfo.noteNumber == 'X' ? styles.h3 : styles.openString}>{props.noteInfo.noteNumber}</h3>
+                    <h3 className={props.noteInfo.noteNumber == 'X' ? styles.h3 : styles.stringNote}>
+                        {props.noteInfo.fret == 0 && props.noteInfo.noteNumber != 'X' ? 'O' : props.noteInfo.noteNumber}
+                    </h3>
                 </button>
             </div>
         )
@@ -91,7 +93,7 @@ function ChordGenerator(props){
                 }
             })}
             <div style={fretNumContainer}>
-                <h3 className={styles.fretNumber}>{getFretNumber(fretNote.string, props.note)}</h3>
+                <h3 className={styles.fretNumber}>{getFretNumber(fretNote.string, getNoteBasedOnInterval(props.note, fretNote.noteNumber))}</h3>
             </div>
         </div>
     )

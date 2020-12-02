@@ -1,0 +1,40 @@
+{
+    "OpenChords":{
+        "Cmaj":{
+            "Shape":{
+                "Notes":[
+                    {
+                        "noteNumber": "X",
+                        "string": 6,
+                        "fret": 0
+                    },
+                    {
+                        "noteNumber": "1",
+                        "string": 5,
+                        "fret": 3
+                    },
+                    {
+                        "noteNumber": "3",
+                        "string": 4,
+                        "fret": 2
+                    },
+                    {
+                        "noteNumber": "O",
+                        "string": 3,
+                        "fret": 0
+                    },
+                    {
+                        "noteNumber": "3",
+                        "string": 2,
+                        "fret": 3
+                    },
+                    {
+                        "noteNumber": "O",
+                        "string": 1,
+                        "fret": 0
+                    }
+                ]
+            }
+        }
+    }
+}

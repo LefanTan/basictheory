@@ -13,9 +13,9 @@ class ChordsPage extends Component{
         super(props)
         this.state ={
             selectedNote: 'C',
-            selectedChord: `maj`,
-            selectedChordInfo: '',
-            chordButtonClicked: false
+            selectedChord: undefined,
+            selectedChordInfo: undefined,
+            sidebarToggle: false
         }
 
         this.handleNoteButtonClick = this.handleNoteButtonClick.bind(this)
@@ -28,6 +28,11 @@ class ChordsPage extends Component{
 
     // Query chord info with the selected chord type and update the state
     updateChordInfo(){
+        if(!this.state.selectedChord){
+            this.setState({selectedChordInfo: undefined})
+            return
+        }
+
         var checkForMajorSharp = (this.state.selectedChord == "maj7(#11)") ? "maj7sharp11" : this.state.selectedChord
 
         const chordTypesRef = db.ref().child('ChordTypes')
@@ -51,8 +56,8 @@ class ChordsPage extends Component{
     handleChordButtonClick(value){
         this.setState(prevState => {
             return{
-                selectedChord: `${value.substring(this.state.selectedNote.length)}`,
-                chordButtonClicked: !prevState.chordButtonClicked
+                selectedChord: `${value.substring(this.state.selectedNote.length)}` == prevState.selectedChord ? undefined : `${value.substring(this.state.selectedNote.length)}`,
+                sidebarToggle: `${value.substring(this.state.selectedNote.length)}` == this.state.selectedChord ? false : true
             }
         },() => this.updateChordInfo())
     }
@@ -65,7 +70,7 @@ class ChordsPage extends Component{
                 </div>
 
                 <div className={chordStyles.rowContainer}>
-                    <Sidebar toggle={this.state.chordButtonClicked}><ChordInfo note={this.state.selectedNote} info={this.state.selectedChordInfo} /></Sidebar>
+                    <Sidebar toggle={this.state.sidebarToggle}><ChordInfo chord={this.state.selectedChord} note={this.state.selectedNote} info={this.state.selectedChordInfo} /></Sidebar>
                     <div className={chordStyles.columnContainer}>
                         <h1 className={chordStyles.h1}>Major</h1>
                         <div className={chordStyles.innerChordRow}>
