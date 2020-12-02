@@ -2,7 +2,7 @@
 import React, {Component} from 'react'
 import styles from './ChordInfo.module.css'
 import ChordGenerator from './ChordGenerator'
-import GetNoteBasedOnInterval from '../Helpers/HelperFunction'
+import {getNoteBasedOnInterval} from '../Helpers/HelperFunction'
 import {HiArrowDown} from 'react-icons/hi'
 
 class ChordInfo extends Component{
@@ -26,9 +26,9 @@ class ChordInfo extends Component{
         })
     }
 
-    chordGeneratorNoteClick(note){
+    chordGeneratorNoteClick(noteNum){
         this.setState({
-            selectedNote: GetNoteBasedOnInterval(this.props.note, note)
+            selectedNote: getNoteBasedOnInterval(this.props.note, noteNum)
         })
     }
 
@@ -46,11 +46,11 @@ class ChordInfo extends Component{
             <div className={styles.Container}>
                 <h1 className={styles.h1}>{this.props.info.FullName} Chord</h1>    
                 <div className={styles.rowChordImgContainer}>
-                    <ChordGenerator onNoteClick={this.chordGeneratorNoteClick}/>
+                    <ChordGenerator note={this.props.note} onNoteClick={this.chordGeneratorNoteClick} noteButtonPositions={this.props.info.Shapes && this.props.info.Shapes[0]['Notes']}/>
                     <div className={styles.columnContainer}>
                         {this.props.info.Notes.map(note => 
                             <div key={note.name} className={styles.noteDegreeRow}>
-                                <h1 className={styles.noteText}>{GetNoteBasedOnInterval(this.props.note, note.num)}</h1> 
+                                <h1 className={styles.noteText}>{getNoteBasedOnInterval(this.props.note, note.num)}</h1> 
                                 <p className={styles.p}>{note.name}</p>
                             </div>
                         )}
@@ -82,7 +82,7 @@ class ChordInfo extends Component{
 
                     <div className={styles.moreChordRow}>
                         {this.props.info.Shapes && this.props.info.Shapes.map(shape => 
-                              <ChordGenerator key={this.props.info.Shapes.findIndex(x => x == shape)} onNoteClick={this.chordGeneratorNoteClick} noteButtonPositions={shape['Notes']}/>
+                              <ChordGenerator key={this.props.info.Shapes.findIndex(x => x == shape)} note={this.props.note} onNoteClick={this.chordGeneratorNoteClick} noteButtonPositions={shape['Notes']}/>
                         )}
                     </div>
                 </div>

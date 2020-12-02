@@ -1,6 +1,8 @@
-function GetNoteBasedOnInterval(rootNote, interval){
-    var notes = ['C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'A#/Bb', 'B']
-    var rootIndex = notes.findIndex(n => n == rootNote)
+
+var notes = ['C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'A#/Bb', 'B']
+
+export function getNoteBasedOnInterval(rootNote, interval){
+    const rootIndex = notes.findIndex(n => n == rootNote)
 
     switch(interval){
         case '1': // root note
@@ -25,7 +27,8 @@ function GetNoteBasedOnInterval(rootNote, interval){
             return notes[(rootIndex + 7) % 12]
         case 'b6': // minor sixth
             return notes[(rootIndex + 8) % 12]
-        case '6': // major sixth
+        case '6': // major sixth or major 13th or diminished 7th
+        case 'bb7':
         case '13': 
             return notes[(rootIndex + 9) % 12]
         case 'b7': // minor seventh
@@ -35,4 +38,27 @@ function GetNoteBasedOnInterval(rootNote, interval){
     }
 }
 
-export default GetNoteBasedOnInterval;
+// in standard tuning ofc lol
+export function getFretNumber(string, targetNote){
+    var startIndex = 0;
+    switch(string){
+        case 6: // Starts from E
+            startIndex = notes.findIndex(x => x == 'E')
+            break;
+        case 5:
+            startIndex = notes.findIndex(x => x == 'A')
+            break;
+        case 4:
+            startIndex = notes.findIndex(x => x == 'D')
+            break;
+        case 3:
+            startIndex = notes.findIndex(x => x == 'G')
+            break;
+    }
+    var targetIndex = notes.findIndex(x => x == targetNote)
+
+    if(targetIndex < startIndex)
+        return 12 - startIndex + targetIndex // 12 because thats the number of item in the notes array
+    else
+        return targetIndex - startIndex
+}

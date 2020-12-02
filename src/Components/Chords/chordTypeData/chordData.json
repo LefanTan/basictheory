@@ -1,0 +1,3762 @@
+{
+	"ChordTypes": {
+		"maj": {
+			"FullName": "Major",
+			"Notes": [{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "3",
+					"name": "Major 3rd"
+				},
+				{
+					"num": "5",
+					"name": "Perfect 5th"
+				}
+			],
+			"Shapes": [{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "1",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "1",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "3",
+							"string": 1,
+							"fret": 3
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 4
+						},
+						{
+							"noteNumber": "5",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "5",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "1",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "3",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "1",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "5",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 4
+						},
+						{
+							"noteNumber": "3",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "5",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "1",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "3",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "1",
+							"string": 1,
+							"fret": 4
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "1",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				}
+			],
+			"Description": "Along with the major chord, it is one of the basic building blocks of tonal music in Western music. In it's most basic form, it is also known as a Major Triad.",
+			"Sound": "Happy, Consonant, stable, not requiring resolution"
+		},
+		"maj7": {
+			"FullName": "Major 7th",
+			"Notes": [
+				{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "3",
+					"name": "Major 3rd"
+				},
+				{
+					"num": "5",
+					"name": "Perfect 5th"
+				},
+				{
+					"num": "7",
+					"name": "Major 7th"
+				}
+			],
+			"Description": "The Major 7 note is a half step below the root note. A common use case for this chord is to give the tonic chord in a major scale a slight dissonant edge and more texture/variety.  It is often used in traditional pop, jazz, bossa nova, indie etc",
+			"Sound": "Slightly dissonant, jazzy, soft, chill",
+			"Shapes": [{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "7",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 2
+						},
+						{
+							"noteNumber": "5",
+							"string": 4,
+							"fret": 4
+						},
+						{
+							"noteNumber": "7",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 2
+						},
+						{
+							"noteNumber": "3",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "7",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "7",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 1,
+							"fret": 3
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 4
+						},
+						{
+							"noteNumber": "3",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "7",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 4
+						},
+						{
+							"noteNumber": "3",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "5",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "7",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "3",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 4
+						},
+						{
+							"noteNumber": "5",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "1",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "3",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "7",
+							"string": 1,
+							"fret": 4
+						}
+					]
+				}
+			]
+		},
+		"maj9": {
+			"FullName": "Major 9th",
+			"Notes": [{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "3",
+					"name": "Major 3rd"
+				},
+				{
+					"num": "5",
+					"name": "Perfect 5th"
+				},
+				{
+					"num": "7",
+					"name": "Major 7th"
+				},
+				{
+					"num": "9",
+					"name": "Major 9th"
+				}
+			],
+			"Description": "The Major 9th has the same note as the Major 2nd, however, it is written as 9 because it is a chord extension. The Major 9th chord is often used to provide more texture and variety to your playing. In a thick chord like this, the 5th can also be left out and it will still sound great. Used in blues, jazz etc",
+			"Sound": "More dissonant than 7th chords, jazzy, soft, chill",
+			"Shapes": [
+				{
+					"Notes": [
+						{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "7",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "9",
+							"string": 1,
+							"fret": 4
+						}
+					]
+				},
+				{
+					"Notes": [
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "7",
+							"string": 3,
+							"fret": 4
+						},
+						{
+							"noteNumber": "9",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 4
+						},
+						{
+							"noteNumber": "9",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "7",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				}
+			]
+		},
+		"maj11": {
+			"FullName": "Major 11th",
+			"Notes": [{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "3",
+					"name": "Major 3rd"
+				},
+				{
+					"num": "5",
+					"name": "Perfect 5th"
+				},
+				{
+					"num": "7",
+					"name": "Major 7th"
+				},
+				{
+					"num": "9",
+					"name": "Major 9th"
+				},
+				{
+					"num": "11",
+					"name": "Major 11th"
+				}
+			],
+			"Description": "The Major 11th has the same note as the Perfect 4th, it is written as 11 because it is a chord extension. The Major 11th chord isn't often used because of its dissonance and the #11 chord is used more commonly, but it can be used in the place of a maj7 or maj9 chord. The third is also often omitted as it makes the chord sound too dissonant.",
+			"Sound": "Very dissonant",
+			"Shapes": [{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "7",
+							"string": 4,
+							"fret": 4
+						},
+						{
+							"noteNumber": "3",
+							"string": 3,
+							"fret": 4
+						},
+						{
+							"noteNumber": "11",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 4,
+							"fret": 0
+						},
+						{
+							"noteNumber": "7",
+							"string": 3,
+							"fret": 4
+						},
+						{
+							"noteNumber": "3",
+							"string": 2,
+							"fret": 5
+						},
+						{
+							"noteNumber": "11",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "7",
+							"string": 4,
+							"fret": 4
+						},
+						{
+							"noteNumber": "9",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "11",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 4,
+							"fret": 0
+						},
+						{
+							"noteNumber": "7",
+							"string": 3,
+							"fret": 4
+						},
+						{
+							"noteNumber": "9",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "11",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				}
+			]
+		},
+		"maj13": {
+			"FullName": "Major 13th",
+			"Notes": [{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "3",
+					"name": "Major 3rd"
+				},
+				{
+					"num": "5",
+					"name": "Perfect 5th"
+				},
+				{
+					"num": "7",
+					"name": "Major 7th"
+				},
+				{
+					"num": "9",
+					"name": "Major 9th"
+				},
+				{
+					"num": "11",
+					"name": "Major 11th"
+				},
+				{
+					"num": "13",
+					"name": "Major 13th"
+				}
+			],
+			"Description": "The Major 13 has the same note as the Major 6th, it is written as 13 because it is a chord extension. The 5th and 11th are often abandoned. While the maj9 chord sounds pretty sweet and common, the 13 adds a quite special flavour that is not always desired. On the other side, the sound of a maj13 has kind of a high recognition factor, that can make song or part of it very unique.",
+			"Sound": "Highly dissonant",
+			"Shapes": [{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "7",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "13",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 4,
+							"fret": 0
+						},
+						{
+							"noteNumber": "7",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "13",
+							"string": 1,
+							"fret": 4
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 5,
+							"fret": 2
+						},
+						{
+							"noteNumber": "13",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "9",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "7",
+							"string": 1,
+							"fret": 2
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 4
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "7",
+							"string": 4,
+							"fret": 5
+						},
+						{
+							"noteNumber": "9",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "13",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "7",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "13",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "9",
+							"string": 1,
+							"fret": 4
+						}
+					]
+				}
+			]
+		},
+		"maj7sharp11": {
+			"FullName": "Major 7(#11)th",
+			"Notes": [
+                {
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "3",
+					"name": "Major 3rd"
+				},
+				{
+					"num": "5",
+					"name": "Perfect 5th"
+				},
+				{
+					"num": "7",
+					"name": "Major 7th"
+				},
+				{
+					"num": "9",
+					"name": "Major 9th"
+				},
+				{
+					"num": "#11",
+					"name": "Augmented Forth"
+				}
+			],
+			"Description": "The Major 7(#11) also known as a lydian chord, is a Major 7 chord with a #4 added to it. You will normally omit the 5th on the guitar, but if you play it, it must be lower than the #11 (e.g. C G B E F#), otherwise it will sound terribly dissonant (e.g. C F# B E G).",
+			"Sound": "Very dissonant",
+			"Shapes": [
+                {
+					"Notes": [
+                        {
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "7",
+							"string": 4,
+							"fret": 4
+						},
+						{
+							"noteNumber": "3",
+							"string": 3,
+							"fret": 4
+						},
+						{
+							"noteNumber": "#11",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [
+                        {
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 4,
+							"fret": 0
+						},
+						{
+							"noteNumber": "7",
+							"string": 3,
+							"fret": 4
+						},
+						{
+							"noteNumber": "3",
+							"string": 2,
+							"fret": 5
+						},
+						{
+							"noteNumber": "#11",
+							"string": 1,
+							"fret": 2
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "7",
+							"string": 4,
+							"fret": 4
+						},
+						{
+							"noteNumber": "9",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "#11",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 4,
+							"fret": 0
+						},
+						{
+							"noteNumber": "7",
+							"string": 3,
+							"fret": 4
+						},
+						{
+							"noteNumber": "9",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "#11",
+							"string": 1,
+							"fret": 2
+						}
+					]
+				},
+				{
+					"Notes": [
+                        {
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 4
+						},
+						{
+							"noteNumber": "3",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "#11",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "7",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				}
+			]
+		},
+		"min": {
+			"FullName": "Minor",
+			"Notes": [{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "b3",
+					"name": "Minor 3rd"
+				},
+				{
+					"num": "5",
+					"name": "Perfect 5th"
+				}
+			],
+			"Description": "Along with the major chord, it is one of the basic building blocks of tonal music in Western music. In it's most basic form, it is also known as a Minor Triad",
+			"Sound": "Sad/Dark, Consonant, stable, not requiring resolution",
+			"Shapes": [
+				{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "b3",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "1",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "b3",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "1",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "1",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "b3",
+							"string": 1,
+							"fret": 2
+						}
+					]
+				},
+				{
+					"Notes": [
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "1",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "b3",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "5",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				}
+			]
+		},
+		"min7": {
+			"FullName": "Minor 7th",
+			"Notes": [{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "b3",
+					"name": "Minor 3rd"
+				},
+				{
+					"num": "5",
+					"name": "Perfect 5th"
+				},
+				{
+					"num": "b7",
+					"name": "Minor 7th"
+				}
+			],
+			"Description": "Most commonly used on the II in the major scale or the IV in the minor scale. The Minor 7 adds an impressive amount of depth to the minor triads and can be used to both darken and brighten chord progressions.",
+			"Sound": "Slightly dissonant, jazzy, soft, chill, happier/darker than minor triads",
+			"Shapes": [{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b3",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 2
+						},
+						{
+							"noteNumber": "5",
+							"string": 4,
+							"fret": 4
+						},
+						{
+							"noteNumber": "b7",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b3",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "b3",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "b7",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "b3",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "b7",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b3",
+							"string": 1,
+							"fret": 2
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "7",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b3",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "1",
+							"string": 1,
+							"fret": 12
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "5",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "b3",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "b7",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				}
+			]
+		},
+		"min9": {
+			"FullName": "Minor 9th",
+			"Notes": [{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "b3",
+					"name": "Minor 3rd"
+				},
+				{
+					"num": "5",
+					"name": "Perfect 5th"
+				},
+				{
+					"num": "b7",
+					"name": "Minor 7th"
+				},
+				{
+					"num": "9",
+					"name": "Major 9th"
+				}
+			],
+			"Description": "The Minor 9th chord is a Minor 7th chord with a Major 9 (Major 2). It can often be used in place of any minor chord to spice up your voicings. It is not uncommon to play this chord with the 5th or its root.",
+			"Sound": "Jazzy, bluesy",
+			"Shapes": [{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b3",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "9",
+							"string": 1,
+							"fret": 4
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "b3",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "b7",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "b3",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "b3",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "b7",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "9",
+							"string": 1,
+							"fret": 3
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b3",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "9",
+							"string": 1,
+							"fret": 4
+						}
+					]
+				}
+			]
+		},
+		"min11": {
+			"FullName": "Minor 11th",
+			"Notes": [
+				{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "b3",
+					"name": "Minor 3rd"
+				},
+				{
+					"num": "5",
+					"name": "Perfect 5th"
+				},
+				{
+					"num": "b7",
+					"name": "Minor 7th"
+				},
+				{
+					"num": "9",
+					"name": "Major 9th"
+				},
+				{
+					"num": "11",
+					"name": "Major 11th"
+				}
+			],
+			"Description": "The Major 11th chord is the Minor 7th chord with a Major 9(Major 2) and Major 11(Perfect Forth) added. Most of the time it difficult, if not impossible to play the six notes on the guitar, so we have to leave out certain notes as the 5th, the root (1) or the 9th. It is often confused with suspended 4 chords since the Major 11 is also the Perfect 4, one distinct difference is that Minor 11 has a Minor 7, and suspended 4 chords doesn't.",
+			"Sound": "Very dissonant",
+			"Shapes": [{
+					"Notes": [
+						{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "b3",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "11",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 4,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "b3",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "11",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				},
+				{
+					"Notes": [
+						{
+							"noteNumber": "b3",
+							"string": 6,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "11",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b7",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				}
+			]
+		},
+		"min13": {
+			"FullName": "Minor 13th",
+			"Notes": [{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "b3",
+					"name": "Minor 3rd"
+				},
+				{
+					"num": "5",
+					"name": "Perfect 5th"
+				},
+				{
+					"num": "b7",
+					"name": "Minor 7th"
+				},
+				{
+					"num": "9",
+					"name": "Major 9th"
+				},
+				{
+					"num": "11",
+					"name": "Major 11th"
+				},
+				{
+					"num": "13",
+					"name": "Major 13th"
+				}
+			],
+			"Description": "The Minor 13th is a Minor 7 with Major 9 (2), Major 11 (4) and Major 13 (6) added. The 5th, 9th or 11th are often abandoned. The Minor 13 chord can be used in place of any minor chord to add an interesting and unique flavour. ",
+			"Sound": "Highly dissonant",
+			"Shapes": [{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 2
+						},
+						{
+							"noteNumber": "5",
+							"string": 5,
+							"fret": 4
+						},
+						{
+							"noteNumber": "b7",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b3",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "13",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				
+				{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b3",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "13",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 2
+						},
+						{
+							"noteNumber": "5",
+							"string": 4,
+							"fret": 4
+						},
+						{
+							"noteNumber": "b7",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b3",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "13",
+							"string": 1,
+							"fret": 4
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 4,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b3",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "13",
+							"string": 1,
+							"fret": 4
+						}
+					]
+				}
+			]
+		},
+		"7":{
+            "FullName": "Dominant 7th",
+			"Notes": [
+				{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "3",
+					"name": "Major 3rd"
+				},
+				{
+					"num": "5",
+					"name": "Perfect 5th"
+				},
+				{
+					"num": "b7",
+					"name": "Minor 7th"
+				}
+			],
+			"Description": "The Dominant 7th is perhaps the most important of the seventh chords. It has a strong dissonance edge due to the tritone (diminished fifth) between the third and seventh, and therefore typically functions to drive the piece towards resolution (often the tonic).",
+			"Sound": "Slightly dissonant, jazzy, bluesy",
+			"Shapes": [
+				{
+					"Notes": [
+						{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "3",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 2
+						},
+						{
+							"noteNumber": "5",
+							"string": 4,
+							"fret": 4
+						},
+						{
+							"noteNumber": "b7",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "3",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 2
+						},
+						{
+							"noteNumber": "3",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "b7",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "3",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+                },
+                {
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b7",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "1",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+                },
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "b7",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "3",
+							"string": 1,
+							"fret": 3
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "5",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "1",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "3",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b7",
+							"string": 1,
+							"fret": 3
+						}
+					]
+				}
+			]
+		},
+		"9": {
+			"FullName": "Dominant 9th",
+			"Notes": [{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "3",
+					"name": "Major 3rd"
+				},
+				{
+					"num": "5",
+					"name": "Perfect 5th"
+				},
+				{
+					"num": "b7",
+					"name": "Minor 7th"
+				},
+				{
+					"num": "9",
+					"name": "Major 9th"
+				}
+			],
+			"Description": "Dominant 9th chord is a dominant 7 chord with a Major 9 (Major 2) added. This addition of the 9th note makes the chord a lot more relaxing sounding. Two common variation of this chord are the 7b9 and 7(#9) chord, the sharp or flat 9 can provide interesting voicings to your playing.",
+			"Sound": "Jazzy, bluesy, chill",
+			"Shapes": [{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "3",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "9",
+							"string": 1,
+							"fret": 4
+						}
+					]
+				},
+				{
+					"Notes": [
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b7",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [
+						{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 4
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 4,
+							"fret": 4
+						},
+						{
+							"noteNumber": "9",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "3",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "b7",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "2",
+							"string": 1,
+							"fret": 2
+						}
+					]
+				}
+			]
+		},
+		"11": {
+			"FullName": "Dominant 11th",
+			"Notes": [{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "3",
+					"name": "Major 3rd"
+				},
+				{
+					"num": "5",
+					"name": "Perfect 5th"
+				},
+				{
+					"num": "b7",
+					"name": "Major 7th"
+				},
+				{
+					"num": "9",
+					"name": "Major 9th"
+				},
+				{
+					"num": "11",
+					"name": "Major 11th"
+				}
+			],
+			"Description": "Dominant 11th chords can often be used in place of any dominant chords to create tension. Playing both the major third (3) and the fourth (4) doesn't sound pretty good (please note that the 11th is the same as the 4th). These two tones, when they are played together, create a dissonant and pretty unpleasant sound (however, it can be interested in certain situations). Consequently, the third is often omitted in the eleventh chord. This can create confusion because it changes the name of the chords. Dominant 11 becomes 9sus4. Still the chords are often written as an 11th chord.",
+			"Sound": "Dissonant, jazzy, bluesy",
+			"Shapes": [{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 3,
+							"fret": 4
+						},
+						{
+							"noteNumber": "11",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 4,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 2,
+							"fret": 5
+						},
+						{
+							"noteNumber": "11",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "9",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "11",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 4,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "9",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "11",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				},
+				{
+					"Notes": [
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 1
+						},
+						{
+							"noteNumber": "11",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "b7",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "9",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				}
+			]
+		},
+		"13": {
+			"FullName": "Dominant 13th",
+			"Notes": [{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "3",
+					"name": "Major 3rd"
+				},
+				{
+					"num": "5",
+					"name": "Perfect 5th"
+				},
+				{
+					"num": "b7",
+					"name": "Minor 7th"
+				},
+				{
+					"num": "9",
+					"name": "Major 9th"
+				},
+				{
+					"num": "11",
+					"name": "Major 11th"
+				},
+				{
+					"num": "13",
+					"name": "Major 13th"
+				}
+			],
+			"Description": "The Dominant 13th chord can be used in place of any dominant chords, especially to create tension or interesting voicings. The 5th like in many other extended chords can be ommited as it is not the most interesting and important role in the chord. The 11 are sometimes omitted too since the interval 3-11 is dissonant.",
+			"Sound": "Highly dissonant",
+			"Shapes": [{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "3",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "13",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 4,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "3",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "13",
+							"string": 1,
+							"fret": 4
+						}
+					]
+				},
+				{
+					"Notes": [{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "b7",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "3",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "13",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "1",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				}
+			]
+		},
+		"sus2":{
+			"FullName": "Suspend 2nd",
+			"Notes": [{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "2",
+					"name": "Major 2nd"
+				},
+				{
+					"num": "5",
+					"name": "Perfect 5th"
+				}
+			],
+			"Description": "Sus 2 chords removes the major/minor 3rd and replace it with a Major 2nd, this means the chord sounds neither 'happy' or 'sad' and can therefore be applied to major or minor chords. Suspended chords have a tendency to resolve, that’s why sus chords are often played in combination with their parent chord. E - F7 - B - Bsus2 etc",
+			"Sound": "Open",
+			"Shapes": [
+				{
+					"Notes":[
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "1",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "2",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 4,
+							"fret": 0
+						},
+						{
+							"noteNumber": "2",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "1",
+							"string": 1,
+							"fret": 2
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 4
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "5",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "2",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 4
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 5
+						},
+						{
+							"noteNumber": "2",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 2
+						},
+						{
+							"noteNumber": "5",
+							"string": 5,
+							"fret": 4
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 4
+						},
+						{
+							"noteNumber": "2",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "X",
+							"string": 2,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "1",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "2",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				}
+			]
+		},
+		"sus4":{
+			"FullName": "Suspend 4th",
+			"Notes": [{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "4",
+					"name": "Perfect 4th"
+				},
+				{
+					"num": "5",
+					"name": "Perfect 5th"
+				}
+			],
+			"Description": "Sus 4 chords removes the major/minor 3rd and replace it with a Perfect Forth, this means the chord sounds neither 'happy' or 'sad' and can therefore be applied to major or minor chords. Suspended chords have a tendency to resolve, that’s why sus chords are often played in combination with their parent chord. B - B sus2 - B - Bsus2 etc",
+			"Sound": "Open",
+			"Shapes": [
+				{
+					"Notes":[
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "1",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "4",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "1",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "4",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "1",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 4
+						},
+						{
+							"noteNumber": "4",
+							"string": 3,
+							"fret": 4
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "1",
+							"string": 1,
+							"fret": 2
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "1",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "4",
+							"string": 1,
+							"fret": 4
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 2
+						},
+						{
+							"noteNumber": "5",
+							"string": 5,
+							"fret": 4
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 4
+						},
+						{
+							"noteNumber": "2",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "X",
+							"string": 2,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				}
+			]
+		},
+		"7sus4":{
+			"FullName": "Dominant 7th Suspended 4th",
+			"Notes": [{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "4",
+					"name": "Perfect 4th"
+				},
+				{
+					"num": "5",
+					"name": "Perfect 5th"
+				},
+				{
+					"num": "b7",
+					"name": "Minor 7th"
+				}
+			],
+			"Description": "The 7sus4 is often used as a replacement chord for dominant 7th chord. But since the 7sus4 chord has a strong tendency to resolve back to dominant 7th chord, you may play 7sus4 in the first half of a bar and then go back to the dominant 7th chord instead of replacing a whole bar of dominant 7th chord. In C for example, you can also go back and forth between C7sus4 and C7 several times.",
+			"Sound": "Slight dissonance, Open",
+			"Shapes": [
+				{
+					"Notes":[
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "b7",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "4",
+							"string": 2,
+							"fret": 4
+						},
+						{
+							"noteNumber": "5",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 1
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "4",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "5",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "1",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "5",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "b7",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "4",
+							"string": 1,
+							"fret": 4
+						}
+					]
+				}
+			]
+		},
+		"dim":{
+			"FullName": "Half Diminished",
+			"Notes": [{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "b3",
+					"name": "Minor 3rd"
+				},
+				{
+					"num": "b5",
+					"name": "Diminished 5th"
+				},
+				{
+					"num": "b7",
+					"name": "Minor 7th"
+				}
+			],
+			"Description": "Half diminished chords are built upon the diminished triads with a minor 7th added. It is called Half diminished because it contains two minor thirds from 1-f3-f5 and 1 major 3rd from f5-f7. A half diminished chord has two primary functions: First, it can act as a predominant chord in minor, one that leads to the dominant. This is because in the minor scale the chord built on scale degree II – which is always a predominant chord – is a half diminished chord. Secondly, In Major, the half dim chord usually provides a dominant function, leading back to the tonic (main chord of a song).",
+			"Sound": "Tense, dark, unstable sounding, require resolution, jazzy",
+			"Shapes": [
+				{
+					"Notes":[
+						{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b3",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b5",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 1
+						},
+						{
+							"noteNumber": "b5",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b7",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "b3",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "b5",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b7",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b3",
+							"string": 1,
+							"fret": 2
+						}
+					]
+				}
+			]
+		},
+		"dim7":{
+			"FullName": "Diminished 7th",
+			"Notes": [{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "b3",
+					"name": "Minor 3rd"
+				},
+				{
+					"num": "b5",
+					"name": "Diminished 5th"
+				},
+				{
+					"num": "bb7",
+					"name": "Diminished 7th"
+				}
+			],
+			"Description": "Diminished 7th chords are built upon the diminished triads with a diminished 7th (flat minor 7) added. It is called Full diminished because it contains three minor thirds from 1-f3-f5-ff7. A fully diminished / diminished 7th chords are usually used as passing chords, it can be used chromatically such as B - Cdim7 - C# to connect two chords together. One interesting feature of the diminished 7th is that because the chord contains a series of minor 3rd, When you invert it, it can either be the same chord in an inversion, or it can be a new chord in root position. B - D - F - Ab can either be a Bo7 in root position, an Abo7 in first inversion, an Fo7 in second inversion, or a Do7 in third inversion. You would choose which one based off of what it resolves to. If it went to Gb major, then you'd call it Fo7.",
+			"Sound": "Tense, dark, unstable sounding, require resolution, jazzy",
+			"Shapes": [
+				{
+					"Notes":[
+						{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 2
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "bb7",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "b3",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b5",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 2
+						},
+						{
+							"noteNumber": "b5",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "bb7",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "b3",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "b5",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "bb7",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "b3",
+							"string": 1,
+							"fret": 2
+						}
+					]
+				}
+			]
+		},
+		"aug":{
+			"FullName": "Augmented",
+			"Notes": [{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "3",
+					"name": "Major 3rd"
+				},
+				{
+					"num": "#5",
+					"name": "Augmented 5th"
+				}
+			],
+			"Description": "An augmented chord (E+, A+ etc) can be used in place of a dominant 7th chord because it is dissonant; it feels unresolved. The raised fifth note (the G# in a C+ triad) sounds like it’s pulling up a semitone (toward A). This pull is especially pronounced if you go from a C major to a C+ because it provides us with chromatic movement from G to G# — our ear wants to hear an A. Combine that movement with the fact that the E in the C+ is pulling us up to F and we have a desire to resolve to F major. In a minor key, the augmented chord can also be used in place of the dominant chord. For example, in the key of Am, we can replace E7 with E+. Like Diminished 7th chords, augmented chords are symmetrical/recursive, which means that C+, E+, G#+ all use the same note.",
+			"Sound": "Tense, dark, unstable sounding, require resolution, jazzy",
+			"Shapes": [
+				{
+					"Notes":[
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "#5",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "1",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "#5",
+							"string": 1,
+							"fret": 4
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 1
+						},
+						{
+							"noteNumber": "#5",
+							"string": 4,
+							"fret": 4
+						},
+						{
+							"noteNumber": "1",
+							"string": 3,
+							"fret": 3
+						},
+						{
+							"noteNumber": "b3",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 4
+						},
+						{
+							"noteNumber": "3",
+							"string": 5,
+							"fret": 3
+						},
+						{
+							"noteNumber": "#5",
+							"string": 4,
+							"fret": 2
+						},
+						{
+							"noteNumber": "1",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "3",
+							"string": 2,
+							"fret": 1
+						},
+						{
+							"noteNumber": "X",
+							"string": 1,
+							"fret": 0
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 4,
+							"fret": 3
+						},
+						{
+							"noteNumber": "3",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "#5",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "1",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				}
+			]
+		},
+		"aug7":{
+			"FullName": "Augmented 7th",
+			"Notes": [{
+					"num": "1",
+					"name": "Root"
+				},
+				{
+					"num": "3",
+					"name": "Major 3rd"
+				},
+				{
+					"num": "#5",
+					"name": "Augmented 5th"
+				},
+				{
+					"num": "b7",
+					"name": "Minor 7th"
+				}
+			],
+			"Description": "An augmented 7th chord adds a minor 7 to the augmented triad. Now, as well as the 5 (V) position, we can use the augmented 7th shapes in other positions to create tension in our music. But when outside the 5 position, and depending on the implied scale over the chord, be aware that it can be spelled as a 7th flat 13th chord (e.g. C7♭13), the ♭13 being enharmonic to the ♯5. Same chord sound, different implied function. The augmented 7th can often be used in place of the iii or vi chord in a major key.",
+			"Sound": "Tense, dark, unstable sounding, require resolution, jazzy",
+			"Shapes": [
+				{
+					"Notes":[
+						{
+							"noteNumber": "X",
+							"string": 6,
+							"fret": 0
+						},
+						{
+							"noteNumber": "1",
+							"string": 5,
+							"fret": 1
+						},
+						{
+							"noteNumber": "35",
+							"string": 4,
+							"fret": 4
+						},
+						{
+							"noteNumber": "b7",
+							"string": 3,
+							"fret": 1
+						},
+						{
+							"noteNumber": "3",
+							"string": 2,
+							"fret": 3
+						},
+						{
+							"noteNumber": "#5",
+							"string": 1,
+							"fret": 2
+						}
+					]
+				},
+				{
+					"Notes":[
+						{
+							"noteNumber": "1",
+							"string": 6,
+							"fret": 1
+						},
+						{
+							"noteNumber": "X",
+							"string": 5,
+							"fret": 0
+						},
+						{
+							"noteNumber": "b7",
+							"string": 4,
+							"fret": 1
+						},
+						{
+							"noteNumber": "3",
+							"string": 3,
+							"fret": 2
+						},
+						{
+							"noteNumber": "#5",
+							"string": 2,
+							"fret": 2
+						},
+						{
+							"noteNumber": "1",
+							"string": 1,
+							"fret": 1
+						}
+					]
+				}
+			]
+		}
+	}
+}

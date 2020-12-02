@@ -14,7 +14,8 @@ class ChordsPage extends Component{
         this.state ={
             selectedNote: 'C',
             selectedChord: `maj`,
-            selectedChordInfo: ''
+            selectedChordInfo: '',
+            chordButtonClicked: false
         }
 
         this.handleNoteButtonClick = this.handleNoteButtonClick.bind(this)
@@ -48,9 +49,12 @@ class ChordsPage extends Component{
 
     // Invoked when a chord button is clicked
     handleChordButtonClick(value){
-        this.setState({
-            selectedChord: `${value.substring(this.state.selectedNote.length)}`
-        }, () => this.updateChordInfo())
+        this.setState(prevState => {
+            return{
+                selectedChord: `${value.substring(this.state.selectedNote.length)}`,
+                chordButtonClicked: !prevState.chordButtonClicked
+            }
+        },() => this.updateChordInfo())
     }
 
     render(){
@@ -61,7 +65,7 @@ class ChordsPage extends Component{
                 </div>
 
                 <div className={chordStyles.rowContainer}>
-                    <Sidebar><ChordInfo note={this.state.selectedNote} info={this.state.selectedChordInfo} /></Sidebar>
+                    <Sidebar toggle={this.state.chordButtonClicked}><ChordInfo note={this.state.selectedNote} info={this.state.selectedChordInfo} /></Sidebar>
                     <div className={chordStyles.columnContainer}>
                         <h1 className={chordStyles.h1}>Major</h1>
                         <div className={chordStyles.innerChordRow}>
@@ -106,18 +110,12 @@ class ChordsPage extends Component{
                         <div className={chordStyles.innerChordRow}>
                             <StandardButton className={"sus2" == this.state.selectedChord ? buttonStyles.chordButtonSelected : buttonStyles.chordButton} value={`${this.state.selectedNote}sus2`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={"sus4" == this.state.selectedChord ? buttonStyles.chordButtonSelected : buttonStyles.chordButton} value={`${this.state.selectedNote}sus4`} onClick={this.handleChordButtonClick}/>
-                            <StandardButton className={"7sus2" == this.state.selectedChord ? buttonStyles.chordButtonSelected : buttonStyles.chordButton} value={`${this.state.selectedNote}7sus2`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={"7sus4" == this.state.selectedChord ? buttonStyles.chordButtonSelected : buttonStyles.chordButton} value={`${this.state.selectedNote}7sus4`} onClick={this.handleChordButtonClick}/>
-                        </div>
-                        <div className={chordStyles.innerChordRow}>
-                            <StandardButton className={"9sus2" == this.state.selectedChord ? buttonStyles.chordButtonSelected : buttonStyles.chordButton} value={`${this.state.selectedNote}9sus2`} onClick={this.handleChordButtonClick}/>
-                            <StandardButton className={"9sus4" == this.state.selectedChord ? buttonStyles.chordButtonSelected : buttonStyles.chordButton} value={`${this.state.selectedNote}9sus4`} onClick={this.handleChordButtonClick}/>
                         </div>
                         <br/>
                         <h1 className={chordStyles.h1}>Augmented</h1>
                         <div className={chordStyles.innerChordRow}>
                             <StandardButton className={"aug" == this.state.selectedChord ? buttonStyles.chordButtonSelected : buttonStyles.chordButton} value={`${this.state.selectedNote}aug`} onClick={this.handleChordButtonClick}/>
-                            <StandardButton className={"aug6" == this.state.selectedChord ? buttonStyles.chordButtonSelected : buttonStyles.chordButton} value={`${this.state.selectedNote}aug6`} onClick={this.handleChordButtonClick}/>
                             <StandardButton className={"aug7" == this.state.selectedChord ? buttonStyles.chordButtonSelected : buttonStyles.chordButton} value={`${this.state.selectedNote}aug7`} onClick={this.handleChordButtonClick}/>
                         </div>
                     </div>

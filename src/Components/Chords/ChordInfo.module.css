@@ -4,11 +4,11 @@
     align-items: center;
     flex-direction: column;
 
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 
-    max-width: max-content;
+    max-width: fit-content;
     height: fit-content;
 }
 
@@ -69,7 +69,7 @@
     align-items: center;
     justify-content: center;
 
-    width: fit-content;
+    width: 90%;
     margin: 0;
     padding: 0;
 }
@@ -104,7 +104,7 @@
     margin-bottom: 20px;
     margin-left: 15%;
 
-    max-width: fit-content;
+    max-width: 50%;
     height: fit-content;
 }
 

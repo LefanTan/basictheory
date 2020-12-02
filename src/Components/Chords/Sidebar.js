@@ -6,7 +6,8 @@ import {Link} from 'react-router-dom';
 
 function Sidebar(props){
     const [sidebar, setSidebar] = useState(false)
-    const useSidebar = () => setSidebar(!sidebar)
+    const toggleSidebar = () => setSidebar(!sidebar)
+    const useSidebar = (state) => setSidebar(state)
 
     useEffect(() => {
         // get the root element and update the overflow state
@@ -16,10 +17,14 @@ function Sidebar(props){
         root.style.setProperty('--overflow-y', sidebar ? 'visible' : 'hidden');
     }, [sidebar])
 
+    useEffect(() => {
+        useSidebar(true)
+    },[props.toggle])
+
     return(
         <div className={styles.Container}>
             <Link to="#">
-                <button className={styles.sidebarButton} onClick={useSidebar} ><Fi.FiMenu className={styles.sidebarIcon}/></button>
+                <button className={styles.sidebarButton} onClick={toggleSidebar} ><Fi.FiMenu className={styles.sidebarIcon}/></button>
             </Link>
             <div className={sidebar ? styles.SidebarActive : styles.Sidebar}>
                 {props.children}
