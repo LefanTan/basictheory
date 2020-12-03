@@ -79,7 +79,7 @@
     composes: genericButton;
 
     width: auto;
-    height: auto;
+    height: fit-content;
 
     font-size: large;
     padding: 10px;

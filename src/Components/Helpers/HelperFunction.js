@@ -1,6 +1,7 @@
 
 const notes = ['C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'A#/Bb', 'B']
 const context = new AudioContext();
+import 'cross-fetch/polyfill'
 
 // Example: getNoteBasedOnInterval('C', 'b3') = D#
 export function getNoteBasedOnInterval(rootNote, interval){
@@ -86,7 +87,7 @@ export function playSample(sample, semitone) {
     source.playbackRate.value = 2 ** (semitone/12)
 
     const gainNode = context.createGain()
-    gainNode.gain.value = 0.8;
+    gainNode.gain.value = 4;
     gainNode.connect(context.destination);
     source.connect(gainNode)
     source.connect(context.destination);

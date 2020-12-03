@@ -43,7 +43,6 @@ class ChordInfo extends Component{
         if(!(this.props.chord && this.props.info && this.props.info))
             return
 
-        console.log(this.props.chord)
         const chordName = `${this.props.note}${this.props.chord}`
         const openChordRef = db.ref().child('OpenChords')
         const query = openChordRef.
