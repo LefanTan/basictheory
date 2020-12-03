@@ -14,8 +14,9 @@ class ChordInfo extends Component{
             moreShape: false,
             selectedNote: "None",
             openChordData: undefined,
-            shapeList: undefined
+            shapeList: undefined,
         }
+
         this.updateOpenChordData = this.updateOpenChordData.bind(this)
         this.handleClick = this.handleClick.bind(this)
         this.chordGeneratorNoteClick = this.chordGeneratorNoteClick.bind(this)
@@ -41,22 +42,20 @@ class ChordInfo extends Component{
     updateOpenChordData(){
         if(!(this.props.chord && this.props.info && this.props.info))
             return
-        else{
-            console.log(this.props.chord)
-            const chordName = `${this.props.note}${this.props.chord}`
-            const openChordRef = db.ref().child('OpenChords')
-            const query = openChordRef.
-                                orderByKey().
-                                equalTo(chordName)
-    
-            query.on('value', snap =>{
-                this.setState({
-                    openChordData: snap.exists() ? snap.val()[chordName] : "",
-                    shapeList: snap.exists() ? this.props.info.Shapes.slice(1) : this.props.info.Shapes
-                })
+
+        console.log(this.props.chord)
+        const chordName = `${this.props.note}${this.props.chord}`
+        const openChordRef = db.ref().child('OpenChords')
+        const query = openChordRef.
+                            orderByKey().
+                            equalTo(chordName)
+
+        query.on('value', snap =>{
+            this.setState({
+                openChordData: snap.exists() ? snap.val()[chordName] : "",
+                shapeList: snap.exists() ? this.props.info.Shapes : this.props.info.Shapes.slice(1)
             })
-        }
-       
+        })
     }
 
     // Query data for the first default chord

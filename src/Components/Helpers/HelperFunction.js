@@ -1,6 +1,8 @@
 
-var notes = ['C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'A#/Bb', 'B']
+const notes = ['C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'A#/Bb', 'B']
+const context = new AudioContext();
 
+// Example: getNoteBasedOnInterval('C', 'b3') = D#
 export function getNoteBasedOnInterval(rootNote, interval){
     const rootIndex = notes.findIndex(n => n == rootNote)
 
@@ -39,6 +41,7 @@ export function getNoteBasedOnInterval(rootNote, interval){
 }
 
 // in standard tuning ofc lol
+// Example: getFretNumber (6, 'A') returns 5 
 export function getFretNumber(string, targetNote){
     var startIndex = 0;
     switch(string){
@@ -67,4 +70,25 @@ export function getFretNumber(string, targetNote){
         return 12 - startIndex + targetIndex // 12 because thats the number of item in the notes array
     else
         return targetIndex - startIndex
+}
+
+// returns an audio buffer from the url
+export function loadSample(url) {
+    return fetch(url)
+    .then(response => response.arrayBuffer())
+    .then(buffer => context.decodeAudioData(buffer));
+}
+
+// plays a sound semitone higher
+export function playSample(sample, semitone) {
+    const source = context.createBufferSource();
+    source.buffer = sample;
+    source.playbackRate.value = 2 ** (semitone/12)
+
+    const gainNode = context.createGain()
+    gainNode.gain.value = 0.8;
+    gainNode.connect(context.destination);
+    source.connect(gainNode)
+    source.connect(context.destination);
+    source.start(0);
 }

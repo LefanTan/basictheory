@@ -3,7 +3,7 @@ import useViewport from './Components/Helpers/CustomHooks'
 import Header from './Components/Header'
 import Home from './Components/Home'
 import ChordsPage from './Components/Chords/ChordsPage'
-import {BrowserRouter as Router, Switch, Route,} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route, HashRouter} from 'react-router-dom'
 import styles from './App.module.css'
 import NotFoundPage from "./Components/NotFoundPage"
 
@@ -23,7 +23,7 @@ function App() {
 
     return(
         <div className={styles.Container}>
-            <Router basename={process.env.REACT_APP_PUBLIC_URL}>
+            <HashRouter basename={process.env.REACT_APP_PUBLIC_URL}>
                 <Header />
                 <Switch>
                     <Route path='/' exact component={Home}/>
@@ -31,7 +31,7 @@ function App() {
                     <Route path={process.env.REACT_APP_CHORDS_PAGE_URL} component={ChordsPage}/>  
                     <Route component={NotFoundPage}/>
                 </Switch>
-            </Router>
+            </HashRouter>
         </div>
     );
 }
