@@ -52,7 +52,6 @@ function ChordGenerator(props){
         const onClickHandler = () => {
             props.onNoteClick(props.noteInfo.noteNumber)
             loadSample(getStringSound(props.noteInfo.string)).then(sample => playSample(sample, getFretNumber(props.noteInfo.string, getNoteBasedOnInterval(props.rootNote, props.noteInfo.noteNumber))))
-            console.log(getFretNumber(props.noteInfo.string, getNoteBasedOnInterval(props.rootNote, props.noteInfo.noteNumber)))
         }
     
         return(    
@@ -79,13 +78,12 @@ function ChordGenerator(props){
             alignItems: 'center',
             textAlign: 'center',
             width: '15%',
-            height: '15%'
+            height: '15%',
         }
 
         const onClickHandler = () => {
             props.onNoteClick(props.noteInfo.noteNumber)
             loadSample(getStringSound(props.noteInfo.string)).then(sample => playSample(sample, getFretNumber(props.noteInfo.string, getNoteBasedOnInterval(props.rootNote, props.noteInfo.noteNumber))))
-            console.log(getFretNumber(props.noteInfo.string, getNoteBasedOnInterval(props.rootNote, props.noteInfo.noteNumber)))
         }
 
         return(    
@@ -107,14 +105,15 @@ function ChordGenerator(props){
     var fretNumContainer = {
         position: "absolute",
         top: `${topPos}%`,
-        left: "-25%",
+        left: "-20%",
+        marginRight:'5px',
 
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         textAlign: 'center',
         width: '15%',
-        height: '15%',
+        height: '15%'
     }
     const fretNumber = getFretNumber(fretNote.string, getNoteBasedOnInterval(props.note, fretNote.noteNumber))
     return(

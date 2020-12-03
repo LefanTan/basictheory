@@ -1,7 +1,5 @@
 
 const notes = ['C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'A#/Bb', 'B']
-const context = new AudioContext();
-import 'cross-fetch/polyfill'
 
 // Example: getNoteBasedOnInterval('C', 'b3') = D#
 export function getNoteBasedOnInterval(rootNote, interval){
@@ -32,7 +30,7 @@ export function getNoteBasedOnInterval(rootNote, interval){
             return notes[(rootIndex + 8) % 12]
         case '6': // major sixth or major 13th or diminished 7th
         case 'bb7':
-        case '13': 
+        case '13':
             return notes[(rootIndex + 9) % 12]
         case 'b7': // minor seventh
             return notes[(rootIndex + 10) % 12]
@@ -42,7 +40,7 @@ export function getNoteBasedOnInterval(rootNote, interval){
 }
 
 // in standard tuning ofc lol
-// Example: getFretNumber (6, 'A') returns 5 
+// Example: getFretNumber (6, 'A') returns 5
 export function getFretNumber(string, targetNote){
     var startIndex = 0;
     switch(string){
@@ -71,6 +69,20 @@ export function getFretNumber(string, targetNote){
         return 12 - startIndex + targetIndex // 12 because thats the number of item in the notes array
     else
         return targetIndex - startIndex
+}
+
+var AudioContext = window.AudioContext // Default
+    || window.webkitAudioContext // Safari and old versions of Chrome
+    || false; 
+
+if (AudioContext) {
+    // Do whatever you want using the Web Audio API
+    var context = new AudioContext;
+    // ...
+} else {
+    // Web Audio API is not supported
+    // Alert the user
+    console.log("Sorry, but the Web Audio API is not supported by your browser. Please, consider upgrading to the latest version or downloading Google Chrome or Mozilla Firefox");
 }
 
 // returns an audio buffer from the url

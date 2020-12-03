@@ -16,9 +16,9 @@ function App() {
     useEffect(() => {
         // get the root element and update the overflow state
         var root = document.querySelector(':root');
-
+        
         // If device width is less than 1280, it is a mobile device. Use max-content as width instead.
-        root.style.setProperty('--device-width', width > 1000 ? '100%' : 'max-content');
+        root.style.setProperty('--device-width', width > 1000 ? '100%' : 'fit-content');
     } ,[width])
 
     return(

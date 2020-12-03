@@ -16,6 +16,10 @@
     color: var(--main-color);
     background-color: inherit;
 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+
     margin: 0;
     padding: 0;
     font-size: auto;
@@ -25,6 +29,7 @@
 .h1{
     composes: generalText;
     align-self: center;
+    font-size: 35px;
 }
 
 .noteText{
@@ -34,11 +39,11 @@
 
 .h2{
     composes: generalText;
-    font-size: 150%;
 }
 
 .p{
     composes: generalText;
+    font-weight: 400;
 }
 
 .arrowDownButton{

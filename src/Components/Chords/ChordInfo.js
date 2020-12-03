@@ -129,7 +129,7 @@ class ChordInfo extends Component{
 
             // If the info doesn't exist, print N/A
             <div>
-                <h1 className={styles.h1}>No chord selected!</h1>    
+                <h1 className={styles.p}>No chord selected!</h1>    
             </div>
         )
     }

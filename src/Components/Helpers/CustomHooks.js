@@ -8,8 +8,8 @@ function useViewport(){
 
     React.useEffect(() =>{
         const handleWindowResize = () => {
-            setWidth(window.innerWidth)
-            setHeight(window.innerHeight)
+            setWidth(screen.width)
+            setHeight(screen.height)
         }   
         window.addEventListener("resize", handleWindowResize)
 

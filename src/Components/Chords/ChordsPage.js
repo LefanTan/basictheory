@@ -13,9 +13,9 @@ class ChordsPage extends Component{
         super(props)
         this.state ={
             selectedNote: 'C',
-            selectedChord: undefined,
+            selectedChord: 'maj',
             selectedChordInfo: undefined,
-            sidebarToggle: false
+            sidebarToggle: true
         }
 
         this.handleNoteButtonClick = this.handleNoteButtonClick.bind(this)
