@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/basictheory/static/css/main.9e9d0625.chunk.css",
-    "main.js": "/basictheory/static/js/main.bc3ebb5a.chunk.js",
-    "main.js.map": "/basictheory/static/js/main.bc3ebb5a.chunk.js.map",
+    "main.js": "/basictheory/static/js/main.63c941f5.chunk.js",
+    "main.js.map": "/basictheory/static/js/main.63c941f5.chunk.js.map",
     "runtime-main.js": "/basictheory/static/js/runtime-main.60d87bb4.js",
     "runtime-main.js.map": "/basictheory/static/js/runtime-main.60d87bb4.js.map",
     "static/js/2.743b9f7a.chunk.js": "/basictheory/static/js/2.743b9f7a.chunk.js",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.60d87bb4.js",
     "static/js/2.743b9f7a.chunk.js",
     "static/css/main.9e9d0625.chunk.css",
-    "static/js/main.bc3ebb5a.chunk.js"
+    "static/js/main.63c941f5.chunk.js"
   ]
 }
