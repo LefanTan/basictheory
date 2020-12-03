@@ -51,7 +51,7 @@ function ChordGenerator(props){
 
         const onClickHandler = () => {
             props.onNoteClick(props.noteInfo.noteNumber)
-            loadSample(getStringSound(props.noteInfo.string)).then(sample => playSample(sample, getFretNumber(props.noteInfo.string, getNoteBasedOnInterval(props.rootNote, props.noteInfo.noteNumber))))
+            loadSample(getStringSound(props.noteInfo.string), playSample, getFretNumber(props.noteInfo.string, getNoteBasedOnInterval(props.rootNote, props.noteInfo.noteNumber)))
         }
     
         return(    
@@ -83,7 +83,7 @@ function ChordGenerator(props){
 
         const onClickHandler = () => {
             props.onNoteClick(props.noteInfo.noteNumber)
-            loadSample(getStringSound(props.noteInfo.string)).then(sample => playSample(sample, getFretNumber(props.noteInfo.string, getNoteBasedOnInterval(props.rootNote, props.noteInfo.noteNumber))))
+            loadSample(getStringSound(props.noteInfo.string), playSample, getFretNumber(props.noteInfo.string, getNoteBasedOnInterval(props.rootNote, props.noteInfo.noteNumber)))
         }
 
         return(    

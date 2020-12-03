@@ -1,5 +1,7 @@
 
 const notes = ['C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'A#/Bb', 'B']
+import fetch from 'cross-fetch'
+
 
 // Example: getNoteBasedOnInterval('C', 'b3') = D#
 export function getNoteBasedOnInterval(rootNote, interval){
@@ -86,10 +88,11 @@ if (AudioContext) {
 }
 
 // returns an audio buffer from the url
-export function loadSample(url) {
+export function loadSample(url, onSuccess, semitone) {
+    context.resume() // resume because safari suspends every audio context created outside an event
     return fetch(url)
     .then(response => response.arrayBuffer())
-    .then(buffer => context.decodeAudioData(buffer));
+    .then(buffer => context.decodeAudioData(buffer, audioBuffer => onSuccess(audioBuffer, semitone)))
 }
 
 // plays a sound semitone higher
