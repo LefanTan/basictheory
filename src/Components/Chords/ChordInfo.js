@@ -108,9 +108,9 @@ class ChordInfo extends Component{
                 <br/>
                 <div className={styles.rowChordImgContainer}> 
                         <button className={styles.arrowDownButton} onClick={() => this.handleClick(styles.arrowDownButton)}>
-                        <h2 className={styles.h2}><strong>More Shapes</strong></h2>
+                            <h2 className={styles.h2}><strong>More Shapes</strong></h2>
                             <HiArrowDown className={styles.arrowDownImg} />
-                            </button>
+                        </button>
                 </div>
                 <div className={this.state.moreShape ? styles.moreChordContainerActive : styles.moreChordContainer}> 
                     <div className={styles.noteDegreeRow}>

@@ -1444,7 +1444,7 @@
 						{
 							"noteNumber": "b3",
 							"string": 2,
-							"fret": 3
+							"fret": 4
 						},
 						{
 							"noteNumber": "X",
@@ -3862,7 +3862,7 @@
 				},
 				{
 					"noteNumber": "1",
-					"string": 3,
+					"string": 3,	
 					"fret": 2
 				},
 				{

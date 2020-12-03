@@ -56,6 +56,17 @@
     color: var(--main-color);
 }
 
+.arrowDownButton:hover{    
+    color: var(--main-hover);
+    transform: scale(1.1);
+    transition: 100ms;
+}
+
+.arrowDownButton:active{    
+    transform: scale(1);
+    transition: 100ms;
+}
+
 .arrowDownImg{
     width:10%;
     height: 10%;
