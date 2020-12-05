@@ -1,8 +1,26 @@
-import { render, screen } from '@testing-library/react';
+import React from 'react'
 import App from './App';
+import { render, unmountComponentAtNode } from "react-dom";
+import { act } from 'react-test-renderer';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+let container = null;
+
+beforeEach(() => {
+  // setup a DOM element as a render target
+  container = document.createElement("div")
+  document.body.appendChild(container)
 });
+
+afterEach(() => {
+  // clean up on exiting
+  unmountComponentAtNode(container)
+  container.remove()
+  container = null;
+})
+
+test('Render app', () => {
+  act(() => {
+    render(<App />, container)
+  })
+  expect(container.textContent).toBe('Chords')
+})
