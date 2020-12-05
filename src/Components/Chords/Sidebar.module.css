@@ -7,10 +7,10 @@
     margin: 0px 30px 0px 20px;  
 
     /*to add a cap in mobile browser*/
-    max-width: 30%;
-    width:fit-content;
+    max-width: fit-content;
+    width: fit-content;
     min-width: 35%;
-    max-height: 80vh;
+    max-height: 72.5vh;
 }
 
 .Sidebar{
@@ -30,7 +30,8 @@
 
     background-color: var(--primary-background);
     border-radius: 35px;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     scroll-padding-right: 2em;
 }
 

@@ -105,14 +105,13 @@ function ChordGenerator(props){
     var fretNumContainer = {
         position: "absolute",
         top: `${topPos}%`,
-        left: "-20%",
-        marginRight:'5px',
+        left: "-31%",
 
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'right',
         alignItems: 'center',
-        textAlign: 'center',
-        width: '15%',
+        textAlign: 'right',
+        width: '30%',
         height: '15%'
     }
     const fretNumber = getFretNumber(fretNote.string, getNoteBasedOnInterval(props.note, fretNote.noteNumber))
