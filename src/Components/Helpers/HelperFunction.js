@@ -5,7 +5,7 @@ import fetch from 'cross-fetch'
 
 // Example: getNoteBasedOnInterval('C', 'b3') = D#
 export function getNoteBasedOnInterval(rootNote, interval){
-    const rootIndex = notes.findIndex(n => n == rootNote)
+    const rootIndex = notes.findIndex(n => n.includes(rootNote))
 
     switch(interval){
         case '1': // root note
@@ -65,7 +65,7 @@ export function getFretNumber(string, targetNote){
             startIndex = notes.findIndex(x => x == 'E')
             break;
     }
-    var targetIndex = notes.findIndex(x => x == targetNote)
+    var targetIndex = notes.findIndex(n => n.includes(targetNote))
 
     if(targetIndex < startIndex)
         return 12 - startIndex + targetIndex // 12 because thats the number of item in the notes array

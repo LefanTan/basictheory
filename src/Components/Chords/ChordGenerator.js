@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import styles from './ChordGenerator.module.css'
-import chordFret from './imgs/chordFret.png'
+import {ReactComponent as ChordFret} from './imgs/chordFret.svg'
 import noteButton from './imgs/noteButton.png'
 import {getFretNumber, getNoteBasedOnInterval, playSample, loadSample} from '../Helpers/HelperFunction'
 import e_6 from '../Sounds/e_6.mp3'
@@ -117,7 +117,7 @@ function ChordGenerator(props){
     const fretNumber = getFretNumber(fretNote.string, getNoteBasedOnInterval(props.note, fretNote.noteNumber))
     return(
         <div className={styles.mainContainer}>
-            <img src={chordFret} className={styles.mainImg} />
+            <ChordFret className={styles.mainImg} />
             {props.noteButtonPositions && props.noteButtonPositions.map(noteInfo =>{
                 if(noteInfo.fret == 0){ 
                     return(<OpenStringButton key={props.noteButtonPositions.findIndex(x => x == noteInfo)} rootNote={props.note} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)

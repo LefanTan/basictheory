@@ -63,15 +63,14 @@
     top: 0px;
     left: 0px;
 
-    aspect-ratio: 2/3;
     width: 100%;
-    height: undefined;
+    height: 100%;
 
     display: table-cell;
     align-self: flex-start;
     padding: 0;
     
-    filter: invert(39%) sepia(20%) saturate(2961%) hue-rotate(308deg) brightness(99%) contrast(86%);
+    fill: var(--main-color);
 } 
 
 .noteButtonContainer{

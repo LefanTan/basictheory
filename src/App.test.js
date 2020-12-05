@@ -1,26 +1,16 @@
 import React from 'react'
 import App from './App';
-import { render, unmountComponentAtNode } from "react-dom";
-import { act } from 'react-test-renderer';
+import ReactDOM from "react-dom";
 
-let container = null;
+import {cleanup, fireEvent, render} from '@testing-library/react'
 
-beforeEach(() => {
-  // setup a DOM element as a render target
-  container = document.createElement("div")
-  document.body.appendChild(container)
-});
+afterEach(cleanup)
 
-afterEach(() => {
-  // clean up on exiting
-  unmountComponentAtNode(container)
-  container.remove()
-  container = null;
-})
+it('Text is change when click', () => {
+  const {getByText} = render(<App />)
+  expect(getByText(/Chords/i).textContent).toBe("Chords")
 
-test('Render app', () => {
-  act(() => {
-    render(<App />, container)
-  })
-  expect(container.textContent).toBe('Chords')
+  fireEvent.click(getByText(/Chords/i))
+
+  expect(getByText(/Major/i).textContent).toBe("Major")
 })
