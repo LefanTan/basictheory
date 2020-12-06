@@ -6,7 +6,7 @@ import styles from './Header.module.css'
 class Header extends Component {
     render(){
         return(
-            <header className={styles.header}>
+            <header data-testid='header' className={styles.header}>
                 <Link to="/"><button className={styles.title_button}>Basictheory.io</button> </Link>
                 <div className={styles.button_row}>
                     <Link to={process.env.REACT_APP_CHORDS_PAGE_URL}>

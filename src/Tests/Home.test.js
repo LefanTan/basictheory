@@ -1,18 +1,21 @@
+/* eslint-disable no-undef */
 import React from 'react'
-import App from '../App'
 import Home from '../Components/Home';
 import Header from '../Components/Header';
 import ChordsPage from '../Components/Chords/ChordsPage'
 import {Switch, Route, MemoryRouter} from 'react-router-dom'
 
-import {cleanup, render, fireEvent, screen} from '@testing-library/react'
+import {cleanup, render, screen} from '@testing-library/react'
+import '@testing-library/jest-dom/extend-expect'
 import userEvent from '@testing-library/user-event'
 
 afterEach(cleanup)
 
+// Integration tests
 describe('Test Home Page UI', () => {
 
   describe('Make sure button links to right page', () => {
+
     it('Chord Button goes to Chord Page', () => {
       const {getByText, getByTestId} = render(
         <MemoryRouter>
@@ -51,5 +54,6 @@ describe('Test Home Page UI', () => {
       expect(queryAllByText(/Chord/i)).toHaveLength(2)
     })
   })
+  
 })
 

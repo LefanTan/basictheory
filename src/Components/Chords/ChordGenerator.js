@@ -11,6 +11,7 @@ import d_4 from '../Sounds/d_4.mp3'
 import g_3 from '../Sounds/g_3.mp3'
 import b_2 from '../Sounds/b_2.mp3'
 import e_1 from '../Sounds/e_1.mp3'
+import ErrorBoundary from '../Helpers/ErrorBoundary'
 
 function ChordGenerator(props){
 
@@ -28,11 +29,20 @@ function ChordGenerator(props){
                 return b_2
             case 1:
                 return e_1
+            default:
+                return null
         }
     }
 
     // Buttons for numbered note buttons
     function StandardNoteButton(props){
+        if(props.noteInfo.string > 6 || props.noteInfo.string < 1)
+            throw new Error("Invalid string number")
+           
+        // Standard note button should not exceed fret no 5 and be less than fret 1 (only open string button should do that)
+        if(props.noteInfo.fret > 5 || props.noteInfo.fret < 1)
+            throw new Error("Invalid fret number")
+        
         var topPos = -0.25 * Math.pow(props.noteInfo.fret, 2) + 19.25 * props.noteInfo.fret - 8.5; 
         var leftPos = 19 * (7 - props.noteInfo.string) - 22.5
         
@@ -66,8 +76,14 @@ function ChordGenerator(props){
 
     // For open string buttons such as X and O
     function OpenStringButton(props){
-        var leftPos = 19 * (7 - props.noteInfo.string) - 23.5
+        if(props.noteInfo.string > 6 || props.noteInfo.string < 1)
+            throw new Error("Invalid string number")
+           
+        // Standard note button should not exceed fret no 5 and be less than fret 1 (only open string button should do that)
+        if(props.noteInfo.fret != 0)
+            throw new Error("Open string button must have a prop 'fret' of 0")
 
+        var leftPos = 19 * (7 - props.noteInfo.string) - 23.5
         var openStringButtonContainer = {
             position: 'absolute',       
             top: '-30px',
@@ -114,21 +130,26 @@ function ChordGenerator(props){
         width: '30%',
         height: '15%'
     }
-    const fretNumber = getFretNumber(fretNote.string, getNoteBasedOnInterval(props.note, fretNote.noteNumber))
+    const fretNumber = props.note && getFretNumber(fretNote.string, getNoteBasedOnInterval(props.note, fretNote.noteNumber))
+    
     return(
-        <div className={styles.mainContainer}>
-            <ChordFret className={styles.mainImg} />
-            {props.noteButtonPositions && props.noteButtonPositions.map(noteInfo =>{
-                if(noteInfo.fret == 0){ 
-                    return(<OpenStringButton key={props.noteButtonPositions.findIndex(x => x == noteInfo)} rootNote={props.note} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
-                }else{
-                    return(<StandardNoteButton key={props.noteButtonPositions.findIndex(x => x == noteInfo)} rootNote={props.note} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
-                }
-            })}
-            <div style={fretNumContainer}>
-                <h3 className={styles.fretNumber}>{fretNumber === 0 ? 12 : fretNumber}</h3>
-            </div>
-        </div>
+        <ErrorBoundary
+            fallback={<h2>Error loading chord</h2>}
+        >
+            <div className={styles.mainContainer}>
+                    <ChordFret className={styles.mainImg} />
+                    {props.noteButtonPositions && props.noteButtonPositions.map(noteInfo =>{
+                        if(noteInfo.fret == 0 || noteInfo.noteNumber == 'X'){ 
+                            return(<OpenStringButton key={props.noteButtonPositions.findIndex(x => x == noteInfo)} rootNote={props.note} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
+                        }else{
+                            return(<StandardNoteButton key={props.noteButtonPositions.findIndex(x => x == noteInfo)} rootNote={props.note} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
+                        }
+                    })}
+                    <div style={fretNumContainer}>
+                        <h3 data-testid='fret-number' className={styles.fretNumber}>{fretNumber === 0 ? 12 : fretNumber}</h3>
+                    </div>
+                </div>
+        </ErrorBoundary>
     )
 }
 
