@@ -33,7 +33,7 @@
 
     color: white;
     background-color: inherit;
-    
+    transition: 50ms;
     outline: none;
     border: none;
     margin: 10px;
@@ -41,10 +41,14 @@
 }
 
 .title_button:hover{
-    transform: scale(1.03);
+    transition: 50ms;
+    transform: scale(1.07);
 }
 
-.title_button:active{color: #cfcfcf;}
+.title_button:active{
+    transition: 100ms; 
+    color: #cfcfcf;
+}
 
 .header_button{
     width: 100px;

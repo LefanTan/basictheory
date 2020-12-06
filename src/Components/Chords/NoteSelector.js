@@ -9,7 +9,7 @@ props expect onClick handler
 */
 function NoteSelector(props){
     return(
-        <div className={styles.noteMainContainer}>
+        <div data-testid="note-selector" className={styles.noteMainContainer}>
                 <div className={styles.noteButtonContainer}>
                     <StandardButton className={props.selectedNote == 'C' ? styles.noteButtonSelected : styles.noteButton} value='C' onClick={props.onClick}/>
                     <div>

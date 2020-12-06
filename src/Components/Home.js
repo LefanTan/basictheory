@@ -21,7 +21,7 @@ class Home extends Component{
     render(){
         return(
             <div className={styles.Container}>
-                <Link to={process.env.REACT_APP_CHORDS_PAGE_URL}> <button className={styles.mainPageButton}>Chord</button> </Link>
+                <Link to={process.env.REACT_APP_CHORDS_PAGE_URL}> <button className={styles.mainPageButton}>Chords</button> </Link>
                 <Link to={process.env.REACT_APP_SCALES_PAGE_URL}> <button className={styles.mainPageButton}>Scales</button> </Link>
             </div>
         );
