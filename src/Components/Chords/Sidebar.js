@@ -23,10 +23,9 @@ function Sidebar(props){
 
     return(
         <div className={styles.Container}>
-            <Link to="#">
-                <button className={styles.sidebarButton} onClick={toggleSidebar} ><Fi.FiMenu className={styles.sidebarIcon}/></button>
-            </Link>
-            <div className={sidebar ? styles.SidebarActive : styles.Sidebar}>
+            
+            <button className={styles.sidebarButton} onClick={toggleSidebar} ><Fi.FiMenu className={styles.sidebarIcon}/></button>
+            <div test-dataid='sidebar' className={sidebar ? styles.SidebarActive : styles.Sidebar}>
                 {props.children}
             </div>
         </div>
