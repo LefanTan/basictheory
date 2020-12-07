@@ -61,12 +61,14 @@ function ChordGenerator(props){
 
         const onClickHandler = () => {
             props.onNoteClick(props.noteInfo.noteNumber)
-            loadSample(getStringSound(props.noteInfo.string), playSample, getFretNumber(props.noteInfo.string, getNoteBasedOnInterval(props.rootNote, props.noteInfo.noteNumber)))
+
+            // Only play sound if root note prop exist
+            props.rootNote && loadSample(getStringSound(props.noteInfo.string), playSample, getFretNumber(props.noteInfo.string, getNoteBasedOnInterval(props.rootNote, props.noteInfo.noteNumber)))
         }
     
         return(    
             <div style={standardButtonContainer}>
-                <button onClick={onClickHandler} className={styles.noteButton}>
+                <button data-testid='standard-button' onClick={onClickHandler} className={styles.noteButton}>
                     <img src={noteButton} className={styles.noteButtonImg}/>
                 </button>
                 <p className={styles.noteText}>{props.noteInfo.noteNumber}</p>
@@ -99,13 +101,16 @@ function ChordGenerator(props){
 
         const onClickHandler = () => {
             props.onNoteClick(props.noteInfo.noteNumber)
-            loadSample(getStringSound(props.noteInfo.string), playSample, getFretNumber(props.noteInfo.string, getNoteBasedOnInterval(props.rootNote, props.noteInfo.noteNumber)))
+
+            // Only play sound if root note prop exist
+            props.rootNote && loadSample(getStringSound(props.noteInfo.string), playSample, getFretNumber(props.noteInfo.string, getNoteBasedOnInterval(props.rootNote, props.noteInfo.noteNumber)))
         }
 
         return(    
             <div style={openStringButtonContainer}>
-                <button onClick={() => props.noteInfo.noteNumber != 'X' && onClickHandler()} className={styles.noteButton}>
+                <button data-testid='open-string-button' onClick={() => props.noteInfo.noteNumber != 'X' && onClickHandler()} className={styles.noteButton}>
                     <h3 className={props.noteInfo.noteNumber == 'X' ? styles.h3 : styles.stringNote}>
+                        {/* if prop fret is 0 and isnt marked with X, it is an open string note */}
                         {props.noteInfo.fret == 0 && props.noteInfo.noteNumber != 'X' ? 'O' : props.noteInfo.noteNumber}
                     </h3>
                 </button>

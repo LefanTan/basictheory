@@ -2,10 +2,10 @@
 const notes = ['C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'A#/Bb', 'B']
 import fetch from 'cross-fetch'
 
-
 // Example: getNoteBasedOnInterval('C', 'b3') = D#
 export function getNoteBasedOnInterval(rootNote, interval){
-    const rootIndex = notes.findIndex(n => n.includes(rootNote))
+    // If lenght of root note is 2, it is a sharp or a flat
+    const rootIndex = notes.findIndex(n => rootNote.length === 2 ? n.includes(rootNote) : n == rootNote )
 
     switch(interval){
         case '1': // root note
@@ -46,26 +46,28 @@ export function getNoteBasedOnInterval(rootNote, interval){
 export function getFretNumber(string, targetNote){
     var startIndex = 0;
     switch(string){
-        case 6: // Starts from E
+        case 6 || '6': // Starts from E
             startIndex = notes.findIndex(x => x == 'E')
             break;
-        case 5:
+        case 5 || '5':
             startIndex = notes.findIndex(x => x == 'A')
             break;
-        case 4:
+        case 4 || '4':
             startIndex = notes.findIndex(x => x == 'D')
             break;
-        case 3:
+        case 3 || '3':
             startIndex = notes.findIndex(x => x == 'G')
             break;
-        case 2:
+        case 2 || '2':
             startIndex = notes.findIndex(x => x == 'B')
             break;
-        case 1:
+        case 1 || '1':
             startIndex = notes.findIndex(x => x == 'E')
             break;
+        default:
+            throw new Error("Invalid string number")
     }
-    var targetIndex = notes.findIndex(n => n.includes(targetNote))
+    var targetIndex = notes.findIndex(n => targetNote.length === 2 ? n.includes(targetNote) : n == targetNote )
 
     if(targetIndex < startIndex)
         return 12 - startIndex + targetIndex // 12 because thats the number of item in the notes array
@@ -89,6 +91,11 @@ if (AudioContext) {
 
 // returns an audio buffer from the url
 export function loadSample(url, onSuccess, semitone) {
+    if(context == null){
+        console.warn('Audio context not available, loadSample will not work')
+        return
+    }
+
     context.resume() // resume because safari suspends every audio context created outside an event
     return fetch(url)
     .then(response => response.arrayBuffer())

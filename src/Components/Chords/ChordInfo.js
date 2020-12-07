@@ -40,7 +40,8 @@ class ChordInfo extends Component{
 
     // Query for openchord data based on the current note and chord
     updateOpenChordData(){
-        if(!(this.props.chord && this.props.info && this.props.info))
+        // If props.chord and info doesn't exist, it's an invalid chord
+        if(!(this.props.chord && this.props.info))
             return
 
         const chordName = `${this.props.note}${this.props.chord}`
@@ -77,7 +78,7 @@ class ChordInfo extends Component{
             this.props.info ?
 
             <div className={styles.Container}>
-                <h1 className={styles.h1}>{this.props.info.FullName} Chord</h1>    
+                <h1 data-testid='chordinfo-title' className={styles.h1}>{this.props.info.FullName} Chord</h1>    
                 <div className={styles.rowChordImgContainer}>
                     <ChordGenerator note={this.props.note} onNoteClick={this.chordGeneratorNoteClick} noteButtonPositions={this.state.openChordData ? this.state.openChordData['Notes'] : this.props.info.Shapes[0]['Notes']}/>
                     <div className={styles.columnContainer}>
@@ -91,7 +92,7 @@ class ChordInfo extends Component{
                 </div>
                 <div className={styles.noteDegreeRow}>
                         <h2 className={styles.h2}>Selected Note:</h2>
-                        <h2>{this.state.selectedNote}</h2>
+                        <h2 data-testid='selected'>{this.state.selectedNote}</h2>
                     </div>
                 <div className={styles.textContainer}>
                     <h2 className={styles.h2}>Description</h2>

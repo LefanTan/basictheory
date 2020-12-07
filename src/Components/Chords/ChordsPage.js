@@ -32,16 +32,17 @@ class ChordsPage extends Component{
             this.setState({selectedChordInfo: undefined})
             return
         }
-
+        // special case
         var checkForMajorSharp = (this.state.selectedChord == "maj7(#11)") ? "maj7sharp11" : this.state.selectedChord
 
         const chordTypesRef = db.ref().child('ChordTypes')
         const query = chordTypesRef.
-                        orderByKey().
+                        orderByKey().   
                         equalTo(checkForMajorSharp)
 
-        query.on('value', snap =>
+        query.on('value', snap =>{
             this.setState({selectedChordInfo: snap.val() && snap.val()[`${checkForMajorSharp}`]})
+            console.log(this.state.selectedChordInfo)}
         )
     }
 

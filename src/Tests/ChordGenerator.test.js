@@ -3,7 +3,6 @@ import React from 'react'
 
 import userEvent from '@testing-library/user-event'
 import {render, cleanup, screen} from '@testing-library/react'
-import ErrorBoundary from '../Components/Helpers/ErrorBoundary'
 import ChordGenerator from '../Components/Chords/ChordGenerator'
 
 beforeEach(() => {
@@ -16,7 +15,7 @@ afterEach(cleanup)
 describe('Test error catching for Chord Generator', () => {
 
     it('Test for invalid fret position' , () => {
-        var stubPosition = [
+        var notePositions = [
             {
                 "noteNumber": "X",
                 "string": 6,
@@ -50,7 +49,7 @@ describe('Test error catching for Chord Generator', () => {
         ]
 
         console.warn = jest.fn(() => {})
-        render(<ChordGenerator note='C' noteButtonPositions={stubPosition} />)
+        render(<ChordGenerator note='C' noteButtonPositions={notePositions} />)
 
         // Make sure error was printed to console
         expect(console.warn).toHaveBeenCalled()
@@ -134,8 +133,7 @@ describe('Test error catching for Chord Generator', () => {
     })
 
     it('Test for wrong X data' , () => {
-        // String 0
-        var stubPosition = [
+        var notePositions = [
             {
                 "noteNumber": "X",
                 "string": 6,
@@ -169,13 +167,13 @@ describe('Test error catching for Chord Generator', () => {
         ]
         
         console.warn = jest.fn(() => {})
-        render(<ChordGenerator note='C' noteButtonPositions={stubPosition} />)
+        render(<ChordGenerator note='C' noteButtonPositions={notePositions} />)
         expect(console.warn).toHaveBeenCalled()
     })
 
     it('Test if note prop is null', () =>{
         // valid positions
-        var stubPosition = [
+        var notePosition = [
             {
                 "noteNumber": "X",
                 "string": 6,
@@ -208,7 +206,91 @@ describe('Test error catching for Chord Generator', () => {
             }
         ]
 
-        const {getByTestId} = render(<ChordGenerator noteButtonPositions={stubPosition} />)
+        const {getByTestId} = render(<ChordGenerator noteButtonPositions={notePosition} />)
         expect(getByTestId('fret-number').textContent).toBe("")
+    })
+})
+
+describe('Test if chord generator generates properly', () => {
+
+    it('Chord generates buttons correctly', () =>{
+        // 2 open string, 4 standard
+        var notePosition = [
+            {
+                "noteNumber": "X",
+                "string": 6,
+                "fret": 0
+            },
+            {
+                "noteNumber": "1",
+                "string": 6, 
+                "fret": 2
+            },
+            {
+                "noteNumber": "5",
+                "string": 4,
+                "fret": 0
+            },
+            {
+                "noteNumber": "1",
+                "string": 3,
+                "fret": 2
+            },
+            {
+                "noteNumber": "3",
+                "string": 2,
+                "fret": 2
+            },
+            {
+                "noteNumber": "5",
+                "string": 1,
+                "fret": 2
+            }
+        ]
+        const {queryAllByTestId} = render(<ChordGenerator noteButtonPositions={notePosition}/>)
+        expect(queryAllByTestId('open-string-button')).toHaveLength(2)
+        expect(queryAllByTestId('standard-button')).toHaveLength(4)
+    })
+
+    it('Test button callback', () => {
+        const mockButtonHandler = jest.fn((noteNumber) => noteNumber)
+        var notePositions = [
+            {
+                "noteNumber": "X",
+                "string": 6,
+                "fret": 0
+            },
+            {
+                "noteNumber": "1",
+                "string": 6, 
+                "fret": 2
+            },
+            {
+                "noteNumber": "5",
+                "string": 4,
+                "fret": 0
+            },
+            {
+                "noteNumber": "1",
+                "string": 3,
+                "fret": 2
+            },
+            {
+                "noteNumber": "3",
+                "string": 2,
+                "fret": 2
+            },
+            {
+                "noteNumber": "5",
+                "string": 1,
+                "fret": 2
+            }
+        ]
+
+        const {getAllByTestId} = render(<ChordGenerator onNoteClick={mockButtonHandler} noteButtonPositions={notePositions} />)
+        // Click the open note of noteNumber 5 assigned
+        userEvent.click(getAllByTestId('open-string-button')[1])
+        expect(mockButtonHandler).toHaveBeenCalled();
+        expect(mockButtonHandler.mock.results[0].value).toBe("5")
     })
 })

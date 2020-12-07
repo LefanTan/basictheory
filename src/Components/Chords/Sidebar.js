@@ -2,7 +2,6 @@
 import React, {useEffect, useState} from 'react'
 import * as Fi from 'react-icons/fi'
 import styles from './Sidebar.module.css'
-import {Link} from 'react-router-dom';
 
 function Sidebar(props){
     const [sidebar, setSidebar] = useState(false)
@@ -23,9 +22,8 @@ function Sidebar(props){
 
     return(
         <div className={styles.Container}>
-            
             <button className={styles.sidebarButton} onClick={toggleSidebar} ><Fi.FiMenu className={styles.sidebarIcon}/></button>
-            <div test-dataid='sidebar' className={sidebar ? styles.SidebarActive : styles.Sidebar}>
+            <div data-testid='sidebar' className={sidebar ? styles.SidebarActive : styles.Sidebar}>
                 {props.children}
             </div>
         </div>
