@@ -1,0 +1,83 @@
+.Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin: 0px 30px 0px 20px;  
+
+    /*to add a cap in mobile browser*/
+    max-width: fit-content;
+    width: fit-content;
+    min-width: 35%;
+    max-height: 72.5vh;
+}
+
+.Sidebar{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+    position: relative;
+    left: -100%; 
+    
+    width: 100%;
+    max-height: fit-content;
+    padding: 10px;
+
+    transition: 50ms;
+    visibility: hidden;
+
+    background-color: var(--primary-background);
+    border-radius: 35px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-padding-right: 2em;
+}
+
+.SidebarActive{
+    composes: Sidebar;
+
+    left:0px;
+    visibility: visible;
+    transition: 300ms;
+}
+
+.sidebarButton{
+    width: 35px;
+    height: 40px;
+
+    padding: 0;
+
+    position: absolute;
+    top: 110px;
+    left: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    outline: none;
+    border: none;
+
+    background-color: inherit;
+}
+
+.sidebarIcon{
+    width: inherit;
+    height: inherit;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: var(--main-color);
+}
+.sidebarIcon:hover{
+    color: var(--main-hover);
+    transform: scale(1.1);
+}
+.sidebarIcon:active{color: var(--main-click);}

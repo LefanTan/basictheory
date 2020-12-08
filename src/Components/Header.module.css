@@ -1,3 +1,5 @@
+@import '../index.css';
+
 .header{
     display: flex;
     flex-direction: row;
@@ -8,10 +10,13 @@
     right:0;
     top:0;
     width: 100%;
-    min-height: 10vh;
-    margin: 0;
+    height: auto;
+    min-width: 800px;
+    margin: 0 auto;
     
-    background-color: #ff5c7a;
+    padding: 10px;
+    background-color: var(--main-color);
+    z-index: 1;
 }
 
 .button_row{
@@ -28,7 +33,7 @@
 
     color: white;
     background-color: inherit;
-    
+    transition: 50ms;
     outline: none;
     border: none;
     margin: 10px;
@@ -36,10 +41,14 @@
 }
 
 .title_button:hover{
-    transform: scale(1.03);
+    transition: 50ms;
+    transform: scale(1.07);
 }
 
-.title_button:active{color: #cfcfcf;}
+.title_button:active{
+    transition: 100ms; 
+    color: #cfcfcf;
+}
 
 .header_button{
     width: 100px;

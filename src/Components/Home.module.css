@@ -1,3 +1,4 @@
+
 .Container{
     display: flex;
 
@@ -12,15 +13,16 @@
 .mainPageButton{
     font-family: 'Ubuntu', sans-serif;
     font-size: 40px;
-    color: #ff5c7a;
+    color: var(--main-color);
     background-color: inherit;
-
+    transition: 50ms;
     border: none;
     outline: none;
     margin: 20px;
 }
 
 .mainPageButton:hover{
+    transition: 50ms;
     transform: scale(1.1);
 }
 

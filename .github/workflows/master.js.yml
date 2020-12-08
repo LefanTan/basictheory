@@ -1,0 +1,47 @@
+# Runs when there is a new release to master
+
+name: React Deploy CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Restore node_modules from cache
+      uses: actions/cache@v2.1.3
+      with:
+        path: |
+          node_modules
+          */*/node_modules
+        key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+    - name: Clean Install
+      run: npm ci
+    - name: Run Build
+      run: npm run build
+    - name: Run Test
+      run: npm test -- --coverage
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1.0.15
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.0.0-beta-01
+      with: 
+        GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: build # The folder the action should deploy.
+        CLEAN: true # Automatically remove deleted files from the deploy branch: 

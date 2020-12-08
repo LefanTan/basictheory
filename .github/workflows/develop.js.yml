@@ -1,0 +1,40 @@
+# Runs when PR is merged to develop, doesn't deploy ot gh pages
+
+name: React Develop CI
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Restore node_modules from cache
+      uses: actions/cache@v2.1.3
+      with:
+        path: |
+          node_modules
+          */*/node_modules
+        key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+    - name: Clean Install
+      run: npm ci
+    - name: Run Build
+      run: npm run build
+    - name: Run Test
+      run: npm test -- --coverage
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1.0.15

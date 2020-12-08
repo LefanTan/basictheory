@@ -1,0 +1,125 @@
+.mainContainer{
+    /* background-color: ivory; */
+    
+    position: relative;
+    top: 0px;
+    left: 0px;
+
+    min-width: 30%;
+    max-width: 35%;
+    margin: 20px 5px 20px 5px;
+}
+
+.h3, .stringNote{
+    color: var(--main-color);       
+
+    z-index: 1;
+    font-size: medium;
+
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+
+.stringNote:hover{
+    transform: scale(1.3);
+    color: var(--main-hover);
+}
+
+.stringNote:active{
+    color: var(--main-click);
+}
+
+.fretNumber{
+    color: var(--main-color);
+    font-size: medium;
+    text-align: center;
+
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+
+.noteText{
+    color: var(--main-color);       
+
+    z-index: 1;
+    font-size: small;
+    pointer-events: none;
+
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+
+.mainImg{
+    position: relative;
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 100%;
+
+    display: table-cell;
+    align-self: flex-start;
+    padding: 0;
+    
+    fill: var(--main-color);
+} 
+
+.noteButtonContainer{
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    width: 20%;
+    height: 20%;
+}
+
+.noteButton{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    outline: none;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: inherit;
+}
+
+.noteButtonImg{
+    width: 110%;
+    height: 100%;
+
+    padding: 0px;
+    margin: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.noteButtonImg:hover{
+    filter: brightness(95%);
+}
+
+.noteButtonImg:active{
+    filter: brightness(90%);
+}
