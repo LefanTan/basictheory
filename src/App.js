@@ -6,6 +6,7 @@ import ChordsPage from './Components/Chords/ChordsPage'
 import {Switch, Route, HashRouter} from 'react-router-dom'
 import styles from './App.module.css'
 import NotFoundPage from "./Components/NotFoundPage"
+import ScalesPage from "./Components/Scales/ScalesPage"
 
 /*
 Main component
@@ -29,6 +30,7 @@ function App() {
                     <Route path='/' exact component={Home}/>
                     <Route path={process.env.REACT_APP_HOME_PAGE_URL} component={Home}/>
                     <Route path={process.env.REACT_APP_CHORDS_PAGE_URL} component={ChordsPage}/>  
+                    <Route path={process.env.REACT_APP_SCALES_PAGE_URL} component={ScalesPage}/>
                     <Route component={NotFoundPage}/>
                 </Switch>
             </HashRouter>

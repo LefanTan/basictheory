@@ -17,9 +17,28 @@ code {
     --main-hover: #d14e66;
     --main-click: #bb374f;
     
-    --primary-background: #f5f5f5;
+    --primary-background-hover: #f5f5f5;
+    --primary-background-click: #d3d3d3;
+
     --overflow-x: auto;
     --overflow-y: visible;
     --device-width: 100%;
     --device-height: fit-content;
+}
+
+.genericButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+
+  outline: none;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 0px;
+  margin: 2px;
 }
