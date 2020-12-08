@@ -3,7 +3,7 @@ import React from 'react'
 
 import {cleanup, render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import NoteSelector from '../Components/Chords/NoteSelector'
+import NoteSelector from '../Components/NoteSelector'
 
 afterEach(cleanup)
 

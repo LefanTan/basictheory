@@ -29,6 +29,7 @@ export function getNoteBasedOnInterval(rootNote, interval){
         case '5': // perfect fifth
             return notes[(rootIndex + 7) % 12]
         case 'b6': // minor sixth
+        case '#5':
             return notes[(rootIndex + 8) % 12]
         case '6': // major sixth or major 13th or diminished 7th
         case 'bb7':
