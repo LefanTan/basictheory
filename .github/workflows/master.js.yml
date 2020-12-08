@@ -23,21 +23,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Restore node_modules from cache
-      uses: actions/cache@v2.1.3
-      with:
-        path: |
-          node_modules
-          */*/node_modules
-        key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-    - name: Clean Install
-      run: npm ci
-    - name: Run Build
-      run: npm run build
-    - name: Run Test
-      run: npm test -- --coverage
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1.0.15
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.0.0-beta-01
       with: 
