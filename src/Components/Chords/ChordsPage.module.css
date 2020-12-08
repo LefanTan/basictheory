@@ -69,3 +69,25 @@ this contains all elements includng the chord header and its innerChordRow
     width: auto;
     height: fit-content;
 }
+
+.chordButton{
+    composes: genericButton from '../../index.css';
+
+    width: auto;
+    height: fit-content;
+
+    font-size: large;
+    padding: 10px;
+    box-shadow: 0px 1px 1px;
+
+    color: var(--main-color);
+    background-color: inherit;
+}
+
+.chordButtonSelected{
+    composes: chordButton;
+    background-color: #d3d3d3;
+}
+
+.chordButton:hover{background-color: var(--primary-background-hover);}
+.chordButton:active, .noteButtonSelected:hover, .chordButtonSelected:hover{background-color: var(--primary-background-click);}
