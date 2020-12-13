@@ -45,7 +45,7 @@ class ChordInfo extends Component{
             return
 
         const chordName = `${this.props.note}${this.props.chord}`
-        const openChordRef = db.ref().child('OpenChords')
+        const openChordRef = db.ref().child('ChordPage').child('OpenChords')
         const query = openChordRef.
                             orderByKey().
                             equalTo(chordName)

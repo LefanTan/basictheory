@@ -14,7 +14,7 @@ export function getNoteBasedOnInterval(rootNote, interval){
         case 'b2': // minor second
             return notes[(rootIndex + 1) % 12]
         case '2': // major second
-        case '9':
+        case '9':   
             return notes[(rootIndex + 2) % 12]
         case 'b3': // minor third
             return notes[(rootIndex + 3) % 12]

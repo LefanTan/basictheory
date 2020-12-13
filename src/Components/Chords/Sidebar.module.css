@@ -28,7 +28,7 @@
     transition: 50ms;
     visibility: hidden;
 
-    background-color: var(--primary-background);
+    background-color: var(--secondary-background);
     border-radius: 35px;
     overflow-y: auto;
     overflow-x: hidden;

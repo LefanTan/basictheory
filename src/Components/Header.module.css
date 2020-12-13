@@ -13,8 +13,9 @@
     height: auto;
     min-width: 800px;
     margin: 0 auto;
-    
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     background-color: var(--main-color);
     z-index: 1;
 }
