@@ -5,11 +5,11 @@
     flex-flow: column;
 
     width: var(--device-width);
-    height: var(--device-height);
+    height: var(--body-height);
 
     margin: 0;
     padding: 0;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-start;
 }
 
@@ -55,7 +55,7 @@ this contains all elements includng the chord header and its innerChordRow
     display: flex;
     flex-direction: column;
     
-    width: auto;   
+    width: fit-content;   
     height: 100%;
 
     margin: 0px 5px 0px 5px;

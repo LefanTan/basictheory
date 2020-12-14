@@ -86,7 +86,7 @@
     align-items: center;
     justify-content: center;
 
-    width: 90%;
+    width: max-content;
     margin: 0;
     padding: 0;
 }
@@ -119,9 +119,9 @@
     margin: 0px;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 15%;
+    margin-left: 10%;
 
-    max-width: 50%;
+    max-width: fit-content;
     height: fit-content;
 }
 

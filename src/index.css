@@ -23,7 +23,9 @@ code {
     --overflow-x: auto;
     --overflow-y: visible;
     --device-width: 100%;
-    --device-height: fit-content;
+    --device-height: 100%;
+    /* Body height is 100% - approximate height of header */
+    --body-height: 80%; 
 }
 
 .genericButton{
