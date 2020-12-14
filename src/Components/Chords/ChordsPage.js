@@ -4,7 +4,8 @@ import chordStyles from './ChordsPage.module.css'
 import StandardButton from '../StandardButton';
 import NoteSelector from '../NoteSelector';
 import Sidebar from './Sidebar';
-import {db} from '../../Services/Firebase'
+import {db} from '../../Services/Firebase';
+import * as Fi from 'react-icons/fi';
 
 // Chord page component
 class ChordsPage extends Component{
@@ -19,6 +20,7 @@ class ChordsPage extends Component{
 
         this.handleNoteButtonClick = this.handleNoteButtonClick.bind(this)
         this.handleChordButtonClick = this.handleChordButtonClick.bind(this)
+        this.sidebarButtonClick = this.sidebarButtonClick.bind(this)
     }
 
     componentDidMount(){
@@ -61,10 +63,19 @@ class ChordsPage extends Component{
         },() => this.updateChordInfo())
     }
 
+    sidebarButtonClick(){
+        this.setState({
+            sidebarToggle: !this.state.sidebarToggle,
+            selectedChordInfo: undefined,
+            selectedChord: undefined
+        })
+    }
+
     render(){
         return(
             <div className={chordStyles.mainContainer}>
                 <div className={chordStyles.header}>
+                    <button className={chordStyles.sidebarButton} onClick={this.sidebarButtonClick} ><Fi.FiMenu className={chordStyles.sidebarIcon}/></button>
                     <NoteSelector className={chordStyles.noteSelector} styles={chordStyles} selectedNote={this.state.selectedNote} onClick={this.handleNoteButtonClick}/>
                 </div>
 

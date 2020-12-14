@@ -47,6 +47,12 @@
     font-weight: 400;
 }
 
+.descriptionText{
+    composes: generalText;
+    font-weight: 400;
+    font-size: small;
+}
+
 .arrowDownButton{
     display: flex;
     justify-content: center;

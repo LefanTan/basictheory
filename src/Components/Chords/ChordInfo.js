@@ -96,12 +96,12 @@ class ChordInfo extends Component{
                     </div>
                 <div className={styles.textContainer}>
                     <h2 className={styles.h2}>Description</h2>
-                    <p className={styles.p}>
+                    <p className={styles.descriptionText}>
                         {this.props.info.Description}
                     </p>
                     <br/>
                     <h2 className={styles.h2}>Sound</h2>
-                    <p className={styles.p}>
+                    <p className={styles.descriptionText}>
                         {this.props.info.Sound}
                     </p>
                 </div>
