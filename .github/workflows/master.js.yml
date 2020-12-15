@@ -1,6 +1,6 @@
 # Runs when there is a new release to master
 
-name: React Deploy CI
+name: React Master CI
 
 on:
   push:
@@ -35,9 +35,11 @@ jobs:
     - name: Run Build
       run: npm run build
     - name: Run Test
-      run: npm test -- --coverage
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1.0.15
+      run: npm test
+    - name: Cypress run
+      uses: cypress-io/github-action@v2
+      with:
+          start: npm start
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.0.0-beta-01
       with: 

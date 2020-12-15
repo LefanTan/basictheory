@@ -29,7 +29,8 @@
 .h1{
     composes: generalText;
     align-self: center;
-    font-size: 35px;
+    width: 80%;
+    font-size: xx-large;
 }
 
 .noteText{
@@ -44,6 +45,12 @@
 .p{
     composes: generalText;
     font-weight: 400;
+}
+
+.descriptionText{
+    composes: generalText;
+    font-weight: 400;
+    font-size: small;
 }
 
 .arrowDownButton{
@@ -85,7 +92,7 @@
     align-items: center;
     justify-content: center;
 
-    width: 90%;
+    width: max-content;
     margin: 0;
     padding: 0;
 }
@@ -118,9 +125,9 @@
     margin: 0px;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 15%;
+    margin-left: 10%;
 
-    max-width: 50%;
+    max-width: fit-content;
     height: fit-content;
 }
 

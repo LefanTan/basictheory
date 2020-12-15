@@ -4,6 +4,7 @@ describe('ChordPage Test', () => {
     it('Test E to E for ChordPage', () => {
         cy.visit('/')
         cy.contains('Chords').click()
+        cy.wait(10)
         cy.contains('Major Chord')
 
         cy.get('[data-testid=note-selector]').contains('Eb').click()
