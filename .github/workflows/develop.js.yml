@@ -38,5 +38,7 @@ jobs:
       run: npm test -- --coverage
     - name: Cypress run
       uses: cypress-io/github-action@v2
+      with:
+          start: npm start
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1.0.15

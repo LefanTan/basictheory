@@ -38,6 +38,8 @@ jobs:
       run: npm test
     - name: Cypress run
       uses: cypress-io/github-action@v2
+      with:
+          start: npm start
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.0.0-beta-01
       with: 
