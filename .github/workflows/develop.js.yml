@@ -42,7 +42,8 @@ jobs:
           start: npm start
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1.0.15
-      coverage:
-        status:
-          project: off
-          patch: off
+      with:
+        coverage:
+          status:
+            project: off
+            patch: off
