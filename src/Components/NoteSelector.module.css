@@ -2,23 +2,17 @@
 
 .noteMainContainer{
     display: flex;
-
     align-items: flex-start;
     justify-content: center;
-
-    width: 100%;
-    height: auto;
+    
+    width: fit-content;
+    height: fit-content;
 
     padding:0; border:0;
-}
 
-.noteButtonContainer{
-    display: flex;
-    flex-flow: row wrap;
-
-    margin-top: 10px;
-    margin-bottom: 20px;
-    margin-left: 80px;
+    margin: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .noteButton{

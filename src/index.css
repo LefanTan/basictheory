@@ -16,14 +16,16 @@ code {
     --main-color: #df4d68;
     --main-hover: #d14e66;
     --main-click: #bb374f;
-    
+    --secondary-background: #f5f5f5;
     --primary-background-hover: #f5f5f5;
     --primary-background-click: #d3d3d3;
 
     --overflow-x: auto;
     --overflow-y: visible;
     --device-width: 100%;
-    --device-height: fit-content;
+    --device-height: 100%;
+    /* Body height is 100% - approximate height of header */
+    --body-height: 80%; 
 }
 
 .genericButton{

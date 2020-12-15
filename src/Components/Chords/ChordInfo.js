@@ -45,7 +45,7 @@ class ChordInfo extends Component{
             return
 
         const chordName = `${this.props.note}${this.props.chord}`
-        const openChordRef = db.ref().child('OpenChords')
+        const openChordRef = db.ref().child('ChordPage').child('OpenChords')
         const query = openChordRef.
                             orderByKey().
                             equalTo(chordName)
@@ -96,12 +96,12 @@ class ChordInfo extends Component{
                     </div>
                 <div className={styles.textContainer}>
                     <h2 className={styles.h2}>Description</h2>
-                    <p className={styles.p}>
+                    <p className={styles.descriptionText}>
                         {this.props.info.Description}
                     </p>
                     <br/>
                     <h2 className={styles.h2}>Sound</h2>
-                    <p className={styles.p}>
+                    <p className={styles.descriptionText}>
                         {this.props.info.Sound}
                     </p>
                 </div>

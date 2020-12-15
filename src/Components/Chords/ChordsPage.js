@@ -4,7 +4,8 @@ import chordStyles from './ChordsPage.module.css'
 import StandardButton from '../StandardButton';
 import NoteSelector from '../NoteSelector';
 import Sidebar from './Sidebar';
-import {db} from '../../Services/Firebase'
+import {db} from '../../Services/Firebase';
+import * as Fi from 'react-icons/fi';
 
 // Chord page component
 class ChordsPage extends Component{
@@ -19,6 +20,7 @@ class ChordsPage extends Component{
 
         this.handleNoteButtonClick = this.handleNoteButtonClick.bind(this)
         this.handleChordButtonClick = this.handleChordButtonClick.bind(this)
+        this.sidebarButtonClick = this.sidebarButtonClick.bind(this)
     }
 
     componentDidMount(){
@@ -34,15 +36,14 @@ class ChordsPage extends Component{
         // special case
         var checkForMajorSharp = (this.state.selectedChord == "maj7(#11)") ? "maj7sharp11" : this.state.selectedChord
 
-        const chordTypesRef = db.ref().child('ChordTypes')
+        const chordTypesRef = db.ref().child('ChordPage').child('ChordTypes')
         const query = chordTypesRef.
                         orderByKey().   
                         equalTo(checkForMajorSharp)
 
         query.on('value', snap =>{
             this.setState({selectedChordInfo: snap.val() && snap.val()[`${checkForMajorSharp}`]})
-            console.log(this.state.selectedChordInfo)}
-        )
+        })
     }
 
     // invoked when note selector button is clicked
@@ -62,10 +63,19 @@ class ChordsPage extends Component{
         },() => this.updateChordInfo())
     }
 
+    sidebarButtonClick(){
+        this.setState({
+            sidebarToggle: !this.state.sidebarToggle,
+            selectedChordInfo: undefined,
+            selectedChord: undefined
+        })
+    }
+
     render(){
         return(
             <div className={chordStyles.mainContainer}>
                 <div className={chordStyles.header}>
+                    <button className={chordStyles.sidebarButton} onClick={this.sidebarButtonClick} ><Fi.FiMenu className={chordStyles.sidebarIcon}/></button>
                     <NoteSelector className={chordStyles.noteSelector} styles={chordStyles} selectedNote={this.state.selectedNote} onClick={this.handleNoteButtonClick}/>
                 </div>
 
