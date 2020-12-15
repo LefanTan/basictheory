@@ -1,6 +1,6 @@
 # Runs when there is a new release to master
 
-name: React Deploy CI
+name: React Master CI
 
 on:
   push:
