@@ -2,7 +2,7 @@
 
 .mainContainer{
     display: grid;
-    grid-template-rows: 15% auto;
+    grid-template-rows: 15% 40% auto;
 
     width: var(--device-width);
     height: var(--body-height);
@@ -15,8 +15,14 @@
 .noteSelectorContainer{ 
     grid-row-start: 1;
     grid-row-end: 2;
-    background-color: aliceblue;
+    align-self: start;
+    width: 100%;
+    height: 100%;
+}
 
+.scaleGeneratorContainer{
+    grid-row-start: 2;
+    grid-row-end: 3;
     width: 100%;
     height: 100%;
 }

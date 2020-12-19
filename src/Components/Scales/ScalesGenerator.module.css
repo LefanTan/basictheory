@@ -1,0 +1,15 @@
+@import '../../index.css';
+
+.Container{
+    width:100%;
+    height: 100%;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+}
+
+.Img{
+    width:100%;
+    height:90%;
+    fill: var(--main-color);
+}
