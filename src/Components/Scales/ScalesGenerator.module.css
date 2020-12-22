@@ -1,15 +1,63 @@
 @import '../../index.css';
 
 .Container{
-    width:100%;
+    position: relative;
+    width: 100%;
     height: 100%;
-    background-color: aliceblue;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.imgContainer{
+    position: relative;
+
+    width: 90%;
+    height: 90%;
+    
+    background-color: aliceblue;
 }
 
 .Img{
     width:100%;
-    height:90%;
+    height:100%;
     fill: var(--main-color);
+}
+
+.generalText{
+    color: var(--main-color);
+    background-color: inherit;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+
+    margin: 0;
+    padding: 0;
+    font-size: auto;
+    padding-right: 5px;
+}
+
+.stringName{
+    position: absolute;
+    top:0px;
+    left:0px;
+
+    width: fit-content;
+    height: 100%;
+    background-color: red;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.h2{
+    composes: generalText;
+}
+
+.p{
+    composes: generalText;
+    font-weight: 400;
 }
