@@ -22,9 +22,16 @@
     height: 100%;
 }
 
-.scaleGeneratorContainer{
+.scaleSelectorContainer{
     grid-row-start: 2;
     grid-row-end: 3;
+    width: 100%;
+    height: 100%;
+}
+
+.scaleGeneratorContainer{
+    grid-row-start: 5;
+    grid-row-end: 6;
     width: 100%;
     height: 100%;
     
