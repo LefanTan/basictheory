@@ -2,8 +2,8 @@
 
 .scaleMainContainer{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     
     width: fit-content;
@@ -13,7 +13,8 @@
 
     margin: 15px;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: auto;  
+    
 }
 
 .scaleSubContainer{
@@ -23,11 +24,11 @@
 
 .scaleButton{
     composes: genericButton from '../../index.css';
-    height: 50px;
+    height: 40px;
     width: fit-content;
-    padding: 0px 5px;
+    padding: 0px 10px;
 
-    font-size: x-large;
+    font-size: large;
     box-shadow: 0px 2px 1px;
 
     color: var(--main-color);
