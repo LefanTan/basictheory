@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from 'react'
 import styles from './ScalesGenerator.module.css'
 import useViewport from '../Helpers/CustomHooks'
+import {ReactComponent as scaleButtonOpaque} from './imgs/scaleButtonOpaque.svg'
 import {ReactComponent as Fret} from './imgs/fretBoard.svg'
 
 // Produce a fret board of 18 frets
