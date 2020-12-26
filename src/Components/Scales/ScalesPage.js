@@ -10,11 +10,11 @@ export default function ScalesPage(){
             <div className={styles.noteSelectorContainer}>
                 <NoteSelector/>
             </div>
-            <div className={styles.scaleSelectorContainer}>
-                <ScaleSelector/>
-            </div>
             <div className={styles.scaleGeneratorContainer}>
                 <ScalesGenerator />
+            </div>
+            <div className={styles.scaleSelectorContainer}>
+                <ScaleSelector/>
             </div>
         </div>
     )

@@ -32,7 +32,7 @@
     box-shadow: 0px 2px 1px;
 
     color: var(--main-color);
-    background-color: inherit;
+    background-color: white;
 }
 .scaleButton:hover{background-color: var(--primary-background-hover);}
 .scaleButton:active, .scaleButtonSelected:hover{background-color: var(--primary-background-click);}
