@@ -22,9 +22,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "cypress": "node_modules/.bin/cypress run",
+    "cypress": "npx cypress open",
     "test": "react-scripts test --watchAll=false",
-    "testLocal": "react-scripts test --watchAll=false && npm run cypress",
+    "testLocal": "react-scripts test --watchAll=false && npx cypress run",
     "eject": "react-scripts eject",
     "deploy": "npm run test && npm run build && gh-pages -d build"
   },

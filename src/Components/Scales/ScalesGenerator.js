@@ -30,7 +30,7 @@ export default function ScalesGenerator(props){
         alignItems: 'center',
         justifyContent: 'center'
     }
-    
+
     return(
         <div className={styles.Container}>
             <div style={imgContainer}>
@@ -60,7 +60,7 @@ export default function ScalesGenerator(props){
                         </div>
                     )}
                 )}
-
+                
             </div>
         </div>
     )
