@@ -35,7 +35,9 @@
     align-items: center;
 
     width: 100%;
-    height:fit-content;
+    height: 12.5%;
+    margin: 10px;
+    margin-bottom: 20px;
 }
 
 /**

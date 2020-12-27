@@ -11,12 +11,12 @@ export default function ScalesGenerator(props){
     const [imgContainerWidth, setImgContainerWidth] = useState(60)
 
     // get the current width of the device view port
-    const {width} = useViewport()
+    const {width, height} = useViewport()
 
     // Update ImgContainerWidth depending on device type
     useEffect(() => {
         // If less than 1000, it is on a device and so change the width accordingly 
-        if(width < 1000) 
+        if(width < height) 
             setImgContainerWidth(90)
         else 
             setImgContainerWidth(60)
@@ -38,7 +38,7 @@ export default function ScalesGenerator(props){
                 <Fret className={styles.Img}/>
                 {stringNotes.map((note, index) => {
                     // just some equation to position the note letters
-                    var noteTopPos = 50 - 20 * index 
+                    var noteTopPos = 50 - 20.5 * index 
                     
                     var stringName ={
                         position: 'absolute',
@@ -53,8 +53,6 @@ export default function ScalesGenerator(props){
                         alignItems: 'center',
                         justifyContent: 'center'
                     }
-
-                    console.log(noteTopPos)
                     return(
                         <div key={index} style={stringName}>
                             <h3 className={styles.h3}>{note}</h3>
