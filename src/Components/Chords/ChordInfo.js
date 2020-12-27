@@ -1,13 +1,12 @@
-/* eslint-disable react/prop-types */
 import React, {Component} from 'react'
 import {db} from '../../Services/Firebase'
 import styles from './ChordInfo.module.css'
+import PropTypes from 'prop-types';
 import ChordGenerator from './ChordGenerator'
 import {getNoteBasedOnInterval} from '../Helpers/HelperFunction'
 import {HiArrowDown} from 'react-icons/hi'
 
 class ChordInfo extends Component{
-
     constructor(props){
         super(props)
         this.state = {
@@ -50,7 +49,7 @@ class ChordInfo extends Component{
                             orderByKey().
                             equalTo(chordName)
 
-        query.on('value', snap =>{
+        query.on('value', snap => {
             this.setState({
                 openChordData: snap.exists() ? snap.val()[chordName] : "",
                 shapeList: snap.exists() ? this.props.info.Shapes : this.props.info.Shapes.slice(1)
@@ -143,5 +142,12 @@ class ChordInfo extends Component{
         }
     }
 }
+
+// Props validation
+ChordInfo.propTypes = {
+    chord: PropTypes.string,
+    note: PropTypes.string,
+    info: PropTypes.object
+};
 
 export default ChordInfo;
