@@ -1,7 +1,9 @@
 import React, { useEffect, useState} from 'react'
 import styles from './ScalesGenerator.module.css'
 import useViewport from '../Helpers/CustomHooks'
+import PropTypes from 'prop-types';
 import {ReactComponent as scaleButtonOpaque} from './imgs/scaleButtonOpaque.svg'
+import {ReactComponent as scaleButtonOutline} from './imgs/scaleButtonOutline.svg'
 import {ReactComponent as Fret} from './imgs/fretBoard.svg'
 
 // Produce a fret board of 18 frets
@@ -22,6 +24,10 @@ export default function ScalesGenerator(props){
             setImgContainerWidth(60)
     }, [width])
 
+    useEffect(() => {
+        console.log(props.notes)
+    }, [props])
+
     var imgContainer = {
         position: 'relative',
         width: `${imgContainerWidth}%`,
@@ -30,6 +36,11 @@ export default function ScalesGenerator(props){
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
+    }
+
+    // Props validation
+    ScalesGenerator.propTypes = {
+        notes: PropTypes.array
     }
 
     return(
@@ -59,7 +70,6 @@ export default function ScalesGenerator(props){
                         </div>
                     )}
                 )}
-                
             </div>
         </div>
     )

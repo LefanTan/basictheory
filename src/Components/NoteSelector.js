@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
+import PropTypes from 'prop-types';
 import StandardButton from './StandardButton'
 import styles from './NoteSelector.module.css'
 
@@ -8,6 +8,11 @@ Note selector component
 props expect onClick handler
 */
 function NoteSelector(props){
+    NoteSelector.propTypes = {
+        selectedNote: PropTypes.string,
+        onClick: PropTypes.func
+    }
+
     return(
         <div data-testid="note-selector" className={styles.noteMainContainer}>
                 <StandardButton className={props.selectedNote == 'C' ? styles.noteButtonSelected : styles.noteButton} value='C' onClick={props.onClick}/>
