@@ -2,7 +2,7 @@
 
 .mainContainer{
     display: grid;
-    grid-template-rows: 15% 35% auto;
+    grid-template-rows: 15% 35% 10% auto;
 
     width: var(--device-width);
     height: var(--body-height);
@@ -17,7 +17,6 @@
 /* Ideally, note selector component should scale according to parent container, but right now the size is fixed */
 .noteSelectorContainer{ 
     grid-row-start: 1;
-    grid-row-end: 2;
     width: 100%;
     height: 100%;
 }
