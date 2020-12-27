@@ -20,7 +20,7 @@ function App() {
         
         // If device width is less than 1280, it is a mobile device. Use max-content as width instead.
         root.style.setProperty('--device-width', width > 1000 ? '100%' : 'fit-content');
-    } ,[width])
+    },[width])
 
     return(
         <div className={styles.Container}>

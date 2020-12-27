@@ -1,0 +1,20 @@
+{
+    "ScaleType":{
+        "Major":{
+            "About": "The Major Scale is the foundation of all western harmony, learning it will help your understanding of music theory. The sequence of the interval is whole, whole, half, whole, whole, whole, half",
+            "Notes": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "UseCases":[
+                "The Major scale can be used in improvising and understanding solos. There are times when the pentatonic or blue scales might sound boring, the major scale can be used in place.",
+                "Use it so people know you know more than just the pentatonic scale ( ͡° ͜ʖ ͡°)"
+            ]
+        }
+    }
+}

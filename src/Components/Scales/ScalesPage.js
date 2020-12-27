@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './ScalesPage.module.css'
 import ScalesGenerator from './ScalesGenerator'
-import ScaleSelector from './ScaleSelector'
+import ScaleSelector from './ScaleSelector
 import NoteSelector from '../NoteSelector'
 
 export default function ScalesPage(){
