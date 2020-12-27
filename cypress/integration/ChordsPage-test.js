@@ -35,5 +35,6 @@ describe('ChordPage Test', () => {
         cy.get("[data-testid='sidebar']").then($div => {
             assert(($div.is(':visible')) == true, "Sidebar is visible")
         })
+        
     })
 })
