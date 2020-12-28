@@ -23,7 +23,7 @@ export default function ScalesGenerator(props){
         if(width < height) 
             setImgContainerWidth(90)
         else 
-            setImgContainerWidth(60)
+            setImgContainerWidth(65)
     }, [width])
 
     useEffect(() => {
@@ -56,7 +56,7 @@ export default function ScalesGenerator(props){
                     var stringName ={
                         position: 'absolute',
                         top: `${noteTopPos}%`,
-                        left: '-25px',
+                        left: '-35px',
 
                         width: 'fit-content',
                         height: '100%',
@@ -72,15 +72,15 @@ export default function ScalesGenerator(props){
                         </div>
                     )}
                 )}
-                <ScalesButton>b3</ScalesButton>
+                <ScalesButton fret={10} string={6}>b3</ScalesButton>
             </div>
         </div>
     )
 }
 
 export function ScalesButton(props){
-    var topPos = 3.5
-    var leftPos = 10.25
+    var topPos = 20 * props.string - 28
+    var leftPos = -1 + 5.5 * props.fret
 
     var scaleButtonContainer = {
         position: 'absolute',       
@@ -94,10 +94,16 @@ export function ScalesButton(props){
         width: '3%',
         height: '15%'
     }
+
+    ScalesButton.propTypes = {
+        onClick: PropTypes.func,
+        fret: PropTypes.number,
+        string: PropTypes.number
+    }
     
     return(
         <div style={scaleButtonContainer}>
-            <button className={styles.scaleButton}>
+            <button className={styles.scaleButton} onClick={props.onClick}>
                 <ScaleButtonOpaque className={styles.scaleButtonImg}/>
             </button>
             

@@ -2,7 +2,7 @@
 
 .mainContainer{
     display: grid;
-    grid-template-rows: 17.5% 35% auto;
+    grid-template-rows: 17.5% 37.5% auto;
 
     width: var(--device-width);
     height: var(--body-height);
