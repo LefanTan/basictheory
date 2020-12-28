@@ -39,7 +39,7 @@ div{
     composes: genericButton from '../index.css';
 
     height: 50%;
-    
+
     font-size: large;
     box-shadow: 0px 2px 1px #d4d4d4;
 

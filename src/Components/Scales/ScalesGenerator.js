@@ -2,13 +2,15 @@ import React, { useEffect, useState} from 'react'
 import styles from './ScalesGenerator.module.css'
 import useViewport from '../Helpers/CustomHooks'
 import PropTypes from 'prop-types';
-import {ReactComponent as scaleButtonOpaque} from './imgs/scaleButtonOpaque.svg'
-import {ReactComponent as scaleButtonOutline} from './imgs/scaleButtonOutline.svg'
+import {ReactComponent as ScaleButtonOpaque} from './imgs/scaleButtonOpaque.svg'
+import {ReactComponent as ScaleButtonOutline} from './imgs/scaleButtonOutline.svg'
 import {ReactComponent as Fret} from './imgs/fretBoard.svg'
 
 // Produce a fret board of 18 frets
+// Also generate a scale based on the CAGED system
 export default function ScalesGenerator(props){
 
+    const selectedNote = 'G'
     const stringNotes = ['E', 'A', 'D', 'G', 'B', 'E']
     const [imgContainerWidth, setImgContainerWidth] = useState(60)
 
@@ -25,7 +27,7 @@ export default function ScalesGenerator(props){
     }, [width])
 
     useEffect(() => {
-        console.log(props.notes)
+        
     }, [props])
 
     var imgContainer = {
@@ -70,7 +72,39 @@ export default function ScalesGenerator(props){
                         </div>
                     )}
                 )}
+                <ScalesButton>b3</ScalesButton>
             </div>
+        </div>
+    )
+}
+
+export function ScalesButton(props){
+    var topPos = 3.5
+    var leftPos = 10.25
+
+    var scaleButtonContainer = {
+        position: 'absolute',       
+        top: `${topPos}%`,
+        left: `${leftPos}%`,
+
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        width: '3%',
+        height: '15%'
+    }
+    
+    return(
+        <div style={scaleButtonContainer}>
+            <button className={styles.scaleButton}>
+                <ScaleButtonOpaque className={styles.scaleButtonImg}/>
+            </button>
+            
+            <p className={styles.scaleButtonText}>{
+                // eslint-disable-next-line react/prop-types
+                props && props.children
+            }</p>
         </div>
     )
 }

@@ -1,16 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 500 500">
-  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>                                                                                            
-                               
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio='none' viewBox="0 0 500 500">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+                                                                                          
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
                            
 <?xpacket end="w"?></metadata>
 <defs>
-    <filter id="filter" x="10" y="10" width="486" height="492" filterUnits="userSpaceOnUse">
-      <feOffset result="offset" dx="2.472" dy="7.608" in="SourceAlpha"/>
-      <feGaussianBlur result="blur" stdDeviation="1.732"/>
-      <feFlood result="flood" flood-opacity="0.82"/>
-      <feComposite result="composite" operator="in" in2="blur"/>
-      <feBlend result="blend" in="SourceGraphic"/>
-    </filter>
   </defs>
-  <circle class="cls-1" cx="250.5" cy="250.5" r="240.5"/>
+  <circle id="Ellipse_1_copy_2" data-name="Ellipse 1 copy 2" class="cls-1" cx="250.5" cy="250.5" r="240.5"/>
 </svg>

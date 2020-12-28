@@ -5,7 +5,7 @@ A standard button that allows different style to be used, and also an onClick ha
 */
 function StandardButton(props){
     StandardButton.propTypes = {
-        className: PropTypes.object,
+        className: PropTypes.string,
         value: PropTypes.string,
         onClick: PropTypes.func
     }

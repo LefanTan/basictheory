@@ -42,7 +42,7 @@ function ChordGenerator(props){
         if(props.noteInfo.fret > 5 || props.noteInfo.fret < 1)
             throw new Error("Invalid fret number")
         
-        var topPos = -0.25 * Math.pow(props.noteInfo.fret, 2) + 19.25 * props.noteInfo.fret - 8.5; 
+        var topPos = -0.25 * Math.pow(props.noteInfo.fret, 2) + 19.25 * props.noteInfo.fret - 9.5; 
         var leftPos = 19 * (7 - props.noteInfo.string) - 22.5
         
         var standardButtonContainer = {
