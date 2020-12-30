@@ -5,13 +5,14 @@ import PropTypes from 'prop-types';
 import {ReactComponent as ScaleButtonOpaque} from './imgs/scaleButtonOpaque.svg'
 import {ReactComponent as ScaleButtonOutline} from './imgs/scaleButtonOutline.svg'
 import {ReactComponent as Fret} from './imgs/fretBoard.svg'
+import { getNoteBasedOnInterval, getNoteFromFretNumber } from '../Helpers/HelperFunction';
 
 // Produce a fret board of 18 frets
 // Also generate a scale based on the CAGED system
 export default function ScalesGenerator(props){
-
-    const selectedNote = 'G'
+    const selectedNote = 'C'
     const stringNotes = ['E', 'A', 'D', 'G', 'B', 'E']
+    const notesFromInterval = props.intervals && props.intervals.map(i => getNoteBasedOnInterval(selectedNote, i))
     const [imgContainerWidth, setImgContainerWidth] = useState(60)
 
     // get the current width of the device view port
@@ -26,9 +27,42 @@ export default function ScalesGenerator(props){
             setImgContainerWidth(65)
     }, [width])
 
-    useEffect(() => {
+    function ScalesButton(props){
+        var topPos = 20 * props.string - 28
+        var leftPos = -1 + 5.5 * props.fret
+    
+        var scaleButtonContainer = {
+            position: 'absolute',       
+            top: `${topPos}%`,
+            left: `${leftPos}%`,
+    
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            textAlign: 'center',
+            width: '3%',
+            height: '15%'
+        }
+    
+        ScalesButton.propTypes = {
+            onClick: PropTypes.func,
+            fret: PropTypes.number,
+            string: PropTypes.number
+        }
         
-    }, [props])
+        return(
+            <div style={scaleButtonContainer}>
+                <button className={styles.scaleButton} onClick={props.onClick}>
+                    <ScaleButtonOpaque className={styles.scaleButtonImg}/>
+                </button>
+                
+                <p className={styles.scaleButtonText}>{
+                    // eslint-disable-next-line react/prop-types
+                    props && props.children
+                }</p>
+            </div>
+        )
+    }
 
     var imgContainer = {
         position: 'relative',
@@ -42,7 +76,16 @@ export default function ScalesGenerator(props){
 
     // Props validation
     ScalesGenerator.propTypes = {
-        notes: PropTypes.array
+        intervals: PropTypes.array
+    }
+
+    // Create a Scale
+    var buttons = []
+    for(var i = 1; i < 7; i++){
+        for(var j = 0; j < 18; j++){
+            if(notesFromInterval && notesFromInterval.includes(getNoteFromFretNumber(i,j)))
+                buttons.push(<ScalesButton key={`${i} ${j}`} fret={j} string={i}>{props.intervals[notesFromInterval.indexOf(getNoteFromFretNumber(i,j))]}</ScalesButton>)
+        }
     }
 
     return(
@@ -72,45 +115,8 @@ export default function ScalesGenerator(props){
                         </div>
                     )}
                 )}
-                <ScalesButton fret={10} string={6}>b3</ScalesButton>
+                {buttons}
             </div>
-        </div>
-    )
-}
-
-export function ScalesButton(props){
-    var topPos = 20 * props.string - 28
-    var leftPos = -1 + 5.5 * props.fret
-
-    var scaleButtonContainer = {
-        position: 'absolute',       
-        top: `${topPos}%`,
-        left: `${leftPos}%`,
-
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center',
-        width: '3%',
-        height: '15%'
-    }
-
-    ScalesButton.propTypes = {
-        onClick: PropTypes.func,
-        fret: PropTypes.number,
-        string: PropTypes.number
-    }
-    
-    return(
-        <div style={scaleButtonContainer}>
-            <button className={styles.scaleButton} onClick={props.onClick}>
-                <ScaleButtonOpaque className={styles.scaleButtonImg}/>
-            </button>
-            
-            <p className={styles.scaleButtonText}>{
-                // eslint-disable-next-line react/prop-types
-                props && props.children
-            }</p>
         </div>
     )
 }

@@ -42,6 +42,34 @@ export function getNoteBasedOnInterval(rootNote, interval){
     }
 }
 
+export function getNoteFromFretNumber(string, fretNumber){
+    var startIndex = 0;
+    switch(string){
+        case 6 || '6': // Starts from E
+            startIndex = notes.findIndex(x => x == 'E')
+            break;
+        case 5 || '5':
+            startIndex = notes.findIndex(x => x == 'A')
+            break;
+        case 4 || '4':
+            startIndex = notes.findIndex(x => x == 'D')
+            break;
+        case 3 || '3':
+            startIndex = notes.findIndex(x => x == 'G')
+            break;
+        case 2 || '2':
+            startIndex = notes.findIndex(x => x == 'B')
+            break;
+        case 1 || '1':
+            startIndex = notes.findIndex(x => x == 'E')
+            break;
+        default:
+            throw new Error("Invalid string number")
+    }
+
+    return notes[(startIndex + fretNumber) % 12]
+}
+
 // in standard tuning ofc lol
 // Example: getFretNumber (6, 'A') returns 5
 export function getFretNumber(string, targetNote){

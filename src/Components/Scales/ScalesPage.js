@@ -26,7 +26,7 @@ export default function ScalesPage(){
                 <NoteSelector/>
             </div>
             <div className={styles.scaleGeneratorContainer}>
-                <ScalesGenerator notes={scaleData && scaleData['Notes']}/>
+                <ScalesGenerator intervals={scaleData && scaleData['Notes']}/>
             </div>
         </div>
     )
