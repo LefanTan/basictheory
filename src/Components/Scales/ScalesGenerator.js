@@ -3,14 +3,13 @@ import styles from './ScalesGenerator.module.css'
 import useViewport from '../Helpers/CustomHooks'
 import PropTypes from 'prop-types';
 import {ReactComponent as ScaleButtonOpaque} from './imgs/scaleButtonOpaque.svg'
-import {ReactComponent as ScaleButtonOutline} from './imgs/scaleButtonOutline.svg'
 import {ReactComponent as Fret} from './imgs/fretBoard.svg'
 import { getNoteBasedOnInterval, getNoteFromFretNumber } from '../Helpers/HelperFunction';
 
 // Produce a fret board of 18 frets
 // Also generate a scale based on the CAGED system
 export default function ScalesGenerator(props){
-    const selectedNote = 'C'
+    const selectedNote = 'E'
     const stringNotes = ['E', 'A', 'D', 'G', 'B', 'E']
     const notesFromInterval = props.intervals && props.intervals.map(i => getNoteBasedOnInterval(selectedNote, i))
     const [imgContainerWidth, setImgContainerWidth] = useState(60)
@@ -43,20 +42,21 @@ export default function ScalesGenerator(props){
             width: '3%',
             height: '15%'
         }
-    
+
         ScalesButton.propTypes = {
             onClick: PropTypes.func,
             fret: PropTypes.number,
-            string: PropTypes.number
+            string: PropTypes.number,
+            isRoot: PropTypes.bool
         }
         
         return(
             <div style={scaleButtonContainer}>
                 <button className={styles.scaleButton} onClick={props.onClick}>
-                    <ScaleButtonOpaque className={styles.scaleButtonImg}/>
+                    <ScaleButtonOpaque className={props.isRoot ? styles.scaleButtonOutlineImg : styles.scaleButtonImg}/>
                 </button>
                 
-                <p className={styles.scaleButtonText}>{
+                <p className={props.isRoot ? styles.scaleButtonRootText : styles.scaleButtonText}>{
                     // eslint-disable-next-line react/prop-types
                     props && props.children
                 }</p>
@@ -83,8 +83,9 @@ export default function ScalesGenerator(props){
     var buttons = []
     for(var i = 1; i < 7; i++){
         for(var j = 0; j < 18; j++){
-            if(notesFromInterval && notesFromInterval.includes(getNoteFromFretNumber(i,j)))
-                buttons.push(<ScalesButton key={`${i} ${j}`} fret={j} string={i}>{props.intervals[notesFromInterval.indexOf(getNoteFromFretNumber(i,j))]}</ScalesButton>)
+            var fretNote = getNoteFromFretNumber(i,j)
+            if(notesFromInterval && notesFromInterval.includes(fretNote))
+                buttons.push(<ScalesButton key={`${i} ${j}`} isRoot={fretNote == selectedNote} fret={j} string={i}>{props.intervals[notesFromInterval.indexOf(fretNote)]}</ScalesButton>)
         }
     }
 

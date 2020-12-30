@@ -8,15 +8,15 @@ export default function ScalesPage(){
     
     const [scaleData, setScaleData] = useState(undefined)
 
-    // Pull data from firebase only on mount FOR NOW since we're only pullling Major Scale information
+    // Pull data from firebase only on mount FOR NOW since we're only pullling one Scale information
     useEffect(() => {
         const ref = db.ref().child('ScalePage').child('ScaleType')
         const query = ref
                         .orderByKey()
-                        .equalTo('Major')
+                        .equalTo('PentatonicMajor')
 
         query.on('value', snap => {
-            snap.exists() ? setScaleData(snap.val()['Major']) : setScaleData('nice')
+            snap.exists() ? setScaleData(snap.val()['PentatonicMajor']) : setScaleData('nice')
         })
     },[])
 
