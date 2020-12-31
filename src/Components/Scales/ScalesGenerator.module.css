@@ -7,7 +7,16 @@
     
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+}
+
+.buttonContainer{
+    display: flex;
+    align-items: center;
     justify-content: center;
+
+    white-space: nowrap;
+    width: 17.5%;
 }
 
 .generalText{

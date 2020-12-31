@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import useViewport from './Components/Helpers/CustomHooks'
 import Header from './Components/Header'
 import Home from './Components/Home'
+import {isMobileOnly, isBrowser, isTablet} from 'react-device-detect';
 import ChordsPage from './Components/Chords/ChordsPage'
 import {Switch, Route, HashRouter} from 'react-router-dom'
 import styles from './App.module.css'
@@ -12,15 +13,15 @@ import ScalesPage from "./Components/Scales/ScalesPage"
 Main component
 */
 function App() {
-    const {width} = useViewport()
+    const {width, height} = useViewport()
 
     useEffect(() => {
         // get the root element and update the overflow state
         var root = document.querySelector(':root');
         
         // If device width is less than 1280, it is a mobile device. Use max-content as width instead.
-        root.style.setProperty('--device-width', width > 1000 ? '100%' : 'fit-content');
-    },[width])
+        root.style.setProperty('--device-width', isBrowser ? '100%' : 'fit-content');
+    },[width])  
 
     return(
         <div className={styles.Container}>

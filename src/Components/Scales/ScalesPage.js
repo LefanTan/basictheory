@@ -7,6 +7,7 @@ import NoteSelector from '../NoteSelector'
 export default function ScalesPage(){
     
     const [scaleData, setScaleData] = useState(undefined)
+    const [selectedNote, setNote] = useState('C')
 
     // Pull data from firebase only on mount FOR NOW since we're only pullling one Scale information
     useEffect(() => {
@@ -23,10 +24,10 @@ export default function ScalesPage(){
     return(
         <div className={styles.mainContainer}>
             <div className={styles.noteSelectorContainer}>
-                <NoteSelector/>
+                <NoteSelector selectedNote={selectedNote} onClick={value => setNote(value)}/>
             </div>
             <div className={styles.scaleGeneratorContainer}>
-                <ScalesGenerator intervals={scaleData && scaleData['Notes']}/>
+                <ScalesGenerator note={selectedNote} intervals={scaleData && scaleData['Notes']}/>
             </div>
         </div>
     )

@@ -2,6 +2,7 @@ import React, { useEffect, useState} from 'react'
 import styles from './ScalesGenerator.module.css'
 import useViewport from '../Helpers/CustomHooks'
 import PropTypes from 'prop-types';
+import {isMobileOnly, isBrowser, isTablet} from 'react-device-detect';
 import {ReactComponent as ScaleButtonOpaque} from './imgs/scaleButtonOpaque.svg'
 import {ReactComponent as Fret} from './imgs/fretBoard.svg'
 import { getNoteBasedOnInterval, getNoteFromFretNumber } from '../Helpers/HelperFunction';
@@ -9,14 +10,13 @@ import { getNoteBasedOnInterval, getNoteFromFretNumber } from '../Helpers/Helper
 // Produce a fret board of 18 frets
 // Also generate a scale based on the CAGED system
 export default function ScalesGenerator(props){
-    const selectedNote = 'E'
     const stringNotes = ['E', 'A', 'D', 'G', 'B', 'E']
-    const notesFromInterval = props.intervals && props.intervals.map(i => getNoteBasedOnInterval(selectedNote, i))
+    const notesFromInterval = (props.intervals && props.note) && props.intervals.map(i => getNoteBasedOnInterval(props.note, i))
     const [imgContainerWidth, setImgContainerWidth] = useState(60)
 
     // get the current width of the device view port
     const {width, height} = useViewport()
-
+    
     // Update ImgContainerWidth depending on device type
     useEffect(() => {
         // If less than 1000, it is on a device and so change the width accordingly 
@@ -76,7 +76,8 @@ export default function ScalesGenerator(props){
 
     // Props validation
     ScalesGenerator.propTypes = {
-        intervals: PropTypes.array
+        intervals: PropTypes.array,
+        note: PropTypes.string
     }
 
     // Create a Scale
@@ -85,12 +86,17 @@ export default function ScalesGenerator(props){
         for(var j = 0; j < 18; j++){
             var fretNote = getNoteFromFretNumber(i,j)
             if(notesFromInterval && notesFromInterval.includes(fretNote))
-                buttons.push(<ScalesButton key={`${i} ${j}`} isRoot={fretNote == selectedNote} fret={j} string={i}>{props.intervals[notesFromInterval.indexOf(fretNote)]}</ScalesButton>)
+                buttons.push(<ScalesButton key={`${i} ${j}`} isRoot={fretNote.includes(props.note)} fret={j} string={i}>{props.intervals[notesFromInterval.indexOf(fretNote)]}</ScalesButton>)
         }
     }
 
     return(
         <div className={styles.Container}>
+            <div className={styles.buttonContainer}>
+                <button>Show All</button>
+                <button>Prev</button>
+                <button>Next</button>
+            </div>
             <div style={imgContainer}>
                 <Fret className={styles.Img}/>
                 {stringNotes.map((note, index) => {

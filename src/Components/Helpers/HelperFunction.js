@@ -10,7 +10,7 @@ export function getNoteBasedOnInterval(rootNote, interval){
     switch(interval){
         case '1': // root note
         case '8':
-            return rootNote
+            return notes[rootIndex]
         case 'b2': // minor second
             return notes[(rootIndex + 1) % 12]
         case '2': // major second
