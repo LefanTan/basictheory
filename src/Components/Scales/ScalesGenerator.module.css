@@ -127,7 +127,7 @@
     composes: generalText;
     color: var(--secondary-background);
     font-weight: 400;
-    font-size: 1.5vh;
+    font-size: 1vw;
 
     pointer-events: none;
     text-align: center;
@@ -139,18 +139,8 @@
 }
 
 .scaleButtonRootText{
-    composes: generalText;
+    composes: scaleButtonText;
     color: var(--main-color);
-    font-weight: 800;
-    font-size: 1.5vh;
-
-    pointer-events: none;
-    text-align: center;
-
-    padding-top: 1px;
-
-    width: 100%;
-    z-index: 1;
 }
 
 .scaleButtonBase{

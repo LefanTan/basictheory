@@ -1,8 +1,9 @@
 @import '../../index.css';
 
 .mainContainer{
+    --scales-generator-height: 30vh;
     display: grid;
-    grid-template-rows: 17.5% 37.5% auto;
+    grid-template-rows: 17.5% var(--scales-generator-height) auto;
 
     width: var(--device-width);
     height: var(--body-height);

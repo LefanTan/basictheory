@@ -21,8 +21,9 @@ export default function ScalesGenerator(props){
     
     // Update ImgContainerWidth depending on device type
     useEffect(() => {
-        if(isMobileOnly) 
-            setImgContainerWidth(90)
+        if(isMobileOnly) {
+            setImgContainerWidth(50)
+        }
         else 
             setImgContainerWidth(65)
     }, [width])
@@ -57,7 +58,7 @@ export default function ScalesGenerator(props){
                     <ScaleButtonOpaque className={props.isRoot ? styles.scaleButtonOutlineImg : styles.scaleButtonImg}/>
                 </button>
                 
-                <p className={props.isRoot ? styles.scaleButtonRootText : styles.scaleButtonText}>{
+                <p className={props.isRoot ? styles.scaleButtonRootText : styles.scaleButtonText} style={{fontSize: `${isMobileOnly ? '50%' : '1vw'}`}}>{
                     // eslint-disable-next-line react/prop-types
                     props && props.children
                 }</p>
@@ -67,15 +68,15 @@ export default function ScalesGenerator(props){
 
     var imgContainer = {
         position: 'relative',
-        width: `${imgContainerWidth}%`,
         maxHeight: '100%',
+        flexGrow: '1',
         
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        margin: `${isMobileOnly ? '0%' : '20%'}`,
         marginLeft: `${isMobileOnly ? '5%' : '0%'}`
     }
-
     var buttonContainer = {
         display: 'flex',
         alignItems: 'center',
@@ -93,7 +94,7 @@ export default function ScalesGenerator(props){
         intervals: PropTypes.array,
         note: PropTypes.string
     }
-
+    
     // Create a Scale
     var buttons = []
     for(var i = 1; i < 7; i++){
