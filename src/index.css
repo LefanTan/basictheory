@@ -19,6 +19,7 @@ code {
     --secondary-background: #f5f5f5;
     --secondary-background-hover: #e2e2e2;
     --secondary-background-click: #c2c2c2;
+    --primary-background: #ffffff;
     --primary-background-hover: #f5f5f5;
     --primary-background-click: #d3d3d3;
 
@@ -35,8 +36,6 @@ code {
   justify-content: center;
   align-items: center;
 
-  width: 60px;
-
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 
@@ -44,5 +43,4 @@ code {
   border: 1px solid #e8e8e8;
   border-radius: 10px;
   padding: 0px;
-  margin: 2px;
 }

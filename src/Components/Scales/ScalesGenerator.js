@@ -2,6 +2,7 @@ import React, { useEffect, useState} from 'react'
 import styles from './ScalesGenerator.module.css'
 import useViewport from '../Helpers/CustomHooks'
 import PropTypes from 'prop-types';
+import * as Md from "react-icons/md";
 import {isMobileOnly, isBrowser, isTablet} from 'react-device-detect';
 import {ReactComponent as ScaleButtonOpaque} from './imgs/scaleButtonOpaque.svg'
 import {ReactComponent as Fret} from './imgs/fretBoard.svg'
@@ -13,14 +14,14 @@ export default function ScalesGenerator(props){
     const stringNotes = ['E', 'A', 'D', 'G', 'B', 'E']
     const notesFromInterval = (props.intervals && props.note) && props.intervals.map(i => getNoteBasedOnInterval(props.note, i))
     const [imgContainerWidth, setImgContainerWidth] = useState(60)
+    const [showAll, setShowAll] = useState(false)
 
     // get the current width of the device view port
-    const {width, height} = useViewport()
+    const {width} = useViewport()
     
     // Update ImgContainerWidth depending on device type
     useEffect(() => {
-        // If less than 1000, it is on a device and so change the width accordingly 
-        if(width < height) 
+        if(isMobileOnly) 
             setImgContainerWidth(90)
         else 
             setImgContainerWidth(65)
@@ -71,7 +72,20 @@ export default function ScalesGenerator(props){
         
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginLeft: `${isMobileOnly ? '5%' : '0%'}`
+    }
+
+    var buttonContainer = {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    
+        whiteSpace: 'nowrap',
+        width:  `${!isBrowser ? '35%' : '15%'}`,
+        height: '100%',
+    
+        margin: `${isMobileOnly ? '0%' : '2%'}`
     }
 
     // Props validation
@@ -92,12 +106,12 @@ export default function ScalesGenerator(props){
 
     return(
         <div className={styles.Container}>
-            <div className={styles.buttonContainer}>
-                <button>Show All</button>
-                <button>Prev</button>
-                <button>Next</button>
+            <div style={buttonContainer}>
+                <button className={showAll ? styles.showAllButtonActive : styles.showAllButton} onClick={() => setShowAll(!showAll)}><h3>Show All</h3></button>
+                <button className={styles.emptyShellButton}><Md.MdNavigateBefore className={styles.nextImg}/></button>
+                <button className={styles.emptyShellButton}><Md.MdNavigateNext className={styles.nextImg}/></button>
             </div>
-            <div style={imgContainer}>
+            <div style={imgContainer}>  
                 <Fret className={styles.Img}/>
                 {stringNotes.map((note, index) => {
                     // just some equation to position the note letters

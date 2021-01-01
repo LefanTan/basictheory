@@ -1,7 +1,9 @@
 @import '../index.css';
 
-div{
+.sharpContainer{
     height: 100%;
+    width: 4.5%;
+    min-width: 60px;
 }
 
 .noteMainContainer{
@@ -20,9 +22,13 @@ div{
 .noteButton{
     composes: genericButton from '../index.css';
     height: 100%;
+    width: 4.5%;
+    min-width: 60px;
 
     font-size: x-large;
     box-shadow: 0px 2px 1px;
+    margin-left: 3px;
+    margin-right: 3px;
 
     color: var(--main-color);
     background-color: inherit;
@@ -32,14 +38,15 @@ div{
 
 .noteButtonSelected{
     composes: noteButton;
-    background-color: #d3d3d3;
+    background-color: var(--primary-background-click);
 }
 
 .noteButtonSharp{
     composes: genericButton from '../index.css';
 
     height: 50%;
-
+    width: 100%;
+    
     font-size: large;
     box-shadow: 0px 2px 1px #d4d4d4;
 

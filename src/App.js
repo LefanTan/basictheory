@@ -13,14 +13,14 @@ import ScalesPage from "./Components/Scales/ScalesPage"
 Main component
 */
 function App() {
-    const {width, height} = useViewport()
+    const {width} = useViewport()
 
     useEffect(() => {
         // get the root element and update the overflow state
         var root = document.querySelector(':root');
         
         // If device width is less than 1280, it is a mobile device. Use max-content as width instead.
-        root.style.setProperty('--device-width', isBrowser ? '100%' : 'fit-content');
+        root.style.setProperty('--device-width', !isMobileOnly ? '100%' : 'fit-content');
     },[width])  
 
     return(
