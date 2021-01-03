@@ -142,18 +142,18 @@ function ChordGenerator(props){
             fallback={<h2>Error loading chord</h2>}
         >
             <div className={styles.mainContainer}>
-                    <ChordFret className={styles.mainImg} />
-                    {props.noteButtonPositions && props.noteButtonPositions.map(noteInfo =>{
-                        if(noteInfo.fret == 0 || noteInfo.noteNumber == 'X'){ 
-                            return(<OpenStringButton key={props.noteButtonPositions.findIndex(x => x == noteInfo)} rootNote={props.note} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
-                        }else{
-                            return(<StandardNoteButton key={props.noteButtonPositions.findIndex(x => x == noteInfo)} rootNote={props.note} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
-                        }
-                    })}
-                    <div style={fretNumContainer}>
-                        <h3 data-testid='fret-number' className={styles.fretNumber}>{fretNumber === 0 ? 12 : fretNumber}</h3>
-                    </div>
+                <ChordFret className={styles.mainImg} />
+                {props.noteButtonPositions && props.noteButtonPositions.map(noteInfo =>{
+                    if(noteInfo.fret == 0 || noteInfo.noteNumber == 'X'){ 
+                        return(<OpenStringButton key={props.noteButtonPositions.findIndex(x => x == noteInfo)} rootNote={props.note} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
+                    }else{
+                        return(<StandardNoteButton key={props.noteButtonPositions.findIndex(x => x == noteInfo)} rootNote={props.note} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
+                    }
+                })}
+                <div style={fretNumContainer}>
+                    <h3 data-testid='fret-number' className={styles.fretNumber}>{fretNumber === 0 ? 12 : fretNumber}</h3>
                 </div>
+            </div>
         </ErrorBoundary>
     )
 }
