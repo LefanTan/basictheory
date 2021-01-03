@@ -70,18 +70,6 @@
     fill: var(--main-color);
 } 
 
-.noteButtonContainer{
-    position: absolute;
-    top: 0;
-
-    display: flex;
-    justify-content: center;
-    align-content: center;
-
-    width: 20%;
-    height: 20%;
-}
-
 .noteButton{
     position: absolute;
     top: 0px;
@@ -102,7 +90,7 @@
 }
 
 .noteButtonImg{
-    width: 110%;
+    width: 120%;
     height: 100%;
 
     padding: 0px;

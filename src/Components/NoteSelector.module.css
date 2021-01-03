@@ -1,26 +1,34 @@
 @import '../index.css';
 
+.sharpContainer{
+    height: 100%;
+    width: 4.5%;
+    min-width: 60px;
+}
+
 .noteMainContainer{
     display: flex;
     align-items: flex-start;
     justify-content: center;
     
-    width: fit-content;
-    height: fit-content;
+    width: 100%;
+    height: 100%;
 
     padding:0; border:0;
 
     margin: 15px;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .noteButton{
     composes: genericButton from '../index.css';
-    height: 70px;
+    height: 100%;
+    width: 4.5%;
+    min-width: 60px;
 
     font-size: x-large;
     box-shadow: 0px 2px 1px;
+    margin-left: 3px;
+    margin-right: 3px;
 
     color: var(--main-color);
     background-color: inherit;
@@ -30,13 +38,14 @@
 
 .noteButtonSelected{
     composes: noteButton;
-    background-color: #d3d3d3;
+    background-color: var(--primary-background-click);
 }
 
 .noteButtonSharp{
     composes: genericButton from '../index.css';
 
-    height: 36px;
+    height: 50%;
+    width: 100%;
     
     font-size: large;
     box-shadow: 0px 2px 1px #d4d4d4;

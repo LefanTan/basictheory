@@ -35,7 +35,9 @@
     align-items: center;
 
     width: 100%;
-    height:fit-content;
+    height: 12.5%;
+    margin: 10px;
+    margin-bottom: 20px;
 }
 
 /**
@@ -81,6 +83,7 @@ this contains all elements includng the chord header and its innerChordRow
     font-size: large;
     padding: 10px;
     box-shadow: 0px 1px 1px;
+    margin: 2px;
 
     color: var(--main-color);
     background-color: inherit;
@@ -88,7 +91,7 @@ this contains all elements includng the chord header and its innerChordRow
 
 .chordButtonSelected{
     composes: chordButton;
-    background-color: #d3d3d3;
+    background-color: var(--primary-background-click);
 }
 
 .chordButton:hover{background-color: var(--primary-background-hover);}
@@ -115,9 +118,6 @@ this contains all elements includng the chord header and its innerChordRow
     width: inherit;
     height: inherit;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: var(--main-color);
 }
 .sidebarIcon:hover{

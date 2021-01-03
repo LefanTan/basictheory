@@ -1,7 +1,61 @@
 {
     "ScaleType":{
+        "Pentatonic Major":{
+            "About": "The Pentatonic Major Scale is like a simplify version of the major scale. COOL!",
+            "Notes": [
+                "1",
+                "2",
+                "3",
+                "5",
+                "6"
+            ],
+            "UseCases":[
+                "It sounds good, very reliable"
+            ]
+        },
+        "Pentatonic Minor":{
+            "About": "The Pentatonic Minor Scale is like a simplify version of the minor scale. COOL!",
+            "Notes": [
+                "1",
+                "b3",
+                "4",
+                "5",
+                "b7"
+            ],
+            "UseCases":[
+                "It sounds good, very reliable"
+            ]
+        },
+        "Blues Major":{
+            "About": "The Blues Major Scale is like a bluesy version of the major scale. COOL!",
+            "Notes": [
+                "1",
+                "2",
+                "3",
+                "b3",
+                "5",
+                "6"
+            ],
+            "UseCases":[
+                "It sounds good, very reliable"
+            ]
+        },
+        "Blues Minor":{
+            "About": "The Blues Minor Scale is like a bluesy version of the minor scale. COOL!",
+            "Notes": [
+                "1",
+                "b3",
+                "4",
+                "b5",
+                "5",
+                "b7"
+            ],
+            "UseCases":[
+                "It sounds good, very reliable"
+            ]
+        },
         "Major":{
-            "About": "The Major Scale is the foundation of all western harmony, learning it will help your understanding of music theory. The sequence of the interval is whole, whole, half, whole, whole, whole, half",
+            "About": "The Major Scale is the foundation of all western harmony, learning it will help your understanding of music theory. The sequence of the interval is whole, whole, half, whole, whole, whole, half.",
             "Notes": [
                 "1",
                 "2",
@@ -14,6 +68,102 @@
             "UseCases":[
                 "The Major scale can be used in improvising and understanding solos. There are times when the pentatonic or blue scales might sound boring, the major scale can be used in place.",
                 "Use it so people know you know more than just the pentatonic scale ( ͡° ͜ʖ ͡°)"
+            ]
+        },
+        "Minor":{
+            "About": "While there are only one major scale, there are three variations of minor scale that exists. The one referenced here is the most common variation, the Natural Minor scale. The sequence of the interval is whole, half, whole, whole, half, whole, whole.",
+            "Notes": [
+                "1",
+                "2",
+                "b3",
+                "4",
+                "5",
+                "b6",
+                "b7"
+            ],
+            "UseCases":[
+                "The Minor scale can be used in improvising and understanding solos. There are times when the pentatonic or blue scales might sound boring, the minor scale can be used in place.",
+                "Use it so people know you know more than just the pentatonic scale ( ͡° ͜ʖ ͡°)"
+            ]
+        },
+        "Dorian":{
+            "About": "It's a minor scale with a major 6 instead of a minor 6",
+            "Notes": [
+                "1",
+                "2",
+                "b3",
+                "4",
+                "5",
+                "6",
+                "b7"
+            ],
+            "UseCases":[
+                "The Minor scale can be used in improvising and understanding solos. There are times when the pentatonic or blue scales might sound boring, the minor scale can be used in place.",
+                "Use it so people know you know more than just the pentatonic scale ( ͡° ͜ʖ ͡°)"
+            ]
+        },
+        "Phrygian":{
+            "About": "Sounds egyptian????",
+            "Notes": [
+                "1",
+                "b2",
+                "b3",
+                "4",
+                "5",
+                "b6",
+                "b7"
+            ],
+            "UseCases":[
+                "Sound Cool",
+                "Acts cool",
+                "Looks cool"
+            ]
+        },
+        "Lydian":{
+            "About": "The lydian scale is almost the same as the major scale except it has a raised 4th (by a semitone) which is an augmented 4th.",
+            "Notes": [
+                "1",
+                "2",
+                "3",
+                "b5",
+                "5",
+                "6",
+                "7"
+            ],
+            "UseCases":[
+                "The lydian mode is used a lot in popular music and I’m almost certain you’ve heard it before, maybe without realising.",
+                "Use it so people know you know more than just the pentatonic scale ( ͡° ͜ʖ ͡°)"
+            ]
+        },
+        "Mixolydian":{
+            "About": "The Mixolydian mode is the fifth mode of the major scale. It has the same notes as the Ionian mode, except the minor seventh (b7), it is considered a major scale. ",
+            "Notes": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "b7"
+            ],
+            "UseCases":[
+                "The Mixolydian mode is widely used in jazz and blues music for improvising over dominant chords. It is one of the most important scale to know."
+            ]
+        },
+        "Locrian":{
+            "About": "The Locrian mode is the seventh mode of the major scale. It has a particular sound because of the b2, b3, b5, b6 and b7. It is the least used, and probably the most misunderstood of all of the modes of the major scale.",
+            "Notes": [
+                "1",
+                "b2",
+                "b3",
+                "4",
+                "b5",
+                "b6",
+                "b7"
+            ],
+            "UseCases":[
+                "Probably also known as diminished scale, so improvised over diminished chords or something",
+                "JAZZYY (ง︡'-'︠)ง"
             ]
         }
     }

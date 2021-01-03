@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import useViewport from './Components/Helpers/CustomHooks'
 import Header from './Components/Header'
 import Home from './Components/Home'
+import {isMobileOnly, isBrowser, isTablet} from 'react-device-detect';
 import ChordsPage from './Components/Chords/ChordsPage'
 import {Switch, Route, HashRouter} from 'react-router-dom'
 import styles from './App.module.css'
@@ -19,8 +20,8 @@ function App() {
         var root = document.querySelector(':root');
         
         // If device width is less than 1280, it is a mobile device. Use max-content as width instead.
-        root.style.setProperty('--device-width', width > 1000 ? '100%' : 'fit-content');
-    },[width])
+        root.style.setProperty('--device-width', !isMobileOnly ? '100%' : 'fit-content');
+    },[width])  
 
     return(
         <div className={styles.Container}>

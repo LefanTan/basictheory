@@ -7,13 +7,80 @@
     
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
-.Img{
-    width: 100%;
+.emptyShellButton{
+    height: 20%;
+    width: 20%;
+
+    outline: none;
+    border: none;
+
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: inherit;
+}
+
+.nextImg{ 
     height: 100%;
-    fill: var(--main-color);
+    width: 100%;
+
+    margin: 0;
+    color: var(--main-color);
+}
+
+.nextImg:hover{
+    color: var(--main-hover);
+    transition: 200ms;
+    transform: scale(1.2);
+}
+
+.nextImg:active{
+    color: var(--main-click);
+}
+
+.showAllButton{
+    composes: genericButton from '../../index.css';
+    height: 20%;
+
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 80%;
+
+    box-shadow: 0px 2px 1px;
+    margin: 0px;
+    padding: 15px 10px 15px 10px;
+
+    color: var(--main-color);
+    background-color: inherit;
+}
+
+.showAllButtonActive{
+    composes: genericButton from '../../index.css';
+    height: 20%;
+
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 80%;
+
+    box-shadow: 0px 2px 1px var(--primary-background-click);
+    margin: 0px;
+    padding: 15px 10px 15px 10px;
+
+    color: var(--primary-background);
+    background-color: var(--main-color);
+}
+
+.showAllButton:hover{
+    background-color: var(--primary-background-hover);
+}
+
+.showAllButton:active{
+    background-color: var(--primary-background-click);
 }
 
 .generalText{
@@ -27,7 +94,102 @@
     margin: 0;
     padding: 0;
     font-size: auto;
-    padding-right: 5px;
+}
+
+.Img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 2.5%;
+    fill: var(--main-color);
+}
+
+.scaleButton{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    outline: none;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: inherit;
+}
+
+.scaleButtonText{
+    composes: generalText;
+    color: var(--secondary-background);
+    font-weight: 400;
+    font-size: 1vw;
+
+    pointer-events: none;
+    text-align: center;
+
+    padding-top: 1px;
+
+    width: 100%;
+    z-index: 1;
+}
+
+.scaleButtonRootText{
+    composes: scaleButtonText;
+    color: var(--main-color);
+}
+
+.scaleButtonBase{
+    width: 100%;
+    height: 100%;
+
+    padding: 0px;
+    margin: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: none;
+}
+
+.scaleButtonImg{
+    composes: scaleButtonBase;
+    fill: var(--main-color);
+}
+
+.scaleButtonOutlineImg{
+    composes: scaleButtonBase;
+
+    display: block;
+
+    fill: var(--secondary-background);
+    border-radius: 100%;
+    box-shadow: 1px 2px 2px #cecece;
+}
+
+.scaleButtonOutlineImg:hover{
+    transition: 200ms;
+    transform: scale(1.1);
+    fill: var(--secondary-background-hover);
+}
+
+.scaleButtonOutlineImg:active{
+    fill: var(--secondary-background-click);
+}
+
+.scaleButtonImg:hover{
+    transition: 200ms;
+    transform: scale(1.1);
+    fill: var(--main-hover);
+}
+
+.scaleButtonImg:active{
+    fill: var(--main-click);
 }
 
 .h2{
