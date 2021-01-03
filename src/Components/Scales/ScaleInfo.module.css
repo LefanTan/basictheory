@@ -1,0 +1,121 @@
+.Container{
+    display: grid;
+    grid-template-columns: 20% 12% auto;
+    justify-items: start;
+    align-items: start;
+
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+
+.aboutContainer{
+    padding: 10px;
+    margin: 10px;
+    width: stretch;
+    height: fit-content;
+    background-color: #d3d3d3;
+    border-radius: 15px;
+}
+
+.notesContainer{
+    padding: 10px;
+    margin: 10px;
+    width: stretch;
+    height: fit-content;
+    background-color: #d3d3d3;
+    border-radius: 15px;
+}
+
+.useCasesContainer{
+    padding: 10px;
+    margin: 10px;
+    width: stretch;
+    height: fit-content;
+    background-color: #d3d3d3;
+    border-radius: 15px;
+}
+
+.generalText{
+    color: var(--main-color);
+    background-color: inherit;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+
+    margin: 0;
+    padding: 0;
+    font-size: auto;
+    padding-right: 5px;
+}
+
+.p{
+    composes: generalText;
+    font-weight: 400;
+}
+
+.h1{
+    composes:p generalText;
+    align-self: center;
+    width: 80%;
+    font-size: xx-large;
+}
+
+.noteText{
+    composes: generalText;
+    font-size: xx-large;
+}
+
+.h2{
+    composes: generalText;
+}
+
+.p{
+    composes: generalText;
+    font-weight: 400;
+}
+
+.descriptionText{
+    composes: generalText;
+    font-weight: 400;
+    font-size: small;
+}
+
+.arrowDownButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    
+    outline: none;
+    border: none;
+    background-color: inherit;
+    
+    color: var(--main-color);
+}
+
+.arrowDownButton:hover{    
+    color: var(--main-hover);
+    transform: scale(1.05);
+    transition: 100ms;
+}
+
+.arrowDownButton:active{    
+    transform: scale(1);
+    transition: 100ms;
+}
+
+.arrowDownImg{
+    height: 100%;
+
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+
+
+

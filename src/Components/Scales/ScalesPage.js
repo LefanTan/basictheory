@@ -4,6 +4,7 @@ import {db} from '../../Services/Firebase'
 import ScalesGenerator from './ScalesGenerator'
 import ScaleSelector from './ScaleSelector'
 import NoteSelector from '../NoteSelector'
+import ScaleInfo from './ScaleInfo'
 
 export default function ScalesPage(){
     
@@ -31,6 +32,9 @@ export default function ScalesPage(){
             </div>
             <div className={styles.scaleSelectorContainer}>
                 <ScaleSelector/>
+            </div>
+            <div className={styles.scaleInfoContainer}>
+                <ScaleInfo note={'C'} scale={'Major'} info={'Hello'}/>
             </div>
         </div>
     )
