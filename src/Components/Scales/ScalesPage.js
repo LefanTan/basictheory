@@ -11,19 +11,19 @@ export default function ScalesPage(){
     
     const [scaleData, setScaleData] = useState(undefined)
     const [selectedNote, setNote] = useState('C')
+    const [selectedScale, setScale] = useState('Major')
     const {width, height} = useViewport()
 
-    // Pull data from firebase only on mount FOR NOW since we're only pullling one Scale information
     useEffect(() => {
         const ref = db.ref().child('ScalePage').child('ScaleType')
         const query = ref
                         .orderByKey()
-                        .equalTo('PentatonicMajor')
+                        .equalTo(selectedScale)
 
         query.on('value', snap => {
-            snap.exists() ? setScaleData(snap.val()['PentatonicMajor']) : setScaleData('nice')
+            snap.exists() ? setScaleData(snap.val()[selectedScale]) : setScaleData('nice')
         })
-    },[])
+    },[selectedScale], [])
 
     return(
         <div className={styles.mainContainer} style={{'--scales-generator-height': `${(isMobile) && width < height ? '15vh' : '30vh'}`, '--scales-selector-height': `${(isMobile) ? '10%' : '7.5%'}`}}>
@@ -34,7 +34,7 @@ export default function ScalesPage(){
                 <ScalesGenerator note={selectedNote} intervals={scaleData && scaleData['Notes']}/>
             </div>
             <div className={styles.scaleSelectorContainer}>
-                <ScaleSelector/>
+                <ScaleSelector selectedScale={selectedScale} onClick={value => setScale(value)}/>
             </div>
         </div>
     )
