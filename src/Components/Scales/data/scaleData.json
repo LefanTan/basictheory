@@ -13,6 +13,19 @@
                 "It sounds good, very reliable"
             ]
         },
+        "PentatonicMinor":{
+            "About": "The Pentatonic Minor Scale is like a simplify version of the minor scale. COOL!",
+            "Notes": [
+                "1",
+                "b3",
+                "4",
+                "5",
+                "b7"
+            ],
+            "UseCases":[
+                "It sounds good, very reliable"
+            ]
+        },
         "Major":{
             "About": "The Major Scale is the foundation of all western harmony, learning it will help your understanding of music theory. The sequence of the interval is whole, whole, half, whole, whole, whole, half.",
             "Notes": [

@@ -13,20 +13,7 @@ import { getNoteBasedOnInterval, getNoteFromFretNumber } from '../Helpers/Helper
 export default function ScalesGenerator(props){
     const stringNotes = ['E', 'A', 'D', 'G', 'B', 'E']
     const notesFromInterval = (props.intervals && props.note) && props.intervals.map(i => getNoteBasedOnInterval(props.note, i))
-    const [imgContainerWidth, setImgContainerWidth] = useState(60)
     const [showAll, setShowAll] = useState(false)
-
-    // get the current width of the device view port
-    const {width} = useViewport()
-    
-    // Update ImgContainerWidth depending on device type
-    useEffect(() => {
-        if(isMobileOnly) {
-            setImgContainerWidth(50)
-        }
-        else 
-            setImgContainerWidth(65)
-    }, [width])
 
     function ScalesButton(props){
         var topPos = 20 * props.string - 28
