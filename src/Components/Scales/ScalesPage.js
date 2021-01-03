@@ -3,8 +3,9 @@ import styles from './ScalesPage.module.css'
 import {db} from '../../Services/Firebase'
 import useViewport from '../Helpers/CustomHooks'
 import ScalesGenerator from './ScalesGenerator'
+import ScaleSelector from './ScaleSelector'
 import NoteSelector from '../NoteSelector'
-import { isMobileOnly } from 'react-device-detect'
+import { isMobile } from 'react-device-detect'
 
 export default function ScalesPage(){
     
@@ -25,12 +26,15 @@ export default function ScalesPage(){
     },[])
 
     return(
-        <div className={styles.mainContainer} style={{'--scales-generator-height': `${(isMobileOnly && width < height) ? '11vh' : '30vh'}`}}>
+        <div className={styles.mainContainer} style={{'--scales-generator-height': `${(isMobile) && width < height ? '15vh' : '30vh'}`, '--scales-selector-height': `${(isMobile) ? '10%' : '7.5%'}`}}>
             <div className={styles.noteSelectorContainer}>
                 <NoteSelector selectedNote={selectedNote} onClick={value => setNote(value)}/>
             </div>
             <div className={styles.scaleGeneratorContainer}>
                 <ScalesGenerator note={selectedNote} intervals={scaleData && scaleData['Notes']}/>
+            </div>
+            <div className={styles.scaleSelectorContainer}>
+                <ScaleSelector/>
             </div>
         </div>
     )
