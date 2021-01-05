@@ -64,24 +64,11 @@
     width: 100%;
     height: 100%;
 
-    display: table-cell;
     align-self: flex-start;
     padding: 0;
     
     fill: var(--main-color);
 } 
-
-.noteButtonContainer{
-    position: absolute;
-    top: 0;
-
-    display: flex;
-    justify-content: center;
-    align-content: center;
-
-    width: 20%;
-    height: 20%;
-}
 
 .noteButton{
     position: absolute;
@@ -103,7 +90,7 @@
 }
 
 .noteButtonImg{
-    width: 110%;
+    width: 120%;
     height: 100%;
 
     padding: 0px;

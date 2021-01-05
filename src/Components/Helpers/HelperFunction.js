@@ -10,7 +10,7 @@ export function getNoteBasedOnInterval(rootNote, interval){
     switch(interval){
         case '1': // root note
         case '8':
-            return rootNote
+            return notes[rootIndex]
         case 'b2': // minor second
             return notes[(rootIndex + 1) % 12]
         case '2': // major second
@@ -40,6 +40,34 @@ export function getNoteBasedOnInterval(rootNote, interval){
         case '7': // major seventh
             return notes[(rootIndex + 11) % 12]
     }
+}
+
+export function getNoteFromFretNumber(string, fretNumber){
+    var startIndex = 0;
+    switch(string){
+        case 6 || '6': // Starts from E
+            startIndex = notes.findIndex(x => x == 'E')
+            break;
+        case 5 || '5':
+            startIndex = notes.findIndex(x => x == 'A')
+            break;
+        case 4 || '4':
+            startIndex = notes.findIndex(x => x == 'D')
+            break;
+        case 3 || '3':
+            startIndex = notes.findIndex(x => x == 'G')
+            break;
+        case 2 || '2':
+            startIndex = notes.findIndex(x => x == 'B')
+            break;
+        case 1 || '1':
+            startIndex = notes.findIndex(x => x == 'E')
+            break;
+        default:
+            throw new Error("Invalid string number")
+    }
+
+    return notes[(startIndex + fretNumber) % 12]
 }
 
 // in standard tuning ofc lol

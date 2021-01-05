@@ -1,11 +1,17 @@
 @import '../../index.css';
 
 .mainContainer{
+    --scales-generator-height: 30vh;
+    --scales-selector-height: 7.5%;
+
     display: grid;
-    grid-template-rows: 15% auto;
+    grid-template-rows: 15% var(--scales-generator-height) var(--scales-selector-height) auto;
 
     width: var(--device-width);
     height: var(--body-height);
+
+    align-items: center;
+    justify-items: center;
 
     margin: 0;
     padding: 0;
@@ -14,9 +20,30 @@
 /* Ideally, note selector component should scale according to parent container, but right now the size is fixed */
 .noteSelectorContainer{ 
     grid-row-start: 1;
-    grid-row-end: 2;
-    background-color: aliceblue;
+    width: 100%;
+    height: 80%;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scaleSelectorContainer{
+    grid-row-start: 3;
     width: 100%;
     height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scaleGeneratorContainer{
+    grid-row-start: 2;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

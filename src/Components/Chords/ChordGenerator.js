@@ -1,6 +1,5 @@
-/* eslint-disable react/jsx-key */
-/* eslint-disable react/prop-types */
 import React from 'react'
+import PropTypes from 'prop-types';
 import styles from './ChordGenerator.module.css'
 import {ReactComponent as ChordFret} from './imgs/chordFret.svg'
 import noteButton from './imgs/noteButton.png'
@@ -43,7 +42,7 @@ function ChordGenerator(props){
         if(props.noteInfo.fret > 5 || props.noteInfo.fret < 1)
             throw new Error("Invalid fret number")
         
-        var topPos = -0.25 * Math.pow(props.noteInfo.fret, 2) + 19.25 * props.noteInfo.fret - 8.5; 
+        var topPos = -0.25 * Math.pow(props.noteInfo.fret, 2) + 19.25 * props.noteInfo.fret - 9.5; 
         var leftPos = 19 * (7 - props.noteInfo.string) - 22.5
         
         var standardButtonContainer = {
@@ -66,6 +65,10 @@ function ChordGenerator(props){
             props.rootNote && loadSample(getStringSound(props.noteInfo.string), playSample, getFretNumber(props.noteInfo.string, getNoteBasedOnInterval(props.rootNote, props.noteInfo.noteNumber)))
         }
     
+        StandardNoteButton.propTypes = {
+            noteInfo: PropTypes.object
+        }
+
         return(    
             <div style={standardButtonContainer}>
                 <button data-testid='standard-button' onClick={onClickHandler} className={styles.noteButton}>
@@ -106,6 +109,12 @@ function ChordGenerator(props){
             props.rootNote && loadSample(getStringSound(props.noteInfo.string), playSample, getFretNumber(props.noteInfo.string, getNoteBasedOnInterval(props.rootNote, props.noteInfo.noteNumber)))
         }
 
+        OpenStringButton.propTypes = {
+            noteInfo: PropTypes.object,
+            onNoteClick: PropTypes.func,
+            rootNote: PropTypes.string
+        }
+
         return(    
             <div style={openStringButtonContainer}>
                 <button data-testid='open-string-button' onClick={() => props.noteInfo.noteNumber != 'X' && onClickHandler()} className={styles.noteButton}>
@@ -137,23 +146,31 @@ function ChordGenerator(props){
     }
     const fretNumber = props.note && getFretNumber(fretNote.string, getNoteBasedOnInterval(props.note, fretNote.noteNumber))
     
+    // Props Validation
+    ChordGenerator.propTypes = {
+        noteButtonPositions: PropTypes.array,
+        note: PropTypes.string,
+        onNoteClick: PropTypes.func,
+        rootNote: PropTypes.string
+    }
+
     return(
         <ErrorBoundary
             fallback={<h2>Error loading chord</h2>}
         >
             <div className={styles.mainContainer}>
-                    <ChordFret className={styles.mainImg} />
-                    {props.noteButtonPositions && props.noteButtonPositions.map(noteInfo =>{
-                        if(noteInfo.fret == 0 || noteInfo.noteNumber == 'X'){ 
-                            return(<OpenStringButton key={props.noteButtonPositions.findIndex(x => x == noteInfo)} rootNote={props.note} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
-                        }else{
-                            return(<StandardNoteButton key={props.noteButtonPositions.findIndex(x => x == noteInfo)} rootNote={props.note} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
-                        }
-                    })}
-                    <div style={fretNumContainer}>
-                        <h3 data-testid='fret-number' className={styles.fretNumber}>{fretNumber === 0 ? 12 : fretNumber}</h3>
-                    </div>
+                <ChordFret className={styles.mainImg} />
+                {props.noteButtonPositions && props.noteButtonPositions.map(noteInfo =>{
+                    if(noteInfo.fret == 0 || noteInfo.noteNumber == 'X'){ 
+                        return(<OpenStringButton key={props.noteButtonPositions.findIndex(x => x == noteInfo)} rootNote={props.note} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
+                    }else{
+                        return(<StandardNoteButton key={props.noteButtonPositions.findIndex(x => x == noteInfo)} rootNote={props.note} onNoteClick={props.onNoteClick} noteInfo={noteInfo}/>)
+                    }
+                })}
+                <div style={fretNumContainer}>
+                    <h3 data-testid='fret-number' className={styles.fretNumber}>{fretNumber === 0 ? 12 : fretNumber}</h3>
                 </div>
+            </div>
         </ErrorBoundary>
     )
 }

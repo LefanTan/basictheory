@@ -1,5 +1,6 @@
 import firebase from 'firebase/app'
 import 'firebase/database'
+import 'firebase/auth'
 
 const config={
     apiKey: "AIzaSyADAWhnUsK6O8h_QkXOZq2BJAQyMIGyNBo",
@@ -8,4 +9,7 @@ const config={
 }
 firebase.initializeApp(config)
 
-export const db = firebase.database();
+export const db = firebase.database()
+export const auth = firebase.auth()
+
+auth.signInWithEmailAndPassword('basictheory@gmail.com', 'basictheory.io')

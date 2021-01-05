@@ -1,13 +1,12 @@
-/* eslint-disable react/prop-types */
 import React, {Component} from 'react'
 import {db} from '../../Services/Firebase'
 import styles from './ChordInfo.module.css'
+import PropTypes from 'prop-types';
 import ChordGenerator from './ChordGenerator'
 import {getNoteBasedOnInterval} from '../Helpers/HelperFunction'
 import {HiArrowDown} from 'react-icons/hi'
 
 class ChordInfo extends Component{
-
     constructor(props){
         super(props)
         this.state = {
@@ -50,7 +49,7 @@ class ChordInfo extends Component{
                             orderByKey().
                             equalTo(chordName)
 
-        query.on('value', snap =>{
+        query.on('value', snap => {
             this.setState({
                 openChordData: snap.exists() ? snap.val()[chordName] : "",
                 shapeList: snap.exists() ? this.props.info.Shapes : this.props.info.Shapes.slice(1)
@@ -74,66 +73,81 @@ class ChordInfo extends Component{
     }
 
     render(){
-        return (
-            this.props.info ?
-
-            <div className={styles.Container}>
-                <h1 data-testid='chordinfo-title' className={styles.h1}>{this.props.info.FullName} Chord</h1>    
-                <div className={styles.rowChordImgContainer}>
-                    <ChordGenerator note={this.props.note} onNoteClick={this.chordGeneratorNoteClick} noteButtonPositions={this.state.openChordData ? this.state.openChordData['Notes'] : this.props.info.Shapes[0]['Notes']}/>
-                    <div className={styles.columnContainer}>
-                        {this.props.info.Notes.map(note => 
-                            <div key={note.name} className={styles.noteDegreeRow}>
-                                <h1 className={styles.noteText}>{getNoteBasedOnInterval(this.props.note, note.num)}</h1> 
-                                <p className={styles.p}>{note.name}</p>
-                            </div>
-                        )}
+        if(!this.props.info && !this.props.chord){
+            return(
+                <div>
+                    <h1 className={styles.p}>Select A Chord</h1>    
+                </div>
+            )
+        }
+        else if(!this.props.info){
+            return(
+                <div>
+                    <h1 className={styles.p}>Loading...</h1>    
+                </div>
+            )
+        }
+        else{
+            return(
+                <div className={styles.Container}>
+                    <h1 data-testid='chordinfo-title' className={styles.h1}>{this.props.info.FullName} Chord</h1>    
+                    <div className={styles.rowChordImgContainer}>
+                        <ChordGenerator note={this.props.note} onNoteClick={this.chordGeneratorNoteClick} noteButtonPositions={this.state.openChordData ? this.state.openChordData['Notes'] : this.props.info.Shapes[0]['Notes']}/>
+                        <div className={styles.columnContainer}>
+                            {this.props.info.Notes.map(note => 
+                                <div key={note.name} className={styles.noteDegreeRow}>
+                                    <h1 className={styles.noteText}>{getNoteBasedOnInterval(this.props.note, note.num)}</h1> 
+                                    <p className={styles.p}>{note.name}</p>
+                                </div>
+                            )}
+                        </div>
                     </div>
-                </div>
-                <div className={styles.noteDegreeRow}>
-                        <h2 className={styles.h2}>Selected Note:</h2>
-                        <h2 data-testid='selected'>{this.state.selectedNote}</h2>
-                    </div>
-                <div className={styles.textContainer}>
-                    <h2 className={styles.h2}>Description</h2>
-                    <p className={styles.descriptionText}>
-                        {this.props.info.Description}
-                    </p>
-                    <br/>
-                    <h2 className={styles.h2}>Sound</h2>
-                    <p className={styles.descriptionText}>
-                        {this.props.info.Sound}
-                    </p>
-                </div>
-                <br/>
-                <div className={styles.rowChordImgContainer}> 
-                        <button className={styles.arrowDownButton} onClick={() => this.handleClick(styles.arrowDownButton)}>
-                            <h2 className={styles.h2}><strong>More Shapes</strong></h2>
-                            <HiArrowDown className={styles.arrowDownImg} />
-                        </button>
-                </div>
-                <div className={this.state.moreShape ? styles.moreChordContainerActive : styles.moreChordContainer}> 
                     <div className={styles.noteDegreeRow}>
-                        <h2 className={styles.h2}>Selected Note:</h2>
-                        <h2>{this.state.selectedNote}</h2>
+                            <h2 className={styles.h2}>Selected Note:</h2>
+                            <h2 data-testid='selected'>{this.state.selectedNote}</h2>
+                        </div>
+                    <div className={styles.textContainer}>
+                        <h2 className={styles.h2}>Description</h2>
+                        <p className={styles.descriptionText}>
+                            {this.props.info.Description}
+                        </p>
+                        <br/>
+                        <h2 className={styles.h2}>Sound</h2>
+                        <p className={styles.descriptionText}>
+                            {this.props.info.Sound}
+                        </p>
                     </div>
+                    <br/>
+                    <div className={styles.rowChordImgContainer}> 
+                            <button className={styles.arrowDownButton} onClick={() => this.handleClick(styles.arrowDownButton)}>
+                                <h2 className={styles.h2}><strong>More Shapes</strong></h2>
+                                <HiArrowDown className={styles.arrowDownImg} />
+                            </button>
+                    </div>
+                    <div className={this.state.moreShape ? styles.moreChordContainerActive : styles.moreChordContainer}> 
+                        <div className={styles.noteDegreeRow}>
+                            <h2 className={styles.h2}>Selected Note:</h2>
+                            <h2>{this.state.selectedNote}</h2>
+                        </div>
 
-                    <div className={styles.moreChordRow}>
-                    {this.state.shapeList && 
-                        this.state.shapeList.map(shape => 
-                            <ChordGenerator key={this.state.shapeList.findIndex(x => x == shape)} note={this.props.note} onNoteClick={this.chordGeneratorNoteClick} noteButtonPositions={shape['Notes']}/>
-                        )}
+                        <div className={styles.moreChordRow}>
+                        {this.state.shapeList && 
+                            this.state.shapeList.map(shape => 
+                                <ChordGenerator key={this.state.shapeList.findIndex(x => x == shape)} note={this.props.note} onNoteClick={this.chordGeneratorNoteClick} noteButtonPositions={shape['Notes']}/>
+                            )}
+                        </div>
                     </div>
                 </div>
-            </div>
-            :
-
-            // If the info doesn't exist yet, print N/A
-            <div>
-                <h1 className={styles.p}>Loading...</h1>    
-            </div>
-        )
+            )
+        }
     }
 }
+
+// Props validation
+ChordInfo.propTypes = {
+    chord: PropTypes.string,
+    note: PropTypes.string,
+    info: PropTypes.object
+};
 
 export default ChordInfo;

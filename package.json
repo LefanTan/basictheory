@@ -12,6 +12,7 @@
     "enzyme-to-json": "^3.6.1",
     "firebase": "^8.1.1",
     "react": "^17.0.1",
+    "react-device-detect": "^1.15.0",
     "react-dom": "^17.0.1",
     "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
@@ -22,9 +23,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "cypress": "node_modules/.bin/cypress open",
+    "cypress": "npx cypress open",
     "test": "react-scripts test --watchAll=false",
-    "testLocal": "react-scripts test --watchAll=false && npm run cypress",
+    "testLocal": "react-scripts test --watchAll=false && npx cypress run",
     "eject": "react-scripts eject",
     "deploy": "npm run test && npm run build && gh-pages -d build"
   },
