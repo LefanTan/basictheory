@@ -86,6 +86,22 @@
                 "Use it so people know you know more than just the pentatonic scale ( ͡° ͜ʖ ͡°)"
             ]
         },
+        "Harmonic Minor":{
+            "About": "Minor scale with a major 7th",
+            "Notes": [
+                "1",
+                "2",
+                "b3",
+                "4",
+                "5",
+                "b6",
+                "7"
+            ],
+            "UseCases":[
+                "The Minor scale can be used in improvising and understanding solos. There are times when the pentatonic or blue scales might sound boring, the minor scale can be used in place.",
+                "Use it so people know you know more than just the pentatonic scale ( ͡° ͜ʖ ͡°)"
+            ]
+        },
         "Dorian":{
             "About": "It's a minor scale with a major 6 instead of a minor 6",
             "Notes": [
