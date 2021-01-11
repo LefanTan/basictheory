@@ -11,7 +11,21 @@ import { getFretNumber, getNoteBasedOnInterval, getNoteFromFretNumber } from '..
 // Also generate a scale based on the CAGED system
 export default function ScalesGenerator(props){
     const stringNotes = ['E', 'A', 'D', 'G', 'B', 'E']
-    const [showAll, setShowAll] = useState(true)
+    const [showAll, setShowAll] = useState(false)
+    const [selectedShape, setShape] = useState('C')
+
+    // action = "prev" or "next"
+    const iterateShape = (action) => {
+        const shapes = ['C', 'A', 'G', 'E', 'D']
+        const reversed = shapes.slice().reverse()
+        
+        var selectedArray = shapes;
+
+        if(action == "prev") selectedArray = reversed
+        else if(action == "next") selectedArray = shapes
+
+        setShape(selectedArray[selectedArray.indexOf(selectedShape) + 1 % selectedArray.length])
+    }
 
     function ScalesButton(props){
         var topPos = 20 * props.string - 28
@@ -55,27 +69,68 @@ export default function ScalesGenerator(props){
     function ScaleShape(props){
         var startingRootNotePosition = 0;
         var startingNotePosition = 0;
+        var intervalIndex = 0;
         const notesFromInterval = (props.intervals && props.rootNote) && props.intervals.map(i => getNoteBasedOnInterval(props.rootNote, i))
-
+        var buttons = []
         
         // Create a full Scale if showAll is true
         if(props.showAll){
-            var buttons = []
-            for(let i = 1; i < 7; i++){
+            for(let i = 6; i > 0; i--){
                 for(let j = 0; j < 18; j++){
-                    var fretNote = getNoteFromFretNumber(i,j)
+                    let fretNote = getNoteFromFretNumber(i,j)
                     if(notesFromInterval && notesFromInterval.includes(fretNote))
                         buttons.push(<ScalesButton key={`${i} ${j}`} isRoot={fretNote === props.rootNote || (props.rootNote.length > 1 && fretNote.includes(props.rootNote))} fret={j} string={i}>{props.intervals[notesFromInterval.indexOf(fretNote)]}</ScalesButton>)
                 }
             }
         }
         else{
-            if(props.shape == 'C'){
-                startingRootNotePosition = getFretNumber(5, props.rootNote)
-                for(let i = 0; i < props.intervals.length; i++){
-                    startingNotePosition = getFretNumber(6, getNoteBasedOnInterval(props.rootNote, props.intervals[i]))
-                    // If the distance is less than 3, we found our starting note position
-                    if(Math.abs(startingRootNotePosition - startingNotePosition) <= 3) break;
+            if(props.intervals){
+
+                if(props.shape == 'C'){
+                    startingRootNotePosition = getFretNumber(5, props.rootNote)
+    
+                    // Find starting interval index position
+                    for(let i = 0; i < props.intervals.length; i++){
+                        startingNotePosition = getFretNumber(6, getNoteBasedOnInterval(props.rootNote, props.intervals[i]))
+                        intervalIndex = i
+                        // If the distance is less than 3, we found our starting note position
+                        if(Math.abs(startingRootNotePosition - startingNotePosition) <= 3) break;
+                    }
+                }else if(props.shape == 'E'){
+                    startingRootNotePosition = getFretNumber(5, props.rootNote)
+    
+                    // Find starting interval index position
+                    for(let i = 0; i < props.intervals.length; i++){
+                        startingNotePosition = getFretNumber(6, getNoteBasedOnInterval(props.rootNote, props.intervals[i]))
+                        intervalIndex = i
+                        // If the distance is less than 3, we found our starting note position
+                        if(Math.abs(startingRootNotePosition - startingNotePosition) <= 3) break;
+                    }
+                }
+
+                // Loop through guitar board with constraints
+                for(let i = 6; i > 0; i--){
+                    var notesInCurrentString = []
+                    for(let j = getFretNumber(i, notesFromInterval[intervalIndex % notesFromInterval.length]); j < 18; j++){
+                        
+                        // Constraints to construct the chord
+                        // 1. Each string should contain maximum of 3 notes
+                        // 2. If there are currently 2 notes on a string, the third cannot not be 2 fret apart from the second
+                        // 3. If there are currently 2 notes on a string, and the first and second and third will be 1 fret apart, the third cannot be added
+                        if(notesInCurrentString.length >= 3 ||
+                            notesInCurrentString.length >= 2 && notesInCurrentString[1] - notesInCurrentString[0] > 2 ||
+                            notesInCurrentString.length >= 2 && notesInCurrentString[1] - notesInCurrentString[0] == 2 && j - notesInCurrentString[1] == 2)
+                            break
+
+                        let fretNote = getNoteFromFretNumber(i,j)
+                        if(notesFromInterval && notesFromInterval.includes(fretNote)){
+                            buttons.push(<ScalesButton key={`${i} ${j}`} isRoot={fretNote === props.rootNote || (props.rootNote.length > 1 && fretNote.includes(props.rootNote))} fret={j} string={i}>
+                                {props.intervals[notesFromInterval.indexOf(fretNote)]}</ScalesButton>)
+
+                            notesInCurrentString.push(j)
+                            intervalIndex++
+                        }
+                    }
                 }
             }
         }
@@ -127,8 +182,8 @@ export default function ScalesGenerator(props){
         <div className={styles.Container}>
             <div style={buttonContainer}>
                 <button className={showAll ? styles.showAllButtonActive : styles.showAllButton} onClick={() => setShowAll(!showAll)}><h3>Show All</h3></button>
-                <button className={styles.emptyShellButton}><Md.MdNavigateBefore className={styles.nextImg}/></button>
-                <button className={styles.emptyShellButton}><Md.MdNavigateNext className={styles.nextImg}/></button>
+                <button className={styles.emptyShellButton} onClick={() => iterateShape("prev")}><Md.MdNavigateBefore className={styles.nextImg}/></button>
+                <button className={styles.emptyShellButton} onClick={() => iterateShape("next")}><Md.MdNavigateNext className={styles.nextImg}/></button>
             </div>
             <div style={imgContainer}>  
                 <Fret className={styles.Img}/>
