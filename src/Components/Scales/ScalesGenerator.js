@@ -24,7 +24,7 @@ export default function ScalesGenerator(props){
         if(action == "prev") selectedArray = reversed
         else if(action == "next") selectedArray = shapes
 
-        setShape(selectedArray[selectedArray.indexOf(selectedShape) + 1 % selectedArray.length])
+        setShape(selectedArray[(selectedArray.indexOf(selectedShape) + 1) % selectedArray.length])
     }
 
     function ScalesButton(props){
@@ -67,12 +67,13 @@ export default function ScalesGenerator(props){
 
     // Generate a scale with a given shape using the CAGED system
     function ScaleShape(props){
-        var startingRootNotePosition = 0;
-        var startingNotePosition = 0;
+        var firstRootNotePosition = 0;
+        var secondRootNotePosition = 0;
+        var foundIndex = false;
         var intervalIndex = 0;
         const notesFromInterval = (props.intervals && props.rootNote) && props.intervals.map(i => getNoteBasedOnInterval(props.rootNote, i))
         var buttons = []
-        
+
         // Create a full Scale if showAll is true
         if(props.showAll){
             for(let i = 6; i > 0; i--){
@@ -85,52 +86,102 @@ export default function ScalesGenerator(props){
         }
         else{
             if(props.intervals){
+                console.log(props.shape)
 
                 if(props.shape == 'C'){
-                    startingRootNotePosition = getFretNumber(5, props.rootNote)
+                    firstRootNotePosition = getFretNumber(5, props.rootNote)
+                    secondRootNotePosition = getFretNumber(2, props.rootNote)
     
                     // Find starting interval index position
-                    for(let i = 0; i < props.intervals.length; i++){
-                        startingNotePosition = getFretNumber(6, getNoteBasedOnInterval(props.rootNote, props.intervals[i]))
-                        intervalIndex = i
+                    for(let i = 0; i < 18 && !foundIndex; i++){
+
+                        // B lydian hs problem
+                        if(i+1 >= 18){ 
+                            // console.log("restart first")
+                            firstRootNotePosition += 12
+                            if(Math.abs(firstRootNotePosition - secondRootNotePosition) > 3)
+                                secondRootNotePosition += 12
+                            i = 0
+                            continue;
+                        }
+
+                        let currentNote = getNoteFromFretNumber(6, i)
+                        if(!notesFromInterval.includes(currentNote))    
+                            continue
+
+                        intervalIndex = notesFromInterval.indexOf(currentNote)
                         // If the distance is less than 3, we found our starting note position
-                        if(Math.abs(startingRootNotePosition - startingNotePosition) <= 3) break;
-                    }
-                }else if(props.shape == 'E'){
-                    startingRootNotePosition = getFretNumber(5, props.rootNote)
-    
-                    // Find starting interval index position
-                    for(let i = 0; i < props.intervals.length; i++){
-                        startingNotePosition = getFretNumber(6, getNoteBasedOnInterval(props.rootNote, props.intervals[i]))
-                        intervalIndex = i
-                        // If the distance is less than 3, we found our starting note position
-                        if(Math.abs(startingRootNotePosition - startingNotePosition) <= 3) break;
+                        let distance = firstRootNotePosition - i
+                        // console.log(`first root ${i} : ${currentNote} : ${firstRootNotePosition}`)
+
+                        if(distance <= 3 && distance > 1)
+                        {
+                            for(let i = 0; i < 18; i++){
+                                let currentNote = getNoteFromFretNumber(3, i)
+
+                                if(!notesFromInterval.includes(currentNote))    
+                                    continue
+
+                                let distance = secondRootNotePosition - i
+                                
+                                // console.log(`second root ${i} : ${currentNote} : ${distance}`)
+                                if(distance <= 1 && distance >= 0){
+                                    foundIndex = true
+                                    break;
+                                }
+                            }
+                            // console.log('restart')
+                            firstRootNotePosition += 12
+                            secondRootNotePosition += 12
+                            i = -1
+                        }
                     }
                 }
 
+                console.log(props.intervals[intervalIndex])
+
+                var allNotes = []
                 // Loop through guitar board with constraints
                 for(let i = 6; i > 0; i--){
-                    var notesInCurrentString = []
+                    allNotes[i] = []    
                     for(let j = getFretNumber(i, notesFromInterval[intervalIndex % notesFromInterval.length]); j < 18; j++){
-                        
                         // Constraints to construct the chord
                         // 1. Each string should contain maximum of 3 notes
                         // 2. If there are currently 2 notes on a string, the third cannot not be 2 fret apart from the second
                         // 3. If there are currently 2 notes on a string, and the first and second and third will be 1 fret apart, the third cannot be added
-                        if(notesInCurrentString.length >= 3 ||
-                            notesInCurrentString.length >= 2 && notesInCurrentString[1] - notesInCurrentString[0] > 2 ||
-                            notesInCurrentString.length >= 2 && notesInCurrentString[1] - notesInCurrentString[0] == 2 && j - notesInCurrentString[1] == 2)
+                        if( allNotes[i].length >= 3 ||
+                            allNotes[i].length >= 2 && allNotes[i][1] - allNotes[i][0] > 2 ||
+                            allNotes[i].length >= 2 && allNotes[i][1] - allNotes[i][0] == 2 && j - allNotes[i][1] == 2)
                             break
 
                         let fretNote = getNoteFromFretNumber(i,j)
                         if(notesFromInterval && notesFromInterval.includes(fretNote)){
-                            buttons.push(<ScalesButton key={`${i} ${j}`} isRoot={fretNote === props.rootNote || (props.rootNote.length > 1 && fretNote.includes(props.rootNote))} fret={j} string={i}>
-                                {props.intervals[notesFromInterval.indexOf(fretNote)]}</ScalesButton>)
-
-                            notesInCurrentString.push(j)
+                            allNotes[i].push(j)
                             intervalIndex++
                         }
                     }
+                }
+
+                // Verify the shape to make sure all notes are in the same octaves
+                // 1. find highest fret
+                // 2. Loop through the notes, if the note are too far away from highest fret, it means that the note is in a different octave, add 12 to move it up
+                var highestFret = 0;
+                allNotes.forEach(row => {
+                    row.forEach(fret => {
+                        if(fret > highestFret)
+                            highestFret = fret 
+                    })
+                })
+
+                for(let i = 6; i > 0; i--){
+                    allNotes[i].forEach(fret => {
+                        if(Math.abs(fret - highestFret) > 5)
+                            fret += 12
+
+                        var fretNote = getNoteFromFretNumber(i, fret)
+                        buttons.push(<ScalesButton key={`${i} ${fret}`} isRoot={fretNote === props.rootNote || (props.rootNote.length > 1 && fretNote.includes(props.rootNote))} fret={fret} string={i}>
+                        {props.intervals[notesFromInterval.indexOf(fretNote)]}</ScalesButton>)
+                    });
                 }
             }
         }
@@ -166,7 +217,7 @@ export default function ScalesGenerator(props){
         justifyContent: 'center',
     
         whiteSpace: 'nowrap',
-        width:  `${!isBrowser ? '35%' : '15%'}`,
+        width:  `${!isBrowser ? '20%' : '15%'}`,
         height: '100%',
     
         margin: `${isMobileOnly ? '0%' : '2%'}`
@@ -210,8 +261,7 @@ export default function ScalesGenerator(props){
                         </div>
                     )}
                 )}
-                {/* {buttons} */}
-                <ScaleShape showAll={showAll} rootNote={props.note} intervals={props.intervals} shape={'C'}/>
+                <ScaleShape shape ={selectedShape} showAll={showAll} rootNote={props.note} intervals={props.intervals}/>
             </div>
         </div>
     )
