@@ -86,8 +86,6 @@ export default function ScalesGenerator(props){
         }
         else{
             if(props.intervals){
-                console.log(props.shape)
-
                 if(props.shape == 'C'){
                     firstRootNotePosition = getFretNumber(5, props.rootNote)
                     secondRootNotePosition = getFretNumber(2, props.rootNote)
@@ -95,9 +93,7 @@ export default function ScalesGenerator(props){
                     // Find starting interval index position
                     for(let i = 0; i < 18 && !foundIndex; i++){
 
-                        // B lydian hs problem
                         if(i+1 >= 18){ 
-                            // console.log("restart first")
                             firstRootNotePosition += 12
                             if(Math.abs(firstRootNotePosition - secondRootNotePosition) > 3)
                                 secondRootNotePosition += 12
@@ -110,10 +106,8 @@ export default function ScalesGenerator(props){
                             continue
 
                         intervalIndex = notesFromInterval.indexOf(currentNote)
-                        // If the distance is less than 3, we found our starting note position
                         let distance = firstRootNotePosition - i
-                        // console.log(`first root ${i} : ${currentNote} : ${firstRootNotePosition}`)
-
+                        // Distance between 2 and 3
                         if(distance <= 3 && distance > 1)
                         {
                             for(let i = 0; i < 18; i++){
@@ -121,24 +115,176 @@ export default function ScalesGenerator(props){
 
                                 if(!notesFromInterval.includes(currentNote))    
                                     continue
-
                                 let distance = secondRootNotePosition - i
                                 
-                                // console.log(`second root ${i} : ${currentNote} : ${distance}`)
+                                // Distance between 0 and 1
                                 if(distance <= 1 && distance >= 0){
                                     foundIndex = true
                                     break;
                                 }
                             }
-                            // console.log('restart')
+                            firstRootNotePosition += 12
+                            secondRootNotePosition += 12
+                            i = -1
+                        }
+                    }
+                }else if(props.shape == 'A'){
+                    firstRootNotePosition = getFretNumber(5, props.rootNote)
+                    secondRootNotePosition = getFretNumber(3, props.rootNote)
+    
+                    // Find starting interval index position
+                    for(let i = 0; i < 18 && !foundIndex; i++){
+                        if(i+1 >= 18){ 
+                            firstRootNotePosition += 12
+                            if(Math.abs(firstRootNotePosition - secondRootNotePosition) > 3)
+                                secondRootNotePosition += 12
+                            i = 0   
+                            continue;
+                        }
+                        let currentNote = getNoteFromFretNumber(6, i)
+                        if(!notesFromInterval.includes(currentNote))    
+                            continue
+
+                        intervalIndex = notesFromInterval.indexOf(currentNote)
+                        let distance = firstRootNotePosition - i
+                        // Distance between 0 and -1
+                        if(distance >= -1 && distance < 1)
+                        {
+                            for(let i = 0; i < 18; i++){
+                                let currentNote = getNoteFromFretNumber(4, i)
+                                if(!notesFromInterval.includes(currentNote))    
+                                    continue
+                                let distance = secondRootNotePosition - i
+                                
+                                // Distance between -1 and 1
+                                if(distance <= 1 && distance >= -1){
+                                    foundIndex = true
+                                    break;
+                                }
+                            }
+                            firstRootNotePosition += 12
+                            secondRootNotePosition += 12
+                            i = -1
+                        }
+                    }
+                }else if(props.shape == 'G'){
+                    firstRootNotePosition = getFretNumber(6, props.rootNote)
+                    secondRootNotePosition = getFretNumber(3, props.rootNote)
+    
+                    // Find starting interval index position
+                    for(let i = 0; i < 18 && !foundIndex; i++){
+                        if(i+1 >= 18){ 
+                            firstRootNotePosition += 12
+                            if(Math.abs(firstRootNotePosition - secondRootNotePosition) > 3)
+                                secondRootNotePosition += 12
+                            i = 0   
+                            continue;
+                        }
+                        let currentNote = getNoteFromFretNumber(6, i)
+                        if(!notesFromInterval.includes(currentNote))    
+                            continue
+
+                        intervalIndex = notesFromInterval.indexOf(currentNote)
+                        let distance = firstRootNotePosition - i
+                        if(distance <= 3)
+                        {
+                            for(let i = 0; i < 18; i++){
+                                let currentNote = getNoteFromFretNumber(4, i)
+                                if(!notesFromInterval.includes(currentNote))    
+                                    continue
+                                let distance = secondRootNotePosition - i
+                                
+                                // Distance between -1 and 0
+                                if(distance <= 0 && distance >= -1){
+                                    foundIndex = true
+                                    break;
+                                }
+                            }
+                            firstRootNotePosition += 12
+                            secondRootNotePosition += 12
+                            i = -1
+                        }
+                    }
+                }else if(props.shape == 'E'){
+                    firstRootNotePosition = getFretNumber(6, props.rootNote)
+                    secondRootNotePosition = getFretNumber(4, props.rootNote)
+    
+                    // Find starting interval index position
+                    for(let i = 0; i < 18 && !foundIndex; i++){
+                        if(i + 1 >= 18){ 
+                            firstRootNotePosition += 12
+                            if(Math.abs(firstRootNotePosition - secondRootNotePosition) > 3)
+                                secondRootNotePosition += 12
+                            i = 0   
+                            continue;
+                        }
+                        let currentNote = getNoteFromFretNumber(6, i)
+                        if(!notesFromInterval.includes(currentNote))    
+                            continue
+
+                        intervalIndex = notesFromInterval.indexOf(currentNote)
+                        let distance = firstRootNotePosition - i
+                        // Between 0 and 1
+                        if(distance >= 0 && distance <= 1)
+                        {
+                            for(let i = 0; i < 18; i++){
+                                let currentNote = getNoteFromFretNumber(5, i)
+                                if(!notesFromInterval.includes(currentNote))    
+                                    continue
+                                let distance = secondRootNotePosition - i
+                                
+                                // Distance between -1 and 0
+                                if(distance <= 0 && distance >= -1){
+                                    foundIndex = true
+                                    break;
+                                }
+                            }
+                            firstRootNotePosition += 12
+                            secondRootNotePosition += 12
+                            i = -1
+                        }
+                    }
+                }else if(props.shape == 'D'){
+                    firstRootNotePosition = getFretNumber(4, props.rootNote)
+                    secondRootNotePosition = getFretNumber(2, props.rootNote)
+    
+                    // Find starting interval index position
+                    for(let i = 0; i < 18 && !foundIndex; i++){
+                        if(i+1 >= 18){ 
+                            firstRootNotePosition += 12
+                            if(Math.abs(firstRootNotePosition - secondRootNotePosition) > 3)
+                                secondRootNotePosition += 12
+                            i = 0   
+                            continue;
+                        }
+                        let currentNote = getNoteFromFretNumber(6, i)
+                        if(!notesFromInterval.includes(currentNote))    
+                            continue
+
+                        intervalIndex = notesFromInterval.indexOf(currentNote)
+                        // If the distance is less than 3, we found our starting note position
+                        let distance = firstRootNotePosition - i
+                        // Distance between 0 and -1
+                        if(distance >= -1 && distance < 1)
+                        {
+                            for(let i = 0; i < 18; i++){
+                                let currentNote = getNoteFromFretNumber(3, i)
+                                if(!notesFromInterval.includes(currentNote))    
+                                    continue
+                                let distance = secondRootNotePosition - i
+                                
+                                // Distance between -1 and 1
+                                if(distance <= 1 && distance >= -1){
+                                    foundIndex = true
+                                    break;
+                                }
+                            }
                             firstRootNotePosition += 12
                             secondRootNotePosition += 12
                             i = -1
                         }
                     }
                 }
-
-                console.log(props.intervals[intervalIndex])
 
                 var allNotes = []
                 // Loop through guitar board with constraints
