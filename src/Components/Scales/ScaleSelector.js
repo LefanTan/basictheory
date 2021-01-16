@@ -25,6 +25,7 @@ function ScaleSelector(props){
             </div>
             <div className={styles.scaleSubContainer}>
                 <StandardButton className={props.selectedScale == 'Blues Minor' ? styles.scaleButtonSelected : styles.scaleButton} value='Blues Minor' onClick={props.onClick}/>   
+                <StandardButton className={props.selectedScale == 'Harmonic Minor' ? styles.scaleButtonSelected : styles.scaleButton} value='Harmonic Minor' onClick={props.onClick}/>   
                 <StandardButton className={props.selectedScale == 'Dorian' ? styles.scaleButtonSelected : styles.scaleButton} value='Dorian' onClick={props.onClick}/>    
                 <StandardButton className={props.selectedScale == 'Phrygian' ? styles.scaleButtonSelected : styles.scaleButton} value='Phrygian' onClick={props.onClick}/>
                 <StandardButton className={props.selectedScale == 'Lydian' ? styles.scaleButtonSelected : styles.scaleButton} value='Lydian' onClick={props.onClick}/>
