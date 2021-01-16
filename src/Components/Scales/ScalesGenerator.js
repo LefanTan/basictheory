@@ -11,7 +11,7 @@ import { getFretNumber, getNoteBasedOnInterval, getNoteFromFretNumber } from '..
 // Also generate a scale based on the CAGED system
 export default function ScalesGenerator(props){
     const stringNotes = ['E', 'A', 'D', 'G', 'B', 'E']
-    const [showAll, setShowAll] = useState(false)
+    const [showAll, setShowAll] = useState(true)
     const [selectedShape, setShape] = useState('C')
 
     // action = "prev" or "next"
@@ -186,7 +186,7 @@ export default function ScalesGenerator(props){
 
                         intervalIndex = notesFromInterval.indexOf(currentNote)
                         let distance = firstRootNotePosition - i
-                        if(distance <= 3)
+                        if(distance <= 3 && distance > 0)
                         {
                             for(let i = 0; i < 18; i++){
                                 let currentNote = getNoteFromFretNumber(4, i)
