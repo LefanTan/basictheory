@@ -359,6 +359,7 @@ export default function ScalesGenerator(props){
     }
     var buttonContainer = {
         display: 'flex',
+        flexFlow: 'column',
         alignItems: 'center',
         justifyContent: 'center',
     
@@ -378,9 +379,21 @@ export default function ScalesGenerator(props){
     return(
         <div className={styles.Container}>
             <div style={buttonContainer}>
-                <button className={showAll ? styles.showAllButtonActive : styles.showAllButton} onClick={() => setShowAll(!showAll)}><h3>Show All</h3></button>
-                <button className={styles.emptyShellButton} onClick={() => iterateShape("prev")}><Md.MdNavigateBefore className={styles.nextImg}/></button>
-                <button className={styles.emptyShellButton} onClick={() => iterateShape("next")}><Md.MdNavigateNext className={styles.nextImg}/></button>
+                <div className={styles.showAllContainer}>
+                    <button className={showAll ? styles.showAllButtonActive : styles.showAllButton} onClick={() => setShowAll(!showAll)}><h3>Show All</h3></button>
+                    <button className={styles.emptyShellButton} onClick={() => iterateShape("prev")}><Md.MdNavigateBefore className={styles.nextImg}/></button>
+                    <button className={styles.emptyShellButton} onClick={() => iterateShape("next")}><Md.MdNavigateNext className={styles.nextImg}/></button>
+                </div>
+                <div className={styles.cagedContainer}>
+                    <h2 className={selectedShape == 'C' ? styles.selected : styles.unselected}>C</h2>
+                    <h2 className={selectedShape == 'A' ? styles.selected : styles.unselected}>A</h2>
+                    <h2 className={selectedShape == 'G' ? styles.selected : styles.unselected}>G</h2>
+                    <h2 className={selectedShape == 'E' ? styles.selected : styles.unselected}>E</h2>
+                    <h2 className={selectedShape == 'D' ? styles.selected : styles.unselected}>D</h2>
+                </div>
+                <div className={styles.cagedContainer}>
+                    <h2 className={styles.systemText}>System</h2>
+                </div>
             </div>
             <div style={imgContainer}>  
                 <Fret className={styles.Img}/>

@@ -26,7 +26,7 @@ export default function ScalesPage(){
     },[selectedScale], [])
 
     return(
-        <div className={styles.mainContainer} style={{'--scales-generator-height': `${(isMobile) && width < height ? '15vh' : '30vh'}`, '--scales-selector-height': `${(isMobile) ? '10%' : '7.5%'}`}}>
+        <div className={styles.mainContainer} style={{'--scales-generator-height': `${(isMobile) && width < height ? '17.5vh' : '30vh'}`, '--scales-selector-height': `${(isMobile) ? '10%' : '7.5%'}`}}>
             <div className={styles.noteSelectorContainer}>
                 <NoteSelector selectedNote={selectedNote} onClick={value => setNote(value)}/>
             </div>
