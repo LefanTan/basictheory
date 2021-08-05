@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/basictheory/static/css/main.d31aa4b5.chunk.css",
-    "main.js": "/basictheory/static/js/main.b0c7c3f1.chunk.js",
-    "main.js.map": "/basictheory/static/js/main.b0c7c3f1.chunk.js.map",
-    "runtime-main.js": "/basictheory/static/js/runtime-main.84f193ec.js",
-    "runtime-main.js.map": "/basictheory/static/js/runtime-main.84f193ec.js.map",
-    "static/js/2.9b392dab.chunk.js": "/basictheory/static/js/2.9b392dab.chunk.js",
-    "static/js/2.9b392dab.chunk.js.map": "/basictheory/static/js/2.9b392dab.chunk.js.map",
+    "main.css": "/basictheory/static/css/main.97d35342.chunk.css",
+    "main.js": "/basictheory/static/js/main.ef002be9.chunk.js",
+    "main.js.map": "/basictheory/static/js/main.ef002be9.chunk.js.map",
+    "runtime-main.js": "/basictheory/static/js/runtime-main.6cf4a892.js",
+    "runtime-main.js.map": "/basictheory/static/js/runtime-main.6cf4a892.js.map",
+    "static/js/2.58763338.chunk.js": "/basictheory/static/js/2.58763338.chunk.js",
+    "static/js/2.58763338.chunk.js.map": "/basictheory/static/js/2.58763338.chunk.js.map",
     "index.html": "/basictheory/index.html",
-    "static/css/main.d31aa4b5.chunk.css.map": "/basictheory/static/css/main.d31aa4b5.chunk.css.map",
-    "static/js/2.9b392dab.chunk.js.LICENSE.txt": "/basictheory/static/js/2.9b392dab.chunk.js.LICENSE.txt",
+    "static/css/main.97d35342.chunk.css.map": "/basictheory/static/css/main.97d35342.chunk.css.map",
+    "static/js/2.58763338.chunk.js.LICENSE.txt": "/basictheory/static/js/2.58763338.chunk.js.LICENSE.txt",
     "static/media/a_5.c63ac53d.mp3": "/basictheory/static/media/a_5.c63ac53d.mp3",
     "static/media/b_2.d5c22064.mp3": "/basictheory/static/media/b_2.d5c22064.mp3",
-    "static/media/chordFret.96ccc64b.svg": "/basictheory/static/media/chordFret.96ccc64b.svg",
+    "static/media/chordFret.7e34cac7.svg": "/basictheory/static/media/chordFret.7e34cac7.svg",
     "static/media/d_4.9b989acb.mp3": "/basictheory/static/media/d_4.9b989acb.mp3",
     "static/media/e_1.16ac1110.mp3": "/basictheory/static/media/e_1.16ac1110.mp3",
     "static/media/e_6.36e553bf.mp3": "/basictheory/static/media/e_6.36e553bf.mp3",
     "static/media/fretBoard.30fe4d9a.svg": "/basictheory/static/media/fretBoard.30fe4d9a.svg",
     "static/media/g_3.da52e213.mp3": "/basictheory/static/media/g_3.da52e213.mp3",
     "static/media/noteButton.82f32475.png": "/basictheory/static/media/noteButton.82f32475.png",
-    "static/media/scaleButtonOpaque.337db69d.svg": "/basictheory/static/media/scaleButtonOpaque.337db69d.svg"
+    "static/media/scaleButtonOpaque.f3b43c25.svg": "/basictheory/static/media/scaleButtonOpaque.f3b43c25.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.84f193ec.js",
-    "static/js/2.9b392dab.chunk.js",
-    "static/css/main.d31aa4b5.chunk.css",
-    "static/js/main.b0c7c3f1.chunk.js"
+    "static/js/runtime-main.6cf4a892.js",
+    "static/js/2.58763338.chunk.js",
+    "static/css/main.97d35342.chunk.css",
+    "static/js/main.ef002be9.chunk.js"
   ]
 }
